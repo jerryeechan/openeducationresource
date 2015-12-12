@@ -1,0 +1,1539 @@
+  [1m[36m (2.8ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (1.0ms)[0m  select sqlite_version(*)
+  [1m[36m (2.0ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+DEPRECATION WARNING: You didn't set `secret_key_base`. Read the upgrade documentation to learn more about this new config option. (called from service at /Users/jerry/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138)
+
+
+Started GET "/assets/rails.png" for ::1 at 2015-11-29 03:20:15 +0800
+
+
+Started GET "/pads" for ::1 at 2015-11-29 03:20:32 +0800
+
+ActionController::RoutingError (The controller-level `respond_to' feature has been extracted to the `responders` gem. Add it to your Gemfile to continue using this feature:
+  gem 'responders', '~> 2.0'
+Consult the Rails upgrade guide for details.):
+  app/controllers/pads_controller.rb:4:in `<class:PadsController>'
+  app/controllers/pads_controller.rb:3:in `<top (required)>'
+
+
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.5ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/routes/_table.html.erb (21.5ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (5.1ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (180.7ms)
+
+
+Started GET "/pads/" for ::1 at 2015-11-29 03:22:22 +0800
+
+ActionController::RoutingError (The controller-level `respond_to' feature has been extracted to the `responders` gem. Add it to your Gemfile to continue using this feature:
+  gem 'responders', '~> 2.0'
+Consult the Rails upgrade guide for details.):
+  app/controllers/pads_controller.rb:4:in `<class:PadsController>'
+  app/controllers/pads_controller.rb:3:in `<top (required)>'
+
+
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.3ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.3ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (66.1ms)
+DEPRECATION WARNING: You didn't set `secret_key_base`. Read the upgrade documentation to learn more about this new config option. (called from service at /Users/jerry/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138)
+
+
+Started GET "/pads/" for ::1 at 2015-11-29 03:23:37 +0800
+Processing by PadsController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `downcase' for nil:NilClass):
+  app/controllers/pads_controller.rb:71:in `index'
+
+
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.4ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (23.5ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (82.0ms)
+
+
+Started GET "/pads/" for ::1 at 2015-11-29 03:23:45 +0800
+Processing by PadsController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `downcase' for nil:NilClass):
+  app/controllers/pads_controller.rb:71:in `index'
+
+
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.6ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (48.9ms)
+
+
+Started GET "/pads" for ::1 at 2015-11-29 03:23:45 +0800
+Processing by PadsController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `downcase' for nil:NilClass):
+  app/controllers/pads_controller.rb:71:in `index'
+
+
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.8ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (47.9ms)
+
+
+Started GET "/pads" for ::1 at 2015-11-29 03:26:16 +0800
+Processing by PadsController#index as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `downcase' for nil:NilClass):
+  app/controllers/pads_controller.rb:72:in `index'
+
+
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.7ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (59.1ms)
+
+
+Started GET "/pads" for ::1 at 2015-11-29 03:27:04 +0800
+Processing by PadsController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `downcase' for nil:NilClass):
+  app/controllers/pads_controller.rb:71:in `index'
+
+
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.1ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (47.7ms)
+
+
+Started GET "/pads" for ::1 at 2015-11-29 03:28:26 +0800
+Processing by PadsController#index as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `put' for #<PadsController:0x007f919cc797c0>):
+  app/controllers/application_controller.rb:11:in `hackpad'
+  app/controllers/pads_controller.rb:71:in `index'
+
+
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.4ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (53.2ms)
+
+
+Started GET "/pads" for ::1 at 2015-11-29 03:28:36 +0800
+Processing by PadsController#index as HTML
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `downcase' for nil:NilClass):
+  app/controllers/pads_controller.rb:71:in `index'
+
+
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.1ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.8ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.4ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (55.8ms)
+
+
+Started GET "/pads" for ::1 at 2015-11-29 03:34:45 +0800
+Processing by PadsController#index as HTML
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `request' for nil:NilClass):
+  app/controllers/pads_controller.rb:71:in `index'
+
+
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.6ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (52.5ms)
+
+
+Started GET "/pads" for ::1 at 2015-11-29 03:34:46 +0800
+Processing by PadsController#index as HTML
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `request' for nil:NilClass):
+  app/controllers/pads_controller.rb:71:in `index'
+
+
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.0ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (48.9ms)
+
+
+Started GET "/pads" for ::1 at 2015-11-29 03:35:05 +0800
+Processing by PadsController#index as HTML
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `request' for nil:NilClass):
+  app/controllers/pads_controller.rb:72:in `index'
+
+
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.9ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (56.8ms)
+
+
+Started GET "/pads" for ::1 at 2015-11-29 03:35:42 +0800
+Processing by PadsController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `request' for nil:NilClass):
+  app/controllers/pads_controller.rb:72:in `index'
+
+
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.5ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (52.4ms)
+
+
+Started GET "/pads" for ::1 at 2015-11-29 03:38:40 +0800
+Processing by PadsController#index as HTML
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `request' for nil:NilClass):
+  app/controllers/pads_controller.rb:73:in `index'
+
+
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.0ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.0ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (52.8ms)
+
+
+Started GET "/pads" for ::1 at 2015-11-29 03:39:01 +0800
+Processing by PadsController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `request' for nil:NilClass):
+  app/controllers/pads_controller.rb:74:in `index'
+
+
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.1ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (54.0ms)
+
+
+Started GET "/pads" for ::1 at 2015-11-29 03:39:33 +0800
+Processing by PadsController#index as HTML
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `request' for nil:NilClass):
+  app/controllers/pads_controller.rb:72:in `index'
+
+
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.6ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (47.9ms)
+
+
+Started GET "/pads" for ::1 at 2015-11-29 03:39:54 +0800
+Processing by PadsController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `downcase' for nil:NilClass):
+  app/controllers/pads_controller.rb:72:in `index'
+
+
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.0ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (51.6ms)
+
+
+Started GET "/pads" for ::1 at 2015-11-29 03:39:56 +0800
+Processing by PadsController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `downcase' for nil:NilClass):
+  app/controllers/pads_controller.rb:72:in `index'
+
+
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.8ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (50.4ms)
+
+
+Started GET "/pads" for ::1 at 2015-11-29 03:40:20 +0800
+Processing by PadsController#index as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `downcase' for nil:NilClass):
+  app/controllers/pads_controller.rb:73:in `index'
+
+
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.1ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (52.8ms)
+
+
+Started GET "/pads" for ::1 at 2015-11-29 03:40:54 +0800
+Processing by PadsController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `downcase' for nil:NilClass):
+  app/controllers/pads_controller.rb:73:in `index'
+
+
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.1ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (50.3ms)
+
+
+Started GET "/pads" for ::1 at 2015-11-29 03:41:23 +0800
+Processing by PadsController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `downcase' for nil:NilClass):
+  app/controllers/pads_controller.rb:74:in `index'
+
+
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.8ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (55.4ms)
+
+
+Started GET "/pads" for ::1 at 2015-11-29 03:43:03 +0800
+Processing by PadsController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `token' for "":String):
+  app/controllers/pads_controller.rb:74:in `index'
+
+
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.3ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (52.4ms)
+
+
+Started GET "/pads" for ::1 at 2015-11-29 03:44:20 +0800
+Processing by PadsController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `downcase' for nil:NilClass):
+  app/controllers/pads_controller.rb:74:in `index'
+
+
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.9ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (51.6ms)
+
+
+Started GET "/pads" for ::1 at 2015-11-29 03:52:13 +0800
+Processing by PadsController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `downcase' for nil:NilClass):
+  app/controllers/pads_controller.rb:73:in `index'
+
+
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.5ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (53.2ms)
+
+
+Started GET "/pads" for ::1 at 2015-11-29 03:52:23 +0800
+Processing by PadsController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `token' for "":String):
+  app/controllers/pads_controller.rb:73:in `index'
+
+
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.2ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (52.6ms)
+
+
+Started GET "/pads" for ::1 at 2015-11-29 03:52:39 +0800
+Processing by PadsController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `token' for "ee":String):
+  app/controllers/pads_controller.rb:73:in `index'
+
+
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.2ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (5.4ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (62.2ms)
+DEPRECATION WARNING: You didn't set `secret_key_base`. Read the upgrade documentation to learn more about this new config option. (called from service at /Users/jerry/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138)
+
+
+Started GET "/pads" for ::1 at 2015-11-29 03:56:39 +0800
+Processing by PadsController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `token' for "ee":String):
+  app/controllers/pads_controller.rb:73:in `index'
+
+
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.5ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (8.8ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (70.9ms)
+
+
+Started GET "/pads" for ::1 at 2015-11-29 03:56:57 +0800
+Processing by PadsController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `downcase' for nil:NilClass):
+  app/controllers/pads_controller.rb:73:in `index'
+
+
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.2ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.3ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (53.1ms)
+DEPRECATION WARNING: You didn't set `secret_key_base`. Read the upgrade documentation to learn more about this new config option. (called from service at /Users/jerry/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138)
+
+
+Started GET "/pads" for ::1 at 2015-11-29 04:04:52 +0800
+Processing by PadsController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `token' for "tokenhaha":String):
+  app/controllers/pads_controller.rb:73:in `index'
+
+
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.1ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (15.4ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (5.4ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (81.8ms)
+
+
+Started GET "/pads" for ::1 at 2015-11-29 04:09:33 +0800
+Processing by PadsController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `token' for "tKrTcxYzvqyG9e0rZI9D":String):
+  app/controllers/pads_controller.rb:73:in `index'
+
+
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.9ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (51.4ms)
+
+
+Started GET "/pads" for ::1 at 2015-11-29 04:12:10 +0800
+Processing by PadsController#index as HTML
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `downcase' for nil:NilClass):
+  app/controllers/pads_controller.rb:72:in `index'
+
+
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.7ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.6ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (54.9ms)
+DEPRECATION WARNING: You didn't set `secret_key_base`. Read the upgrade documentation to learn more about this new config option. (called from service at /Users/jerry/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138)
+
+
+Started GET "/pads" for ::1 at 2015-11-29 04:14:26 +0800
+
+LoadError (cannot load such file -- oauth):
+  app/controllers/application_controller.rb:1:in `<top (required)>'
+  app/controllers/pads_controller.rb:3:in `<top (required)>'
+
+
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.0ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (8.3ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (64.6ms)
+DEPRECATION WARNING: You didn't set `secret_key_base`. Read the upgrade documentation to learn more about this new config option. (called from service at /Users/jerry/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138)
+
+
+Started GET "/pads" for ::1 at 2015-11-29 04:16:35 +0800
+
+LoadError (cannot load such file -- oauth):
+  app/controllers/application_controller.rb:1:in `<top (required)>'
+  app/controllers/pads_controller.rb:3:in `<top (required)>'
+
+
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.2ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (5.3ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (74.2ms)
+
+
+Started GET "/pads" for ::1 at 2015-11-29 04:18:52 +0800
+Processing by PadsController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+NameError (uninitialized constant ApplicationController::OAuth):
+  app/controllers/application_controller.rb:11:in `hackpad'
+  app/controllers/pads_controller.rb:71:in `index'
+
+
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.4ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (47.5ms)
+DEPRECATION WARNING: You didn't set `secret_key_base`. Read the upgrade documentation to learn more about this new config option. (called from service at /Users/jerry/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138)
+
+
+Started GET "/assets/rails.png" for ::1 at 2015-11-29 04:23:19 +0800
+
+
+Started GET "/assets/rails.png" for ::1 at 2015-11-29 04:23:20 +0800
+
+
+Started GET "/pads" for ::1 at 2015-11-29 04:23:22 +0800
+Processing by PadsController#index as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `downcase' for nil:NilClass):
+  app/controllers/pads_controller.rb:72:in `index'
+
+
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (19.0ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (8.7ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (77.9ms)
+
+
+Started GET "/pads" for ::1 at 2015-11-29 04:23:23 +0800
+Processing by PadsController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `downcase' for nil:NilClass):
+  app/controllers/pads_controller.rb:72:in `index'
+
+
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.6ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (46.6ms)
+
+
+Started GET "/pads" for ::1 at 2015-11-29 04:23:42 +0800
+Processing by PadsController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `downcase' for nil:NilClass):
+  app/controllers/pads_controller.rb:73:in `index'
+
+
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.0ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (48.8ms)
+
+
+Started GET "/pads" for ::1 at 2015-11-29 04:30:41 +0800
+Processing by PadsController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `downcase' for nil:NilClass):
+  app/controllers/pads_controller.rb:73:in `index'
+
+
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.5ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (55.4ms)
+
+
+Started GET "/pads" for ::1 at 2015-11-29 04:35:44 +0800
+Processing by PadsController#index as HTML
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `downcase' for nil:NilClass):
+  app/controllers/pads_controller.rb:73:in `index'
+
+
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (15.2ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.9ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.5ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (88.4ms)
+
+
+Started GET "/pads" for ::1 at 2015-11-29 04:41:44 +0800
+Processing by PadsController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `authorize' for #<OAuth::Consumer:0x007fa5729dd7e8>):
+  app/controllers/pads_controller.rb:72:in `index'
+
+
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.0ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (49.2ms)
+
+
+Started GET "/pads" for ::1 at 2015-11-29 17:17:11 +0800
+Processing by PadsController#index as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `authorize' for #<OAuth::Consumer:0x007fa57145d7d8>):
+  app/controllers/pads_controller.rb:72:in `index'
+
+
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (12.7ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.8ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (68.8ms)
+
+
+Started GET "/pads" for ::1 at 2015-11-29 17:17:21 +0800
+Processing by PadsController#index as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `downcase' for nil:NilClass):
+  app/controllers/pads_controller.rb:73:in `index'
+
+
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.3ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (47.9ms)
+
+
+Started GET "/pads" for ::1 at 2015-11-29 17:17:27 +0800
+Processing by PadsController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `token' for "eee":String):
+  app/controllers/pads_controller.rb:73:in `index'
+
+
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.6ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (49.2ms)
+
+
+Started GET "/pads" for ::1 at 2015-11-29 17:19:18 +0800
+Processing by PadsController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `token' for "eee/eee":String):
+  app/controllers/pads_controller.rb:73:in `index'
+
+
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.6ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (49.1ms)
+DEPRECATION WARNING: You didn't set `secret_key_base`. Read the upgrade documentation to learn more about this new config option. (called from service at /Users/jerry/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138)
+
+
+Started GET "/assets/rails.png" for ::1 at 2015-11-29 20:57:19 +0800
+
+
+Started GET "/assets/rails.png" for ::1 at 2015-11-29 20:57:19 +0800
+
+
+Started GET "/pads" for ::1 at 2015-11-29 20:57:21 +0800
+
+LoadError (cannot load such file -- oauth):
+  app/controllers/application_controller.rb:1:in `<top (required)>'
+  app/controllers/pads_controller.rb:3:in `<top (required)>'
+
+
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.0ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (7.9ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (66.5ms)
+
+
+Started GET "/pads" for ::1 at 2015-11-29 20:57:21 +0800
+
+LoadError (cannot load such file -- oauth):
+  app/controllers/application_controller.rb:1:in `<top (required)>'
+  app/controllers/pads_controller.rb:3:in `<top (required)>'
+
+
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.7ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (46.2ms)
+
+
+Started GET "/pads" for ::1 at 2015-11-29 20:57:39 +0800
+Processing by PadsController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+NameError (uninitialized constant ApplicationController::OAuth):
+  app/controllers/application_controller.rb:11:in `hackpad'
+  app/controllers/pads_controller.rb:71:in `index'
+
+
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.1ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (46.3ms)
+DEPRECATION WARNING: You didn't set `secret_key_base`. Read the upgrade documentation to learn more about this new config option. (called from service at /Users/jerry/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138)
+
+
+Started GET "/pads" for ::1 at 2015-11-29 20:59:12 +0800
+Processing by PadsController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `token' for "eee/eee":String):
+  app/controllers/pads_controller.rb:73:in `index'
+
+
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.1ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (9.0ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (75.3ms)
+DEPRECATION WARNING: You didn't set `secret_key_base`. Read the upgrade documentation to learn more about this new config option. (called from service at /Users/jerry/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138)
+
+
+Started GET "/pads" for ::1 at 2015-11-29 21:00:40 +0800
+Processing by PadsController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `token' for "eee/eee":String):
+  app/controllers/pads_controller.rb:73:in `index'
+
+
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.9ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (13.6ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (68.7ms)
+DEPRECATION WARNING: You didn't set `secret_key_base`. Read the upgrade documentation to learn more about this new config option. (called from service at /Users/jerry/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138)
+
+
+Started GET "/pads" for ::1 at 2015-11-29 21:08:58 +0800
+Processing by PadsController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `token' for "eee/eee":String):
+  app/controllers/pads_controller.rb:73:in `index'
+
+
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.8ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (6.2ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (66.6ms)
+DEPRECATION WARNING: You didn't set `secret_key_base`. Read the upgrade documentation to learn more about this new config option. (called from service at /Users/jerry/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138)
+
+
+Started GET "/pads" for ::1 at 2015-11-29 21:10:01 +0800
+Processing by PadsController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+NameError (uninitialized constant ApplicationController::OAuth):
+  app/controllers/application_controller.rb:11:in `hackpad'
+  app/controllers/pads_controller.rb:71:in `index'
+
+
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.2ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (8.4ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (64.6ms)
+DEPRECATION WARNING: You didn't set `secret_key_base`. Read the upgrade documentation to learn more about this new config option. (called from service at /Users/jerry/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138)
+
+
+Started GET "/pads" for ::1 at 2015-11-29 21:10:51 +0800
+Processing by PadsController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `token' for "eee/eee":String):
+  app/controllers/pads_controller.rb:73:in `index'
+
+
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.4ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (20.1ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (85.7ms)
+DEPRECATION WARNING: You didn't set `secret_key_base`. Read the upgrade documentation to learn more about this new config option. (called from service at /Users/jerry/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138)
+
+
+Started GET "/pads" for ::1 at 2015-11-29 21:12:20 +0800
+Processing by PadsController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `token' for "eee/eee":String):
+  app/controllers/pads_controller.rb:73:in `index'
+
+
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.9ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.3ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (10.2ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (71.8ms)
+
+
+Started GET "/pads" for ::1 at 2015-11-29 21:13:11 +0800
+Processing by PadsController#index as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+NameError (undefined local variable or method `byebug' for #<PadsController:0x007f8ab2f1bc08>):
+  app/controllers/pads_controller.rb:72:in `index'
+
+
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.2ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (48.1ms)
+
+
+Started GET "/pads" for ::1 at 2015-11-29 21:13:58 +0800
+Processing by PadsController#index as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+NameError (undefined local variable or method `byebug' for #<PadsController:0x007f8ab39054f8>):
+  app/controllers/pads_controller.rb:72:in `index'
+
+
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.1ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (49.4ms)
+DEPRECATION WARNING: You didn't set `secret_key_base`. Read the upgrade documentation to learn more about this new config option. (called from service at /Users/jerry/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138)
+
+
+Started GET "/pads" for ::1 at 2015-11-29 21:14:17 +0800
+Processing by PadsController#index as HTML
+DEPRECATION WARNING: You didn't set `secret_key_base`. Read the upgrade documentation to learn more about this new config option. (called from service at /Users/jerry/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138)
+
+
+Started GET "/pads" for ::1 at 2015-11-29 21:20:24 +0800
+Processing by PadsController#index as HTML
+DEPRECATION WARNING: You didn't set `secret_key_base`. Read the upgrade documentation to learn more about this new config option. (called from service at /Users/jerry/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138)
+
+
+Started GET "/pads" for ::1 at 2015-11-29 21:21:10 +0800
+Processing by PadsController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `token' for "eee/eee":String):
+  app/controllers/pads_controller.rb:73:in `index'
+
+
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.1ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (8.9ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (62.7ms)
+DEPRECATION WARNING: You didn't set `secret_key_base`. Read the upgrade documentation to learn more about this new config option. (called from service at /Users/jerry/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138)
+
+
+Started GET "/pads" for ::1 at 2015-11-29 21:23:16 +0800
+Processing by PadsController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `token' for "eee/eee":String):
+  app/controllers/pads_controller.rb:73:in `index'
+
+
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.1ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (9.9ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (66.6ms)
+DEPRECATION WARNING: You didn't set `secret_key_base`. Read the upgrade documentation to learn more about this new config option. (called from service at /Users/jerry/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138)
+
+
+Started GET "/pads" for ::1 at 2015-11-29 21:30:54 +0800
+Processing by PadsController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `token' for "eee/eee":String):
+  app/controllers/pads_controller.rb:73:in `index'
+
+
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.1ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (10.5ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (69.2ms)
+DEPRECATION WARNING: You didn't set `secret_key_base`. Read the upgrade documentation to learn more about this new config option. (called from service at /Users/jerry/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138)
+
+
+Started GET "/pads" for ::1 at 2015-11-29 21:44:30 +0800
+Processing by PadsController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `token' for "eee/eee":String):
+  app/controllers/pads_controller.rb:73:in `index'
+
+
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.0ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (9.2ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (65.7ms)
+DEPRECATION WARNING: You didn't set `secret_key_base`. Read the upgrade documentation to learn more about this new config option. (called from service at /Users/jerry/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138)
+
+
+Started GET "/pads" for ::1 at 2015-11-29 21:44:42 +0800
+Processing by PadsController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `token' for "eee/eee":String):
+  app/controllers/pads_controller.rb:73:in `index'
+
+
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.2ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (9.9ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (65.3ms)
+
+
+Started GET "/pads" for ::1 at 2015-11-29 21:44:43 +0800
+Processing by PadsController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `token' for "eee/eee":String):
+  app/controllers/pads_controller.rb:73:in `index'
+
+
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.3ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (44.4ms)
+DEPRECATION WARNING: You didn't set `secret_key_base`. Read the upgrade documentation to learn more about this new config option. (called from service at /Users/jerry/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138)
+
+
+Started GET "/pads" for ::1 at 2015-11-29 21:49:44 +0800
+Processing by PadsController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+NameError (uninitialized constant ApplicationController::OAuth):
+  app/controllers/application_controller.rb:11:in `hackpad'
+  app/controllers/pads_controller.rb:71:in `index'
+
+
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.7ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (11.0ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (63.5ms)
+DEPRECATION WARNING: You didn't set `secret_key_base`. Read the upgrade documentation to learn more about this new config option. (called from service at /Users/jerry/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138)
+
+
+Started GET "/pads" for ::1 at 2015-11-29 21:53:21 +0800
+Processing by PadsController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+NameError (uninitialized constant ApplicationController::OAuth):
+  app/controllers/application_controller.rb:11:in `hackpad'
+  app/controllers/pads_controller.rb:71:in `index'
+
+
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.3ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (8.6ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (63.4ms)
+DEPRECATION WARNING: You didn't set `secret_key_base`. Read the upgrade documentation to learn more about this new config option. (called from service at /Users/jerry/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138)
+
+
+Started GET "/pads" for ::1 at 2015-11-29 21:54:42 +0800
+Processing by PadsController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+NameError (uninitialized constant ApplicationController::OAuth):
+  app/controllers/application_controller.rb:11:in `hackpad'
+  app/controllers/pads_controller.rb:71:in `index'
+
+
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.3ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (7.9ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (60.3ms)
+DEPRECATION WARNING: You didn't set `secret_key_base`. Read the upgrade documentation to learn more about this new config option. (called from service at /Users/jerry/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138)
+
+
+Started GET "/pads" for ::1 at 2015-11-29 21:57:19 +0800
+Processing by PadsController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+NameError (uninitialized constant ApplicationController::OAuth):
+  app/controllers/application_controller.rb:11:in `hackpad'
+  app/controllers/pads_controller.rb:71:in `index'
+
+
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.3ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.6ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (69.7ms)
+
+
+Started GET "/pads" for ::1 at 2015-11-29 21:58:25 +0800
+Processing by PadsController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `token' for "eee/eee":String):
+  lib/oauth/client/helper.rb:34:in `oauth_parameters'
+  lib/oauth/client/helper.rb:74:in `header'
+  lib/oauth/client/net_http.rb:90:in `set_oauth_header'
+  lib/oauth/client/net_http.rb:30:in `oauth!'
+  lib/oauth/consumer.rb:225:in `sign!'
+  lib/oauth/consumer.rb:191:in `create_signed_request'
+  lib/oauth/consumer.rb:162:in `request'
+  app/controllers/pads_controller.rb:73:in `index'
+
+
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.9ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (46.4ms)
+
+
+Started GET "/pads" for ::1 at 2015-11-29 22:00:36 +0800
+Processing by PadsController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `downcase' for nil:NilClass):
+  lib/oauth/request_proxy/base.rb:93:in `normalized_uri'
+  lib/oauth/request_proxy/base.rb:113:in `signature_base_string'
+  lib/oauth/signature/base.rb:77:in `signature_base_string'
+  lib/oauth/signature/hmac/base.rb:12:in `digest'
+  lib/oauth/signature/base.rb:65:in `signature'
+  lib/oauth/signature.rb:23:in `sign'
+  lib/oauth/client/helper.rb:45:in `signature'
+  lib/oauth/client/helper.rb:75:in `header'
+  lib/oauth/client/net_http.rb:90:in `set_oauth_header'
+  lib/oauth/client/net_http.rb:30:in `oauth!'
+  lib/oauth/consumer.rb:225:in `sign!'
+  lib/oauth/consumer.rb:191:in `create_signed_request'
+  lib/oauth/consumer.rb:162:in `request'
+  app/controllers/pads_controller.rb:73:in `index'
+
+
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.8ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (51.1ms)
+
+
+Started GET "/pads" for ::1 at 2015-11-29 22:08:20 +0800
+Processing by PadsController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `downcase' for nil:NilClass):
+  lib/oauth/request_proxy/base.rb:93:in `normalized_uri'
+  lib/oauth/request_proxy/base.rb:113:in `signature_base_string'
+  lib/oauth/signature/base.rb:77:in `signature_base_string'
+  lib/oauth/signature/hmac/base.rb:12:in `digest'
+  lib/oauth/signature/base.rb:65:in `signature'
+  lib/oauth/signature.rb:23:in `sign'
+  lib/oauth/client/helper.rb:45:in `signature'
+  lib/oauth/client/helper.rb:75:in `header'
+  lib/oauth/client/net_http.rb:90:in `set_oauth_header'
+  lib/oauth/client/net_http.rb:30:in `oauth!'
+  lib/oauth/consumer.rb:225:in `sign!'
+  lib/oauth/consumer.rb:191:in `create_signed_request'
+  lib/oauth/consumer.rb:162:in `request'
+  app/controllers/pads_controller.rb:73:in `index'
+
+
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.0ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (51.9ms)
+
+
+Started GET "/pads" for ::1 at 2015-11-29 22:08:54 +0800
+Processing by PadsController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `downcase' for nil:NilClass):
+  lib/oauth/request_proxy/base.rb:93:in `normalized_uri'
+  lib/oauth/request_proxy/base.rb:113:in `signature_base_string'
+  lib/oauth/signature/base.rb:77:in `signature_base_string'
+  lib/oauth/signature/hmac/base.rb:12:in `digest'
+  lib/oauth/signature/base.rb:65:in `signature'
+  lib/oauth/signature.rb:23:in `sign'
+  lib/oauth/client/helper.rb:45:in `signature'
+  lib/oauth/client/helper.rb:75:in `header'
+  lib/oauth/client/net_http.rb:90:in `set_oauth_header'
+  lib/oauth/client/net_http.rb:30:in `oauth!'
+  lib/oauth/consumer.rb:225:in `sign!'
+  lib/oauth/consumer.rb:191:in `create_signed_request'
+  lib/oauth/consumer.rb:162:in `request'
+  app/controllers/pads_controller.rb:73:in `index'
+
+
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.7ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (47.3ms)
+
+
+Started GET "/pads" for ::1 at 2015-11-29 22:09:13 +0800
+Processing by PadsController#index as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `downcase' for nil:NilClass):
+  lib/oauth/request_proxy/base.rb:93:in `normalized_uri'
+  lib/oauth/request_proxy/base.rb:113:in `signature_base_string'
+  lib/oauth/signature/base.rb:77:in `signature_base_string'
+  lib/oauth/signature/hmac/base.rb:12:in `digest'
+  lib/oauth/signature/base.rb:65:in `signature'
+  lib/oauth/signature.rb:23:in `sign'
+  lib/oauth/client/helper.rb:45:in `signature'
+  lib/oauth/client/helper.rb:75:in `header'
+  lib/oauth/client/net_http.rb:90:in `set_oauth_header'
+  lib/oauth/client/net_http.rb:30:in `oauth!'
+  lib/oauth/consumer.rb:225:in `sign!'
+  lib/oauth/consumer.rb:191:in `create_signed_request'
+  lib/oauth/consumer.rb:162:in `request'
+  app/controllers/pads_controller.rb:73:in `index'
+
+
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.4ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (45.9ms)
+
+
+Started GET "/pads" for ::1 at 2015-11-29 22:09:47 +0800
+Processing by PadsController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `downcase' for nil:NilClass):
+  lib/oauth/request_proxy/base.rb:93:in `normalized_uri'
+  lib/oauth/request_proxy/base.rb:113:in `signature_base_string'
+  lib/oauth/signature/base.rb:77:in `signature_base_string'
+  lib/oauth/signature/hmac/base.rb:12:in `digest'
+  lib/oauth/signature/base.rb:65:in `signature'
+  lib/oauth/signature.rb:23:in `sign'
+  lib/oauth/client/helper.rb:45:in `signature'
+  lib/oauth/client/helper.rb:75:in `header'
+  lib/oauth/client/net_http.rb:90:in `set_oauth_header'
+  lib/oauth/client/net_http.rb:30:in `oauth!'
+  lib/oauth/consumer.rb:225:in `sign!'
+  lib/oauth/consumer.rb:191:in `create_signed_request'
+  lib/oauth/consumer.rb:162:in `request'
+  app/controllers/pads_controller.rb:73:in `index'
+
+
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.5ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.3ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (47.2ms)
+
+
+Started GET "/pads" for ::1 at 2015-11-29 22:10:02 +0800
+Processing by PadsController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `downcase' for nil:NilClass):
+  lib/oauth/request_proxy/base.rb:93:in `normalized_uri'
+  lib/oauth/request_proxy/base.rb:113:in `signature_base_string'
+  lib/oauth/signature/base.rb:77:in `signature_base_string'
+  lib/oauth/signature/hmac/base.rb:12:in `digest'
+  lib/oauth/signature/base.rb:65:in `signature'
+  lib/oauth/signature.rb:23:in `sign'
+  lib/oauth/client/helper.rb:45:in `signature'
+  lib/oauth/client/helper.rb:75:in `header'
+  lib/oauth/client/net_http.rb:90:in `set_oauth_header'
+  lib/oauth/client/net_http.rb:30:in `oauth!'
+  lib/oauth/consumer.rb:225:in `sign!'
+  lib/oauth/consumer.rb:191:in `create_signed_request'
+  lib/oauth/consumer.rb:162:in `request'
+  app/controllers/pads_controller.rb:73:in `index'
+
+
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.2ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (46.0ms)
+DEPRECATION WARNING: You didn't set `secret_key_base`. Read the upgrade documentation to learn more about this new config option. (called from service at /Users/jerry/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138)
+
+
+Started GET "/pads" for ::1 at 2015-11-29 22:10:14 +0800
+Processing by PadsController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `downcase' for nil:NilClass):
+  lib/oauth/request_proxy/base.rb:97:in `normalized_uri'
+  lib/oauth/request_proxy/base.rb:117:in `signature_base_string'
+  lib/oauth/signature/base.rb:77:in `signature_base_string'
+  lib/oauth/signature/hmac/base.rb:12:in `digest'
+  lib/oauth/signature/base.rb:65:in `signature'
+  lib/oauth/signature.rb:23:in `sign'
+  lib/oauth/client/helper.rb:45:in `signature'
+  lib/oauth/client/helper.rb:75:in `header'
+  lib/oauth/client/net_http.rb:90:in `set_oauth_header'
+  lib/oauth/client/net_http.rb:30:in `oauth!'
+  lib/oauth/consumer.rb:225:in `sign!'
+  lib/oauth/consumer.rb:191:in `create_signed_request'
+  lib/oauth/consumer.rb:162:in `request'
+  app/controllers/pads_controller.rb:73:in `index'
+
+
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.5ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.9ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (86.0ms)
+DEPRECATION WARNING: You didn't set `secret_key_base`. Read the upgrade documentation to learn more about this new config option. (called from service at /Users/jerry/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138)
+
+
+Started GET "/pads" for ::1 at 2015-11-29 22:10:42 +0800
+Processing by PadsController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `downcase' for nil:NilClass):
+  lib/oauth/request_proxy/base.rb:97:in `normalized_uri'
+  lib/oauth/request_proxy/base.rb:117:in `signature_base_string'
+  lib/oauth/signature/base.rb:77:in `signature_base_string'
+  lib/oauth/signature/hmac/base.rb:12:in `digest'
+  lib/oauth/signature/base.rb:65:in `signature'
+  lib/oauth/signature.rb:23:in `sign'
+  lib/oauth/client/helper.rb:45:in `signature'
+  lib/oauth/client/helper.rb:75:in `header'
+  lib/oauth/client/net_http.rb:90:in `set_oauth_header'
+  lib/oauth/client/net_http.rb:30:in `oauth!'
+  lib/oauth/consumer.rb:225:in `sign!'
+  lib/oauth/consumer.rb:191:in `create_signed_request'
+  lib/oauth/consumer.rb:162:in `request'
+  app/controllers/pads_controller.rb:73:in `index'
+
+
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.7ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (6.9ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (71.3ms)
+
+
+Started GET "/pads" for ::1 at 2015-11-29 22:10:44 +0800
+Processing by PadsController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `downcase' for nil:NilClass):
+  lib/oauth/request_proxy/base.rb:97:in `normalized_uri'
+  lib/oauth/request_proxy/base.rb:117:in `signature_base_string'
+  lib/oauth/signature/base.rb:77:in `signature_base_string'
+  lib/oauth/signature/hmac/base.rb:12:in `digest'
+  lib/oauth/signature/base.rb:65:in `signature'
+  lib/oauth/signature.rb:23:in `sign'
+  lib/oauth/client/helper.rb:45:in `signature'
+  lib/oauth/client/helper.rb:75:in `header'
+  lib/oauth/client/net_http.rb:90:in `set_oauth_header'
+  lib/oauth/client/net_http.rb:30:in `oauth!'
+  lib/oauth/consumer.rb:225:in `sign!'
+  lib/oauth/consumer.rb:191:in `create_signed_request'
+  lib/oauth/consumer.rb:162:in `request'
+  app/controllers/pads_controller.rb:73:in `index'
+
+
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.6ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (46.6ms)
+
+
+Started GET "/pads" for ::1 at 2015-11-29 22:10:45 +0800
+Processing by PadsController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `downcase' for nil:NilClass):
+  lib/oauth/request_proxy/base.rb:97:in `normalized_uri'
+  lib/oauth/request_proxy/base.rb:117:in `signature_base_string'
+  lib/oauth/signature/base.rb:77:in `signature_base_string'
+  lib/oauth/signature/hmac/base.rb:12:in `digest'
+  lib/oauth/signature/base.rb:65:in `signature'
+  lib/oauth/signature.rb:23:in `sign'
+  lib/oauth/client/helper.rb:45:in `signature'
+  lib/oauth/client/helper.rb:75:in `header'
+  lib/oauth/client/net_http.rb:90:in `set_oauth_header'
+  lib/oauth/client/net_http.rb:30:in `oauth!'
+  lib/oauth/consumer.rb:225:in `sign!'
+  lib/oauth/consumer.rb:191:in `create_signed_request'
+  lib/oauth/consumer.rb:162:in `request'
+  app/controllers/pads_controller.rb:73:in `index'
+
+
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.0ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (44.1ms)
+
+
+Started GET "/pads" for ::1 at 2015-11-29 22:10:46 +0800
+Processing by PadsController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `downcase' for nil:NilClass):
+  lib/oauth/request_proxy/base.rb:97:in `normalized_uri'
+  lib/oauth/request_proxy/base.rb:117:in `signature_base_string'
+  lib/oauth/signature/base.rb:77:in `signature_base_string'
+  lib/oauth/signature/hmac/base.rb:12:in `digest'
+  lib/oauth/signature/base.rb:65:in `signature'
+  lib/oauth/signature.rb:23:in `sign'
+  lib/oauth/client/helper.rb:45:in `signature'
+  lib/oauth/client/helper.rb:75:in `header'
+  lib/oauth/client/net_http.rb:90:in `set_oauth_header'
+  lib/oauth/client/net_http.rb:30:in `oauth!'
+  lib/oauth/consumer.rb:225:in `sign!'
+  lib/oauth/consumer.rb:191:in `create_signed_request'
+  lib/oauth/consumer.rb:162:in `request'
+  app/controllers/pads_controller.rb:73:in `index'
+
+
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.8ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (45.5ms)
+
+
+Started GET "/pads" for ::1 at 2015-11-29 22:10:49 +0800
+Processing by PadsController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `downcase' for nil:NilClass):
+  lib/oauth/request_proxy/base.rb:97:in `normalized_uri'
+  lib/oauth/request_proxy/base.rb:117:in `signature_base_string'
+  lib/oauth/signature/base.rb:77:in `signature_base_string'
+  lib/oauth/signature/hmac/base.rb:12:in `digest'
+  lib/oauth/signature/base.rb:65:in `signature'
+  lib/oauth/signature.rb:23:in `sign'
+  lib/oauth/client/helper.rb:45:in `signature'
+  lib/oauth/client/helper.rb:75:in `header'
+  lib/oauth/client/net_http.rb:90:in `set_oauth_header'
+  lib/oauth/client/net_http.rb:30:in `oauth!'
+  lib/oauth/consumer.rb:225:in `sign!'
+  lib/oauth/consumer.rb:191:in `create_signed_request'
+  lib/oauth/consumer.rb:162:in `request'
+  app/controllers/pads_controller.rb:73:in `index'
+
+
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.8ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (46.7ms)
+
+
+Started GET "/pads" for ::1 at 2015-11-29 22:12:26 +0800
+Processing by PadsController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `downcase' for nil:NilClass):
+  lib/oauth/request_proxy/base.rb:97:in `normalized_uri'
+  lib/oauth/request_proxy/base.rb:117:in `signature_base_string'
+  lib/oauth/signature/base.rb:77:in `signature_base_string'
+  lib/oauth/signature/hmac/base.rb:12:in `digest'
+  lib/oauth/signature/base.rb:65:in `signature'
+  lib/oauth/signature.rb:23:in `sign'
+  lib/oauth/client/helper.rb:45:in `signature'
+  lib/oauth/client/helper.rb:75:in `header'
+  lib/oauth/client/net_http.rb:90:in `set_oauth_header'
+  lib/oauth/client/net_http.rb:30:in `oauth!'
+  lib/oauth/consumer.rb:225:in `sign!'
+  lib/oauth/consumer.rb:191:in `create_signed_request'
+  lib/oauth/consumer.rb:162:in `request'
+  app/controllers/pads_controller.rb:73:in `index'
+
+
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.6ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (49.3ms)
+DEPRECATION WARNING: You didn't set `secret_key_base`. Read the upgrade documentation to learn more about this new config option. (called from service at /Users/jerry/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138)
+
+
+Started GET "/pads" for ::1 at 2015-11-29 22:12:37 +0800
+Processing by PadsController#index as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `+' for nil:NilClass):
+  lib/oauth/consumer.rb:164:in `request'
+  app/controllers/pads_controller.rb:73:in `index'
+
+
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.3ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.7ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (53.3ms)
+DEPRECATION WARNING: You didn't set `secret_key_base`. Read the upgrade documentation to learn more about this new config option. (called from service at /Users/jerry/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138)
+
+
+Started GET "/pads" for ::1 at 2015-11-29 22:15:54 +0800
+Processing by PadsController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `downcase' for nil:NilClass):
+  lib/oauth/request_proxy/base.rb:100:in `normalized_uri'
+  lib/oauth/request_proxy/base.rb:120:in `signature_base_string'
+  lib/oauth/signature/base.rb:77:in `signature_base_string'
+  lib/oauth/signature/hmac/base.rb:12:in `digest'
+  lib/oauth/signature/base.rb:65:in `signature'
+  lib/oauth/signature.rb:23:in `sign'
+  lib/oauth/client/helper.rb:45:in `signature'
+  lib/oauth/client/helper.rb:75:in `header'
+  lib/oauth/client/net_http.rb:90:in `set_oauth_header'
+  lib/oauth/client/net_http.rb:30:in `oauth!'
+  lib/oauth/consumer.rb:225:in `sign!'
+  lib/oauth/consumer.rb:191:in `create_signed_request'
+  lib/oauth/consumer.rb:162:in `request'
+  app/controllers/pads_controller.rb:73:in `index'
+
+
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.7ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (9.3ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (77.6ms)
+DEPRECATION WARNING: You didn't set `secret_key_base`. Read the upgrade documentation to learn more about this new config option. (called from service at /Users/jerry/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138)
+
+
+Started GET "/assets/rails.png" for ::1 at 2015-11-29 22:18:55 +0800
+
+
+Started GET "/pads" for ::1 at 2015-11-29 22:18:57 +0800
+Processing by PadsController#index as HTML
+#<Net::HTTPUnauthorized 401 Unauthorized readbody=true>: {"success":false,"error":"Domain id does not match request."}
+Completed 400 Bad Request in 1807ms (ActiveRecord: 0.0ms)
+DEPRECATION WARNING: You didn't set `secret_key_base`. Read the upgrade documentation to learn more about this new config option. (called from service at /Users/jerry/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138)
+
+
+Started GET "/pads" for ::1 at 2015-11-29 22:21:57 +0800
+Processing by PadsController#index as HTML
+Completed 500 Internal Server Error in 1083ms (ActiveRecord: 0.0ms)
+
+ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"pads", :id=>nil} missing required keys: [:id]):
+  app/controllers/pads_controller.rb:77:in `index'
+
+
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.3ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.2ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (79.3ms)
+
+
+Started GET "/pads" for ::1 at 2015-11-29 22:24:01 +0800
+Processing by PadsController#index as HTML
+Completed 500 Internal Server Error in 1527ms (ActiveRecord: 0.0ms)
+
+ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"pads", :id=>nil} missing required keys: [:id]):
+  app/controllers/pads_controller.rb:78:in `index'
+
+
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.2ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (46.0ms)
+
+
+Started GET "/pads" for ::1 at 2015-11-29 22:25:39 +0800
+Processing by PadsController#index as HTML
+Completed 500 Internal Server Error in 1049ms (ActiveRecord: 0.0ms)
+
+ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"pads", :id=>nil} missing required keys: [:id]):
+  app/controllers/pads_controller.rb:79:in `index'
+
+
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (17.4ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (61.6ms)
+
+
+Started GET "/pads" for ::1 at 2015-11-29 22:27:16 +0800
+Processing by PadsController#index as HTML
+  Rendered pads/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 1661ms (Views: 229.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2015-11-29 22:27:18 +0800
+
+
+Started GET "/assets/application.js?body=1" for ::1 at 2015-11-29 22:27:18 +0800
+
+
+Started GET "/assets/jquery.js?body=1" for ::1 at 2015-11-29 22:27:18 +0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for ::1 at 2015-11-29 22:27:18 +0800
+
+
+Started GET "/RbYdI5RLJMI" for ::1 at 2015-11-29 22:27:24 +0800
+
+ActionController::RoutingError (No route matches [GET] "/RbYdI5RLJMI"):
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/jerry/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/jerry/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/jerry/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.1ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/routes/_table.html.erb (21.5ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (132.5ms)
+
+
+Started GET "/RbYdI5RLJMI" for ::1 at 2015-11-29 22:28:15 +0800
+
+ActionController::RoutingError (No route matches [GET] "/RbYdI5RLJMI"):
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/jerry/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/jerry/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/jerry/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.2ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.3ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/jerry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (63.1ms)
+
+
+Started GET "/pads/new" for ::1 at 2015-11-29 22:30:42 +0800
+Processing by PadsController#new as HTML
+  Rendered pads/_form.html.erb (1.3ms)
+  Rendered pads/new.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 24ms (Views: 24.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/rails.png" for ::1 at 2015-11-30 01:26:02 +0800

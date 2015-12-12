@@ -1,0 +1,41 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+		<script src="https://hackpad.com/static/hackpad.js"></script> 
+
+		<style>
+			.menu{
+				float:left;
+				width: 20%;
+				
+
+			}
+			.menu li{
+				padding: 10px;
+				border: 1px #000;
+			}
+			.menu li:hover{
+				
+			}
+			.pad-area{
+				float: left;
+				width: 80%;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="menu">
+			<li>演算法</li>
+			<li>作業系統</li>
+		</div>
+		<div class="pad-area">
+			<div class="pad" id="pad1"></div>
+			<div class="pad" id="pad2"></div>
+		</div>
+	</body>
+	<script type="text/javascript">
+    hackpad.render($('#pad1'),'U07gFMENtq4','openeducationresource');
+    hackpad.render($('#pad2'),'U07gFMENtq4','openeducationresource');
+  </script>
+</html>

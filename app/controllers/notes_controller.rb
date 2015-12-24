@@ -33,4 +33,10 @@ class NotesController < ApplicationController
   def note_params
     params.require(:note).permit(:title)
   end
+
+  def get_note
+    @notes = Note.all
+  end
+
+  helper_method :get_note
 end

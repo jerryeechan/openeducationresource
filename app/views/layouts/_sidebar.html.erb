@@ -1,4 +1,7 @@
 <%= link_to 'New Pad', new_pad_path %>
 <ul class="side-note">
-  <li><button class='button'>新增章節</button></li>
+  <% get_note.each do|note|%>
+    <%= note.title%>
+  <% end -%>
+    <li><button class='button'>新增章節</button></li>
 </ul>

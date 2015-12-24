@@ -27,7 +27,7 @@ gem "byebug"
 gem 'figaro'
 gem 'responders', '~> 2.0'
 gem 'best_in_place', '3.0.3'
-gem "koala", "~> 2.2"
+#gem "koala", "~> 2.2"
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 

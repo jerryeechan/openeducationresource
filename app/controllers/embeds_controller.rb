@@ -3,10 +3,11 @@ class EmbedsController < ApplicationController
 
   # GET /pads/1/embed
   def show
+    puts params[:pad_id]
     opts = {
       :padId => params[:pad_id],
-      :email => 'teuser@hackpad.test',
-      :name => 'tess e. user'
+      :email => 'anonymous@hackpad.user',
+      :name => '匿名用戶'
     }
     req = hackpad.create_signed_request :get, "/ep/api/embed-pad?#{opts.to_query}", nil, { :scheme => :query_string }
     respond_with @pad_url = hackpad.uri + req.path

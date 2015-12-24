@@ -41,7 +41,8 @@ module Hpjsdemo
 
     # Enable escaping HTML in JSON.
     config.active_support.escape_html_entities_in_json = true
-
+    config.action_controller.default_url_options = { :trailing_slash => true }
+    config.assets.digest = false 
     # Use SQL instead of Active Record's schema dumper when creating the database.
     # This is necessary if your schema can't be completely dumped by the schema dumper,
     # like if you have constraints or database-specific column types
@@ -54,10 +55,7 @@ module Hpjsdemo
     
     #config.active_record.whitelist_attributes = true
     config.time_zone = "Taipei"
-    # Enable the asset pipeline
-    config.assets.enabled = true
-
-    # Version of your assets, change this if you want to expire all your assets
-    config.assets.version = '1.0'
+    
+    
   end
 end

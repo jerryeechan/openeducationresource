@@ -1,16 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Hpjsdemo</title>
+  <title>一起學</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
+  <%= javascript_include_tag "application", 'data-turbolinks-track'=>true %>
   <%= csrf_meta_tags %>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
   <script src="<%= ENV['HACKPAD_SERVER'] %>/static/hackpad.js" type="text/javascript"></script>
 </head>
 <body>
 
-<%= yield %>
+<div class="container-fluid">
+  <div class="sidebar col-md-2">
+      <%= render 'layouts/sidebar' %>
+  </div>
+
+  <div class="content col-md-10">
+      <%= yield %>
+  </div>
+</div>
 
 </body>
 </html>

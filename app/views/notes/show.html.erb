@@ -1,0 +1,4 @@
+<%= best_in_place @note, :title, :as => :input %>
+<% @note.chapters.each do |chapter| %>
+  <%= chapter.title %>
+<% end %>

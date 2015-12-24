@@ -6,8 +6,11 @@ class PadsController < ApplicationController
 
   # GET /pads/1
   def show
+    req = hackpad.request :post, "/api/1.0/user/create?email=test@ee.com.tw&name=nono"
+    puts(req)
     @pad_id = params[:id]
 
+=begin    
     res = hackpad.request :get, "/api/1.0/pad/#{@pad_id}/content.txt"
 
     if res.is_a? Net::HTTPSuccess
@@ -15,8 +18,22 @@ class PadsController < ApplicationController
     else
       logger.warn "#{res.inspect}: #{res.body}"
       head :bad_request
-    end    
+    end   
+=end
+
+    puts 'Pad_id:'
+
+    puts params[:id]
+    opts = {
+      :padId => params[:id],
+      #:email => 'anonymous@hackpad.user',
+      :email => 'pupu1416@yahoo.com.tw',
+      :name => 'pupu11'
+    }
+    req = hackpad.create_signed_request :get, "/ep/api/embed-pad?#{opts.to_query}", nil, { :scheme => :query_string }
+    respond_with @pad_url = hackpad.uri + req.path
   end
+
 
   # GET /pads/new
   def new
@@ -24,9 +41,11 @@ class PadsController < ApplicationController
 
   # POST /pads
   def create
-    content = params[:content]
+    
 
-    res = hackpad.request :post, "/api/1.0/pad/create", nil, {}, content, { 'Content-Type' => 'text/plain' }
+    content = params[:content]
+    @user = 'test@yahoo.com.tw|hackpad'
+    res = hackpad.request :post, "/api/1.0/pad/create?asUser=#{@user}", nil, {}, content, { 'Content-Type' => 'text/plain' }
 
     if res.is_a? Net::HTTPSuccess
       json = ActiveSupport::JSON.decode res.body
@@ -75,7 +94,7 @@ class PadsController < ApplicationController
     if res.is_a? Net::HTTPSuccess
 
       @pads = ActiveSupport::JSON.decode(res.body)
-      #puts(json)
+      puts @pads 
 
       #redirect_to pad_path @pad_id
     else

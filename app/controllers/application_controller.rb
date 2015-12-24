@@ -13,5 +13,4 @@ class ApplicationController < ActionController::Base
     }
   	return @hackpad
   end
-  
 end

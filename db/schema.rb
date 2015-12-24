@@ -11,6 +11,53 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20151223081759) do
+
+  create_table "chapters", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string   "title"
+    t.integer  "index"
+    t.integer  "note_id"
+  end
+
+  add_index "chapters", ["index"], name: "index_chapters_on_index"
+  add_index "chapters", ["note_id"], name: "index_chapters_on_note_id"
+
+  create_table "notes", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string   "title"
+  end
+
+  create_table "pads", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string   "url"
+  end
+
+  create_table "questions", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string   "padId"
+    t.integer  "section_id"
+  end
+
+  add_index "questions", ["section_id"], name: "index_questions_on_section_id"
+
+  create_table "sections", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string   "padId"
+    t.string   "title"
+    t.integer  "chpater_id"
+  end
+
+  add_index "sections", ["chpater_id"], name: "index_sections_on_chpater_id"
+
+  create_table "users", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
 end

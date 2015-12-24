@@ -7,4 +7,10 @@ Hpjsdemo::Application.routes.draw do
     end
     resources 'revisions', :only => [ :index, :show ]
   end
+
+  resources :notes do
+    resources :chapters do
+      resources :sections
+    end
+  end
 end

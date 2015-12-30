@@ -5,8 +5,9 @@ class SectionsController < ApplicationController
   def show
 
     @section = Section.find(params[:id])
-=begin    
-    @user_email = current_user.email
+
+    #@user_email = current_user.email
+    @user_email = 
     res = hackpad.request :get, "/api/1.0/pad/#{@section.padId}/content.txt?asUser=#{@user_email}"
 
     if res.is_a? Net::HTTPSuccess
@@ -16,7 +17,6 @@ class SectionsController < ApplicationController
       puts res
       puts res.body
     end   
-=end
     
     
     opts = {
@@ -59,14 +59,17 @@ class SectionsController < ApplicationController
       redirect_to @section
     else # mode == new
       @user_email = current_user.email
-      res = hackpad.request :post, "/api/1.0/pad/create?asUser=#{@user_email}|hackpad", nil, {}, params[:section][:title], { 'Content-Type' => 'text/plain' }
+      puts @user_email
+      @user_email = 'pupu1416@yahoo.com.tw'
+      puts @user_email
+      puts "/api/1.0/pad/create?asUser=#{@user_email}"
+      puts params[:section][:title]
+      res = hackpad.request :post, "/api/1.0/pad/create?asUser=#{@user_email}", nil, {}, params[:section][:title], { 'Content-Type' => 'text/plain' }
 
       if res.is_a? Net::HTTPSuccess
-
         json = ActiveSupport::JSON.decode res.body
         params[:section][:padId] = json['padId']
         @section = @chapter.sections.create(section_param)
-
         redirect_to @section
       else
         logger.warn "#{res.inspect}: #{res.body}"

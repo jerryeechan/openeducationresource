@@ -1,15 +1,33 @@
 .sidebar{
-  
-}
-.side-note{
-  overflow-y: auto;
-  position: absolute;
-  
+    // width: 400px;
+  overflow: auto;
+  height: 100vh;
+  background-color: #DCDCDC;
+  border: 1px solid red;
 }
 .content{
-  
+  height: 100vh;
+  overflow: auto;
 }
 
 iframe{
   overflow: scroll;
+}
+
+.col2 {
+  border: 9px solid green;
+}
+
+.rowfix {
+  position: fixed;
+  top: 0;
+}
+
+.pad
+{
+  width: 1080px;
+}
+#pad_area
+{
+  width: 1080px;
 }

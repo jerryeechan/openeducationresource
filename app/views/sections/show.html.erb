@@ -2,7 +2,8 @@
 <%= best_in_place @section,:title%>
 <div id="loadText<%= @section.padId %>">loading</div>
 <div id="pad<%= @section.padId %>" style="width:1080px; height:100px"></div>
-<%= link_to '新增問題' new_question_path%>
+<div id="pad" style="width:800px; height:100%"></div>
+<div id="pad_area"></div>
 <script type="text/javascript">
 $(function () {
   console.log($("#pad<%= @section.padId %>"));

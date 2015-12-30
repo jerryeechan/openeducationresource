@@ -4,7 +4,7 @@ class CreateChapters < ActiveRecord::Migration
 
       t.timestamps null: false
       t.string :title
-      t.integer :index ,unique: true, index: true
+      t.integer :index
     end
   end
 end

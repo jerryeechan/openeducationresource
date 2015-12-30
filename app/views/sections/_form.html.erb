@@ -1,0 +1,12 @@
+<div class="create_section form">
+<%= form_for([@chapter, @chapter.sections.build]) do |f| %>
+  <p><%= radio_button_tag(:mode, "new", true) %> 新增
+  <%= radio_button_tag(:mode, "url") %> HackPad連結</p>
+  <p> 標題名稱 <%= f.text_field :title %></p>
+  <p> HackPad連結 <input name='pad_url' id='pad_url'></p>
+  <%= f.submit%>
+<% end %>
+</div>
+
+
+

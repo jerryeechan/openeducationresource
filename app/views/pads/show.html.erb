@@ -1,11 +1,7 @@
-<p id="notice"><%= notice %></p>
-<div id="pad" style="width:800px; height:100%"></div>
+<div></div>
 <script type="text/javascript">
-$(function () {
-  hackpad.render_url($('#pad'), "<%= raw @pad_url %>");
-});
-</script>
-
+$('div').html('<%= @content %>');
+</script> 
 
 
 

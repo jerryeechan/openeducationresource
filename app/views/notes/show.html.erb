@@ -1,4 +1,5 @@
-<%= best_in_place @note, :title, :as => :input %>
+<p>筆記名稱：<%= best_in_place @note, :title, :as => :input %></p>
+<p>created by<%= get_note_created_user(@note.user_id).name %></p>
 <% @note.chapters.each do |chapter| %>
-  <%= chapter.title %>
+  <%= best_in_place chapter, :title, :as => :input %>
 <% end %>

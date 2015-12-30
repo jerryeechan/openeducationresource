@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>一起學</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application", 'data-turbolinks-track'=>true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<div class="container-fluid">
+  <div class="row">
+    <% get_all_notes.each do|note|%>
+      <li> <%=note.title%> </li>
+    <% end %>
+    <%= link_to '新增筆記', new_note_path%>
+    <% if current_user%>
+      <p>Hi<%= current_user.name %> <%= link_to '登出', signout_path %> </p>
+    <% else %>
+      <%= link_to 'FB 登入', fb_login_path %>
+    <% end -%>
+  </div>
+  <div class="row">
+    <div class="sidebar col-md-2">
+        <%= render 'layouts/sidebar' %>
+    </div>
+
+    <div class="content col-md-10">
+        <%= yield %>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

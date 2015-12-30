@@ -1,9 +1,11 @@
 class NotesController < ApplicationController
+  layout "note_layout", :only => :show
   def index
     @notes = Note.all
   end
   def show
     @note = Note.find(params[:id])
+    session[:note_id] = params[:id]
   end
 
   def new
@@ -11,7 +13,10 @@ class NotesController < ApplicationController
   end
 
   def create
-    @note = Note.new(note_params)
+    @note = current_user.notes.create(note_params)
+    
+    #current_user.notes << @note
+    #current_user.save
     if @note.save
       redirect_to @note
     end
@@ -33,10 +38,6 @@ class NotesController < ApplicationController
   def note_params
     params.require(:note).permit(:title)
   end
+  
 
-  def get_note
-    @notes = Note.all
-  end
-
-  helper_method :get_note
 end

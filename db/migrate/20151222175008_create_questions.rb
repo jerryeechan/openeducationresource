@@ -4,6 +4,7 @@ class CreateQuestions < ActiveRecord::Migration
 
       t.timestamps null: false
       t.string :padId
+      t.string :pad_url
     end
   end
 end

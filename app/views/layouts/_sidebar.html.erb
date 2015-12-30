@@ -1,7 +1,23 @@
-<%= link_to 'New Pad', new_pad_path %>
 <ul class="side-note">
-  <% get_note.each do|note|%>
-    <%= note.title%>
+  <% if current_note%>
+    <%= current_note.title %>
+    <hr>
+    <% current_note.chapters.each do |chapter|%>
+      <li>Ch <%= chapter.index%> <%= best_in_place chapter,:title, :classes => 'bip-chapter-title',:chapter_id => chapter.id  %> </li>
+
+        <% chapter.sections.each do |section|%>
+          <li><%= link_to "e", section%> </li>
+        <% end -%>
+        <li>
+          <%= link_to '新增段落' , :action=>'new', :controller=>'sections' , :chapter_id => chapter.id%>
+          
+        </li>
+    <% end -%> 
+      <%= button_tag(:type=> 'button', :class => 'add_chapter_button') do %>
+        <%content_tag(:strong, '新增章節')%>
+      <%end%>
   <% end -%>
-    <li><button class='button'>新增章節</button></li>
+  <% for i in 0...1%>
+    <li>Lomoers</li>
+  <% end %>
 </ul>

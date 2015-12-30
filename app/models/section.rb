@@ -1,4 +1,5 @@
 class Section < ActiveRecord::Base
-  belongs_to :chapter
+  has_and_belongs_to_many :chapters
+  #belongs_to :chapter
   has_many :questions
 end

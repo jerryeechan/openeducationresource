@@ -6,12 +6,12 @@ class PadsController < ApplicationController
 
   # GET /pads/1
   def show
-    req = hackpad.request :post, "/api/1.0/user/create?email=test@ee.com.tw&name=nono"
-    puts(req)
     @pad_id = params[:id]
-
-=begin    
-    res = hackpad.request :get, "/api/1.0/pad/#{@pad_id}/content.txt"
+    @user = 'test@yahoo.com.tw|hackpad'
+    puts @pad_id
+    @link = '/api/1.0/pad/'+@pad_id.to_s+'/content.md'
+    puts @link
+    res = hackpad.request :get, @link
 
     if res.is_a? Net::HTTPSuccess
       respond_with @content = res.body
@@ -19,19 +19,6 @@ class PadsController < ApplicationController
       logger.warn "#{res.inspect}: #{res.body}"
       head :bad_request
     end   
-=end
-
-    puts 'Pad_id:'
-
-    puts params[:id]
-    opts = {
-      :padId => params[:id],
-      #:email => 'anonymous@hackpad.user',
-      :email => 'pupu1416@yahoo.com.tw',
-      :name => 'pupu11'
-    }
-    req = hackpad.create_signed_request :get, "/ep/api/embed-pad?#{opts.to_query}", nil, { :scheme => :query_string }
-    respond_with @pad_url = hackpad.uri + req.path
   end
 
 

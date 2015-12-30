@@ -1,0 +1,17 @@
+<p id="notice"><%= notice %></p>
+<%= best_in_place @section,:title%>
+<div id="loadText<%= @section.padId %>">loading</div>
+<div id="pad<%= @section.padId %>" style="width:1080px; height:100px"></div>
+<%= link_to '新增問題' new_question_path%>
+<script type="text/javascript">
+$(function () {
+  console.log($("#pad<%= @section.padId %>"));
+  hackpad.render_url($("#pad<%= @section.padId %>"),"<%= raw @pad_url %>");
+
+});
+var onPadFrameLoad = function(padId)
+{
+  console.log('#loadText'+padId);
+  $('#loadText'+padId).remove();
+}
+</script>

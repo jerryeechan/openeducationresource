@@ -15,9 +15,6 @@ WebsocketRails::EventMap.describe do
 
     # using a Hash to specify the target
     subscribe :message, :to => ChatController, :with_method => :message
-    namespace :chapter do
-      subscribe :
-    end
 
     # using the same syntax as routes.rb
     #subscribe :message, 'chat#message'

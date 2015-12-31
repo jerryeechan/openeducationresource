@@ -1,0 +1,46 @@
+		<!--<div class="container">-->
+			<!--<header class="clearfix">
+				<span>NTHU CS</span>
+				<h1>SCAD Fianl Project Group 7</h1>
+				<nav>
+				</nav>
+			</header>-->
+			<div id="main-menu">
+				<nav id="cbp-hrmenu" class="cbp-hrmenu">
+					<ul>
+						<li>
+							<a href="#">Courses</a>
+							<div class="cbp-hrsub">
+								<div class="cbp-hrsub-inner">
+									<div><a href="#">Learn Thai</a><span>NEW</span></div>
+									<% get_all_notes %>
+									<% @notes.each do |note| %>
+ 										<div><%= link_to note.title, note_path(note)%> </div>
+									<% end %>
+									<div><%= link_to '新增課程筆記', new_note_path, :class => 'insert-note' %><div>
+								</div><!-- /cbp-hrsub-inner -->
+							</div><!-- /cbp-hrsub -->
+						</li>
+						<li>
+							<div class="searchContainer">
+								<input type="search" id="search" placeholder="Search" />
+    							<button class="icon"><i class="fa fa-search"></i></button>
+    						</div>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		<!--</div>-->
+        <% if current_user%>
+      <p>Hi<%= current_user.name %> <%= link_to '登出', signout_path %> </p>
+    <% else %>
+      <%= link_to 'FB 登入', fb_login_path %>
+    <% end -%>
+
+
+		<script>
+			$(function() {
+				cbpHorizontalMenu.init();
+				console.log('ewrs');
+			});
+		</script>

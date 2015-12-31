@@ -10,20 +10,15 @@
 
 <div class="container-fluid">
   <div class="row">
-    <% get_all_notes.each do|note|%>
-      <li> <%=note.title%> </li>
-    <% end %>
-    <button class="test" >test_btn</button>
-    <%= link_to '新增筆記', new_note_path%>
-    <% if current_user%>
-      <p>Hi<%= current_user.name %> <%= link_to '登出', signout_path %> </p>
-    <% else %>
-      <%= link_to 'FB 登入', fb_login_path %>
-    <% end -%>
+    <%= render 'layouts/menu' %>
+
+    
   </div>
-  <div class="row">
+  <div class="row main-index-row">
     <%= yield %>
-  </div>
+  
+  <p>1111111content</p><p>content</p><p>content</p><p>content</p><p>content</p><p>content</p><p>content</p><p>content</p><p>content</p><p>content</p><p>content</p><p>content</p><p>content</p><p>content</p><p>content</p><p>content</p><p>content</p><p>content</p><p>content</p><p>content</p><p>content</p><p>content</p><p>content</p><p>content</p><p>content</p><p>content</p><p>content</p><p>content</p><p>content</p><p>content</p><p>content</p><p>content</p><p>content</p><p>content</p><p>content</p><p>content</p><p>content</p><p>content</p><p>content</p><p>content</p><p>content</p><p>content</p><p>content</p><p>content</p><p>content</p><p>content</p><p>content</p><p>content</p><p>content</p><p>content</p><p>content</p><p>content</p><p>content</p><p>content</p><p>content</p><p>content</p><p>content</p><p>content</p><p>content</p><p>content</p><p>content</p><p>content</p><p>content</p><p>content</p><p>content</p><p>content</p><p>content</p><p>content</p><p>content</p><p>content</p><p>content</p><p>content</p><p>content</p><p>content</p><p>content</p><p>content</p><p>content</p><p>content</p><p>content</p><p>content</p>  
+</div>
 </div>
 
 </body>

@@ -1,12 +1,12 @@
 .sidebar{
     // width: 400px;
   overflow: auto;
-  height: 100vh;
+  height: calc(100vh - 63px);
   background-color: #DCDCDC;
-  border: 1px solid red;
+  border: 0px solid red;
 }
 .content{
-  height: 100vh;
+  height: calc(100vh - 63px);
   overflow: auto;
 }
 

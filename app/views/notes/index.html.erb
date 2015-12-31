@@ -1,5 +1,5 @@
 <% @notes.each do |note| %>
-  <%= link_to note.title, note_path(note) %> </br>
+  <%= link_to note.title, note_path(note), :class => 'note-link'%> </br>
 <% end %>
 
 <%= link_to '新增筆記', new_note_path %>

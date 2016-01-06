@@ -6,10 +6,14 @@ class SectionsController < ApplicationController
 
     @section = Section.find(params[:id])
 
-    #@user_email = current_user.email
-    @user_email = 
-    res = hackpad.request :get, "/api/1.0/pad/#{@section.padId}/content.txt?asUser=#{@user_email}"
 
+    if current_user
+      @user_email = @current_user.email
+    else
+      @user_email = anonymous_user.email
+    end
+    #@user_email = 
+    res = hackpad.request :get, "/api/1.0/pad/#{@section.padId}/content.txt?asUser=#{@user_email}"
     if res.is_a? Net::HTTPSuccess
       @content = res.body
       puts @content
@@ -22,8 +26,8 @@ class SectionsController < ApplicationController
     opts = {
       :padId => @section.padId,
       #:email => 'anonymous@hackpad.user',
-      :email => current_user.email,
-      :name => current_user.name
+      :email => @user_email,
+      :name => 'tester' #@current_user.name
     }
     
     @pad_url = hackpad.uri + get_pad_url(opts)
@@ -59,9 +63,6 @@ class SectionsController < ApplicationController
       redirect_to @section
     else # mode == new
       @user_email = current_user.email
-      puts @user_email
-      @user_email = 'pupu1416@yahoo.com.tw'
-      puts @user_email
       puts "/api/1.0/pad/create?asUser=#{@user_email}"
       puts params[:section][:title]
       res = hackpad.request :post, "/api/1.0/pad/create?asUser=#{@user_email}", nil, {}, params[:section][:title], { 'Content-Type' => 'text/plain' }

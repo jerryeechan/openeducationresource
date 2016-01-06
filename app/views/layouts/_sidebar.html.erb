@@ -6,18 +6,17 @@
       <li>Ch <%= chapter.index%> <%= best_in_place chapter,:title, :classes => 'bip-chapter-title',:chapter_id => chapter.id  %> </li>
 
         <% chapter.sections.each do |section|%>
-          <li><%= link_to "e", section%> </li>
+          <li><%= link_to section.title, section%> </li>
         <% end -%>
         <li>
           <%= link_to '新增段落' , :action=>'new', :controller=>'sections' , :chapter_id => chapter.id%>
-          
         </li>
-    <% end -%> 
+    <% end %> 
       <%= button_tag(:type=> 'button', :class => 'add_chapter_button') do %>
         <%content_tag(:strong, '新增章節')%>
       <%end%>
   <% end -%>
-  <% for i in 0...1%>
+  <% for i in 0...100%>
     <li>Lomoers</li>
   <% end %>
 </ul>

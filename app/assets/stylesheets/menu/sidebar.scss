@@ -1,17 +1,16 @@
 .sidebar{
     // width: 400px;
+  position: fixed;
   overflow: auto;
   height: calc(100vh - 63px);
   background-color: #DCDCDC;
   border: 0px solid red;
+  z-index: 100;
 }
 .content{
   height: calc(100vh - 63px);
-  overflow: auto;
-}
-
-iframe{
-  overflow: scroll;
+  position: relative;
+  left: 240px;
 }
 
 .col2 {

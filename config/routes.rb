@@ -23,6 +23,8 @@ Hpjsdemo::Application.routes.draw do
   end
 
   resources :questions
+
+  get 'user', to:'user#index'
   
   post 'sections/:id/copy', to: 'sections#copy'
 

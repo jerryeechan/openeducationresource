@@ -25,7 +25,7 @@ $(document).on('ready page:load', function () {
     {
       copy_section($(this).attr('id'));
     });
-
+ 
     function copy_section(section_id)
     {
       $.post('/sections/'+section_id+'/copy'); 

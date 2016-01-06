@@ -16,8 +16,18 @@ class ApplicationController < ActionController::Base
 
   def current_user
     @current_user ||= User.find_by(uid: session[:user_id]) if session[:user_id]
+  else
+    
   end
   helper_method :current_user
+
+  def anonymous_user
+    @anonymous_user = User.anonymous
+  end
+  helper_method :anonymous_user
+
+  
+  
 =begin
   def current_user
     @current_user ||= User.find_by(uid: session[:user_id]) if session[:user_id]

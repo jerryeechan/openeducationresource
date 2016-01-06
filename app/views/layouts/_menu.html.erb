@@ -6,8 +6,12 @@
 				</nav>
 			</header>-->
 			<div id="main-menu">
+			
+			
+					
 				<nav id="cbp-hrmenu" class="cbp-hrmenu">
 					<ul>
+										<%= link_to 'Home' ,root_path %>
 						<li>
 							<a href="#">Courses</a>
 							<div class="cbp-hrsub">
@@ -25,19 +29,20 @@
 							<div class="searchContainer">
 								<input type="search" id="search" placeholder="Search" />
     							<button class="icon"><i class="fa fa-search"></i></button>
-    						</div>
+    					</div>    					
 						</li>
+						<li>
+						<% if current_user %>
+			      		<p>Hi<%= current_user.name %> <%= link_to '登出', signout_path %> </p>
+			    		<% else %>
+			      		<%= link_to 'FB 登入', fb_login_path %>
+			    		<% end -%>
+			    	</li>
 					</ul>
+
 				</nav>
 			</div>
 		<!--</div>-->
-        <% if current_user%>
-      <p>Hi<%= current_user.name %> <%= link_to '登出', signout_path %> </p>
-    <% else %>
-      <%= link_to 'FB 登入', fb_login_path %>
-    <% end -%>
-
-
 		<script>
 			$(function() {
 				cbpHorizontalMenu.init();

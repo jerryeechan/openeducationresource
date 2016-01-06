@@ -1,14 +1,16 @@
 <p id="notice"><%= notice %></p>
 <%= best_in_place @section,:title%>
 <div id="loadText<%= @section.padId %>">loading</div>
-<div id="pad<%= @section.padId %>" style="width:1080px; height:100px"></div>
-<div id="pad" style="width:800px; height:100%"></div>
+<div id="pad<%= @section.padId %>" style="width:1080px; height:100%"></div>
 <div id="pad_area"></div>
+  <% for i in 0...100%>
+    <li>Lomoers</li>
+  <% end %>
+
 <script type="text/javascript">
 $(function () {
   console.log($("#pad<%= @section.padId %>"));
   hackpad.render_url($("#pad<%= @section.padId %>"),"<%= raw @pad_url %>");
-
 });
 var onPadFrameLoad = function(padId)
 {

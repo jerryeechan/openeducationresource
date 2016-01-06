@@ -1,1 +1,4 @@
-<%= %>
+<p>精選筆記</p>
+<% @notes.each do |note| %>
+  <%= link_to note.title, note%>
+<% end %>

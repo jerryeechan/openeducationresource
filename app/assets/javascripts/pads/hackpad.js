@@ -1,3 +1,5 @@
+
+
 (function($){
 
   window.hackpad = function(){
@@ -16,15 +18,7 @@
       }
       var frameId = "hackpad-" + padId; // note that this is by definition uri-encoded
       // TODO: post instead of get into the iframe
-      
-      
-      $('#pad').html("<object id='pad_area' data="+url+"/>");
-
-      //$("<iframe id='"+frameId+"' style='border:0px; width:100%; height:100%; min-height: 220px;'></iframe>").attr('src', url).appendTo(targetElement);
-      $('iframe').load(function()
-        {
-          onPadFrameLoad(padId);
-        });
+      $("<iframe id='"+frameId+"' style='border:0px; width:100%; height:100%; min-height: 420px;'></iframe>").attr('src', url).appendTo(targetElement);
       window.addEventListener("message", function(event) {
         if (event.origin == origin) {
           var args = event.data.split(":");
@@ -39,12 +33,10 @@
           // height adjustment
           if (args.length == 3 && args[0] == frameId && args[1] == "height") {
             var height = Number(args[2]) + 60; // 60 is non-ace elements offset
-
-            var hp = document.getElementById('pad_area');// document.getElementById(frameId).parentElement;
+            var hp = document.getElementById(frameId).parentElement;
 
             if (hp && height > 420) {
               hp.style.height = height + "px";
-              $(hp);
             }
           }
         }

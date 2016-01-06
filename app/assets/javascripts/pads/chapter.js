@@ -48,8 +48,8 @@ $(document).on('ready page:load', function () {
     function change_note(note_id,title)
     {
       var chapter = {
-        title: title
-        id: note_id
+        title: title,
+        id: note_id,
         index : index
       }
       dispatcher.trigger('note.change_title', chapter);
@@ -58,8 +58,8 @@ $(document).on('ready page:load', function () {
     function change_chapter(chater_id,title,index)
     {
       var chapter = {
-        title: title
-        id: chapter_id
+        title: title,
+        id: chapter_id,
         index : index
       }
       dispatcher.trigger('chapter.change_title', chapter);

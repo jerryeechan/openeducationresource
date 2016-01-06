@@ -68,8 +68,8 @@ $(document).on('ready page:load', function () {
     function change_section(section_id,title,index)
     {
       var section = {
-        title: title
-        id: section_id
+        title: title,
+        id: section_id,
         index : index
       }
       dispatcher.trigger('section.change_title', section);

@@ -1,0 +1,9 @@
+<%if current_user%>
+  <p><%=@current_user.name%></p>
+  <p><%=@current_user.email%></p>
+<% else %>
+  <% @user.name %>
+  <p>匿名用戶：尚未登入</p>
+  <p><%= @user.name %></p>
+  <p><%= @user.email %></p>
+<% end -%>

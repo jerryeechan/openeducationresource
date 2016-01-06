@@ -43,6 +43,7 @@ module Hpjsdemo
     config.active_support.escape_html_entities_in_json = true
     config.action_controller.default_url_options = { :trailing_slash => true }
     config.assets.digest = false 
+    config.serve_static_assets = true 
     # Use SQL instead of Active Record's schema dumper when creating the database.
     # This is necessary if your schema can't be completely dumped by the schema dumper,
     # like if you have constraints or database-specific column types

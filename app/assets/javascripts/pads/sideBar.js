@@ -1,11 +1,15 @@
 $(document).on('ready page:load', function () {
-    // load();
-    $( "#section1, #section2, #section3" ).sortable({
-        connectWith: ".connectedSortable",
-        placeholder: "ui-state-highlight-sec",
-        update: function( event, ui ) {showList();}
-    }).disableSelection();
 
+    temp = $("#chapter").children("#chapter_out");
+    temp.each(function()
+    {
+        var parent = $(this);
+        var mid = parent.children(".closeThis").children(".connectedSortable");
+
+        var secId = mid[0].id;
+
+        addSortable(secId);
+    });
 
     $( "#chapter" ).sortable({
         placeholder: "ui-state-highlight ui-corner-all", 
@@ -16,10 +20,17 @@ $(document).on('ready page:load', function () {
 
     addStyle();
 });
-  
+
+function addSortable(i){
+    $( "#"+i ).sortable({
+        connectWith: ".connectedSortable",
+        placeholder: "ui-state-highlight-sec",
+        update: function( event, ui ) {showList();}
+    }).disableSelection();
+}
+
 function addStyle(){
     temp  = $(".ui-state-chapter");
-
     temp.each(function()
     {
         var node = $(this);
@@ -31,9 +42,20 @@ function addStyle(){
             .find( ".chapter-header" )
             .addClass( "ui-widget-header ui-corner-all" )
             .prepend( "<span class='ui-icon ui-icon-minusthick portlet-toggle'></span>");
+        }
+    });
 
-            $( ".portlet-toggle" ).click(function() {
-                var icon = node;
+
+    temp  = $(".portlet-toggle");
+    temp.each(function()
+    {
+        var node = $(this);
+
+        if(!node.hasClass( "done" )){
+            
+            node.addClass( "done" )
+            .click(function() {
+                var icon = $( this );
                 icon.toggleClass( "ui-icon-minusthick ui-icon-plusthick" );
                 icon.closest( ".ui-state-chapter" ).find( ".closeThis" ).toggle(500);
             });
@@ -42,7 +64,7 @@ function addStyle(){
 }
 
 function showList(){
-    temp = $("#chapter").find("#chapter_out");
+    temp = $("#chapter").children("#chapter_out");
     datas = [];
 
     temp.each(function()
@@ -50,7 +72,7 @@ function showList(){
         array = [];
         var parent = $(this);
         var ch = parent.children(".chapter-header");
-        var mid = parent.children(".connectedSortable");
+        var mid = parent.children(".closeThis").children(".connectedSortable");
         var sec = mid.children(".ui-state-default");
 
         array.push(ch.text());
@@ -67,7 +89,7 @@ function showList(){
 
     for(j = 0; j < datas.length; j++){
         for(i = 0; i < datas[j].length; i++){
-            console.log(datas[j][i]);
+            console.log(".."+datas[j][i]);
         }
     }
 }
@@ -95,21 +117,15 @@ function load(){
 
 function addSec(i){
     name = $("#id").val();
-    $("#section"+i).append("<li class=\"ui-state-default\">"+name+"</li>");
+    $("#"+i).append("<li class=\"ui-state-default\">"+name+"</li>");
 }
 
-function addCh(){
-    index += 1;
-    name = $("#id").val();
+function addCh(i){
+    name = "new chapter";
 
-    $("#chapter").append("<li id=\"chapter_out\" class=\"ui-state-chapter\"><div class=\"chapter-header\">"+name+"</div><div class=\"closeThis\"><ul id=\"section"+index+"\" class=\"connectedSortable\"></ul><input type=\"button\" onclick=\"addSec("+index+")\" value=\"Add Section\"></div></li>");
-
-    $( "#section"+index).sortable({
-        connectWith: ".connectedSortable",
-        placeholder: "ui-state-highlight-sec",
-        update: function( event, ui ) {showList();}
-    }).disableSelection();
-
+    $("#chapter").append("<li id=\"chapter_out\" class=\"ui-state-chapter\"><div class=\"chapter-header\">"+name+"</div><div class=\"closeThis\"><ul id=\""+i+"\" class=\"connectedSortable\"></ul><input type=\"button\" onclick=\"addSec("+i+")\" value=\"Add Section\"></div></li>");
+    
+    addSortable(i);
     addStyle();
 }
 

@@ -70,7 +70,8 @@ class SectionsController < ApplicationController
 
       redirect_to @section
     else # mode == new
-      @user_email = current_user.email
+      #@user_email = current_user.email
+      @user_email = "dfdf@dsf.com"
       puts "/api/1.0/pad/create?asUser=#{@user_email}"
       puts params[:section][:title]
       res = hackpad.request :post, "/api/1.0/pad/create?asUser=#{@user_email}", nil, {}, params[:section][:title], { 'Content-Type' => 'text/plain' }
@@ -79,7 +80,11 @@ class SectionsController < ApplicationController
         json = ActiveSupport::JSON.decode res.body
         params[:section][:padId] = json['padId']
         @section = @chapter.sections.create(section_param)
-        redirect_to @section
+        #redirect_to @section
+        respond_to do |format|
+        #format.html {redirect_to  }
+          format.js #create.js
+        end
       else
         logger.warn "#{res.inspect}: #{res.body}"
         head :bad_request

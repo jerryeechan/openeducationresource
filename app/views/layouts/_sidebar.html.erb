@@ -37,7 +37,7 @@
         <div class="closeThis">
           <ul id="section<%=chapter.id%>" class="connectedSortable">
             <% chapter.sections.each do |section|%>
-              <li class="ui-state-default"><%= link_to section.title, note_chapter_section_path(current_note,chapter,section)%>
+              <li class="ui-state-default" id="sec<%=section.id%>"><%= link_to section.title, note_chapter_section_path(current_note,chapter,section)%>
                </li>
             <% end %>
             <li>

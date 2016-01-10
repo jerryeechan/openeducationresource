@@ -1,5 +1,6 @@
 $(document).on('ready page:load', function () {
 
+    //遍歷全部的chapter，將其所有的section加上sortable性質
     temp = $("#chapter").children("#chapter_out");
     temp.each(function()
     {
@@ -11,6 +12,7 @@ $(document).on('ready page:load', function () {
         addSortable(secId);
     });
 
+    //將chapter加上sortable性質
     $( "#chapter" ).sortable({
         placeholder: "ui-state-highlight ui-corner-all", 
         handle: ".chapter-header",
@@ -21,6 +23,12 @@ $(document).on('ready page:load', function () {
     addStyle();
 });
 
+function Data(chapter, section){
+    this.chapter = chapter;
+    this.section = section;
+}
+
+//section方面的sortable
 function addSortable(i){
     $( "#"+i ).sortable({
         connectWith: ".connectedSortable",
@@ -64,34 +72,38 @@ function addStyle(){
 }
 
 function showList(){
+    index = 0;
+    datas = new Array();
     temp = $("#chapter").children("#chapter_out");
-    datas = [];
 
     temp.each(function()
     {
         array = [];
         var parent = $(this);
-        var ch = parent.children(".chapter-header");
+        // var ch = parent.children(".chapter-header");
         var mid = parent.children(".closeThis").children(".connectedSortable");
         var sec = mid.children(".ui-state-default");
 
-        array.push(ch.text());
+        // array.push(mid[0].id.substring(7));
 
-        sec.each(function()
-        {
-            var son = $(this);
 
-            array.push(son.text());
-        });
+        for(i = 0;i < sec.length; i++){
+            array.push(sec[i].id.substring(3));
+        }
 
-        datas.push(array);
+        datas[index] = new Data(mid[0].id.substring(7), array);
+        index++;
     });
 
-    for(j = 0; j < datas.length; j++){
-        for(i = 0; i < datas[j].length; i++){
-            console.log(".."+datas[j][i]);
-        }
-    }
+    json = JSON.stringify(datas);
+
+    // for(j = 0; j < datas.length; j++){
+    //     for(i = 0; i < datas[j].length; i++){
+    //         console.log(".."+datas[j][i]);
+    //     }
+    // }
+
+    console.log(json);
 }
 
 

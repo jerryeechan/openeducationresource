@@ -32,6 +32,8 @@ ActiveRecord::Schema.define(version: 20151226140232) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string   "title"
+    t.integer  "viewby"
+    t.integer  "follower"
     t.integer  "user_id"
   end
 
@@ -47,6 +49,7 @@ ActiveRecord::Schema.define(version: 20151226140232) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string   "padId"
+    t.string   "pad_url"
     t.integer  "section_id"
   end
 

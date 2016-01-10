@@ -1,14 +1,4 @@
 module ApplicationHelper
-
-  def anonymous_user
-    @current_user = User.anonymous
-    puts @current_user
-    puts @current_user.name
-  end
-
-  def current_user
-    @current_user ||= User.find_by(uid: session[:user_id]) if session[:user_id]
-  end
   
   def current_note
     @note = Note.find_by_id(session[:note_id])

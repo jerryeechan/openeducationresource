@@ -1,9 +1,9 @@
 $(document).on('ready page:load', function () {
   // Actions to do
-  console.log('chapter.js load');
+//  console.log('chapter.js load');
     $('.add_chapter_button').click(function()
      {
-      //console.log('click');
+      console.log('click add chapter button');
         create_chapter();
     });  
 
@@ -55,7 +55,7 @@ $(document).on('ready page:load', function () {
       dispatcher.trigger('note.change_title', chapter);
     }
 
-    function change_chapter(chater_id,title,index)
+    function change_chapter(chapter_id,title,index)
     {
       var chapter = {
         title: title,

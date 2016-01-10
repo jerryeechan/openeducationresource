@@ -1,15 +1,17 @@
 .sidebar{
     // width: 400px;
-  position: fixed;
   overflow: auto;
+  position: fixed;
+
   height: calc(100vh - 63px);
   background-color: #DCDCDC;
-  border: 0px solid red;
-  z-index: 100;
 }
 .content{
   height: calc(100vh - 63px);
   position: relative;
+  padding: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
   left: 240px;
 }
 

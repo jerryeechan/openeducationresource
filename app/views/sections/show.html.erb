@@ -1,20 +1,17 @@
 <p id="notice"><%= notice %></p>
-<%= best_in_place @section,:title%>
-<div id="loadText<%= @section.padId %>">loading</div>
-<div id="pad<%= @section.padId %>" style="width:1080px; height:100%"></div>
-<div id="pad_area"></div>
-  <% for i in 0...100%>
-    <li>Lomoers</li>
-  <% end %>
-
+<%= link_to "刪除",note_chapter_section_path(@note,@chapter,@section),method: :delete%>
+<iframe src="https://openeducationresource.hackpad.com/<%=@section.padId%>" style="width:100%;height:100%;"></iframe>
 <script type="text/javascript">
+/*
 $(function () {
   console.log($("#pad<%= @section.padId %>"));
   hackpad.render_url($("#pad<%= @section.padId %>"),"<%= raw @pad_url %>");
 });
+
 var onPadFrameLoad = function(padId)
 {
   console.log('#loadText'+padId);
   $('#loadText'+padId).remove();
 }
+*/
 </script>

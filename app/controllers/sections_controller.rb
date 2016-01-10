@@ -3,15 +3,17 @@ class SectionsController < ApplicationController
   layout "note_layout"
   respond_to :html, :js
   def show
-
+    @note = Note.find(params[:note_id])
+    @chapter = Chapter.find(params[:chapter_id])
     @section = Section.find(params[:id])
 
-
+    
     if current_user
       @user_email = @current_user.email
     else
       @user_email = anonymous_user.email
     end
+    
     #@user_email = 
     res = hackpad.request :get, "/api/1.0/pad/#{@section.padId}/content.txt?asUser=#{@user_email}"
     if res.is_a? Net::HTTPSuccess
@@ -45,6 +47,7 @@ class SectionsController < ApplicationController
   end
 
   def new
+    @note = Note.find(params[:note_id])
     @chapter = Chapter.find(params[:chapter_id])
   end
 
@@ -58,7 +61,12 @@ class SectionsController < ApplicationController
     
       puts params[:section][:padId]
       @section = @chapter.sections.create(section_param)
-      @section.index = Section.find(:chapter_id=>params[:chapter_id]).length+1
+      @sections = @chapter.sections
+      if @sections
+        @section.index = 1
+      else
+        @section.index = @sections.length+1
+      end
 
       redirect_to @section
     else # mode == new
@@ -84,8 +92,9 @@ class SectionsController < ApplicationController
   end
 
   def destroy
+    @note = Note.find(params[:chapter_id])
     Section.find(params[:id]).destroy
-    redirect_to current_note
+    redirect_to @note
   end
   def copy
     session[:section_id] = params[:id]

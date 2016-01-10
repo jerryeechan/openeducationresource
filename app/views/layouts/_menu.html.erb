@@ -31,13 +31,13 @@
     							<button class="icon"><i class="fa fa-search"></i></button>
     					</div>    					
 						</li>
-						<li>
-						<% if current_user %>
-			      		<p>Hi<%= current_user.name %> <%= link_to '登出', signout_path %> </p>
+							<% if current_user %>
+			      		Hi<%= current_user.name %> <%= link_to '登出', signout_path %>
 			    		<% else %>
+			    			<%= current_user %>
 			      		<%= link_to 'FB 登入', fb_login_path %>
-			    		<% end -%>
-			    	</li>
+			    		<% end %>
+			    	
 					</ul>
 
 				</nav>

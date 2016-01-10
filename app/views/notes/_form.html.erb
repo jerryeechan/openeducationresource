@@ -2,8 +2,13 @@
   <!--
   加入欄位
   -->
-  <label>筆記標題名稱</label>
-  <%= f.text_field :title %><br>
-  <br>
-  <%= f.submit "新增筆記" %>
+  <% if current_user %>
+    <label>筆記標題名稱</label>
+    <%= f.text_field :title %><br>
+    <br>
+    <%= f.submit "新增筆記" %>
+  <% else %>
+    <p>請先<%= link_to '登入', fb_login_path %>!!</p>
+
+  <% end -%>
 <% end %>

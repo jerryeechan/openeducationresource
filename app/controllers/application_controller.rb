@@ -15,7 +15,11 @@ class ApplicationController < ActionController::Base
   end
 
   def current_user
+    puts "current_user called"
+    puts session[:user_id]
+    puts User.find_by(uid: session[:user_id])
     @current_user ||= User.find_by(uid: session[:user_id]) if session[:user_id]
+    return @current_user
   else
     
   end

@@ -27,9 +27,9 @@ $(document).on('ready page:load', function () {
       });
     }
 
-    function exchange_chapter(id1,id2)
+    function reorder()
     {
-
+      
     }
 
 

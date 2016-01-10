@@ -70,14 +70,16 @@ class SectionsController < ApplicationController
         @section.index = @sections.length+1
       end
 
-      redirect_to @section
+      respond_to do |format|
+        #format.html {redirect_to  }
+          format.js #create.js
+      end
     else # mode == new
       #@user_email = current_user.email
       @user_email = "pupu1416@yahoo.com.tw"
       puts "/api/1.0/pad/create?asUser=#{@user_email}"
       puts params[:section][:title]
       res = hackpad.request :post, "/api/1.0/pad/create?asUser=#{@user_email}", nil, {}, params[:section][:title], { 'Content-Type' => 'text/plain' }
-
       if res.is_a? Net::HTTPSuccess
         json = ActiveSupport::JSON.decode res.body
         params[:section][:padId] = json['padId']

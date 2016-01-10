@@ -34,7 +34,19 @@ class NotesController < ApplicationController
         end
       end
   end
+  def reorder
+    chapter_array = params[:array]
+    chapter_array.each do |chapter_jobj|
+      chapter_id = chapter_jobj[:chapter_id]
+      section_ids = chapter_jobj[:section_id]
 
+      (0...section_ids.count-1).each do |i|
+        section = Section.find(section_ids[i])
+        section.index = i
+        section.chapter_id = chapter_id
+      end
+    end
+  end
   def note_params
     params.require(:note).permit(:title)
   end

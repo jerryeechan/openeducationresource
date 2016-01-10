@@ -10,34 +10,49 @@
           <li class="ui-state-default">1.2</li>
           <li class="ui-state-default">1.3</li> -->
 
+          <!-- notyet
           <li class="ui-state-default">1.4 <input type="button" onclick="del(this.parentNode)" value="delete"></li>
-          <li class="ui-state-default"><span>1.5</span><input type="button" onclick="edit(this.parentNode)" value="edit"></li>
+          <li class="ui-state-default"><span>1.5</span><input type="button" onclick="edit(this.parentNode)" value="edit"></li> -->
+
+
         <!-- </ul> -->
-        <input type="button" onclick="addSec(1)" value="Add Section">
-        
+
+        <!-- notyet
+        <input type="button" onclick="addSec(1)" value="Add Section"> -->
+
     <!-- </li> -->
 
+    
 
 
 
     <hr>
-    <% current_note.chapters.each do |chapter|%>
-      <li id="chapter_out" class="ui-state-chapter"><div class="chapter-header">Ch <%= chapter.index%> <%= best_in_place chapter,:title, :classes => 'bip-chapter-title',:chapter_id => chapter.id  %></div></li>
+    <ul id="chapter">
+      <% current_note.chapters.each do |chapter|%>
+      <li id="chapter_out" class="ui-state-chapter">
+        <div class="chapter-header">Ch <%= chapter.index%> <%= best_in_place chapter,:title, :classes => 'bip-chapter-title',:chapter_id => chapter.id  %></div>
 
-        <ul id="section1" class="connectedSortable">
-          <% chapter.sections.each do |section|%>
-            <li class="ui-state-default"><%= link_to section.title, note_chapter_section_path(current_note,chapter,section)%> </li>
-          <% end -%>
-        </ul>
+        <div class="closeThis">
+          <ul id="section1" class="connectedSortable">
+            <% chapter.sections.each do |section|%>
+              <li class="ui-state-default"><%= link_to section.title, note_chapter_section_path(current_note,chapter,section)%> </li>
+            <% end -%>
+          </ul>
 
-        <li>
-          <%= link_to '新增段落' , new_note_chapter_section_path(current_note,chapter)%>
-        </li>
+          <li>
+            <%= link_to '新增段落' , new_note_chapter_section_path(current_note,chapter)%>
+          </li>
+        </div>
+      </li>
     <% end %> 
+    </ul>
+    
+
       <%= button_tag(:type=> 'button', :class => 'add_chapter_button') do %>
         <%content_tag(:strong, '新增章節')%>
       <%end%>
   <% end -%>
+
 <!--
   <% for i in 0...100%>
     <li>Lomoers</li>

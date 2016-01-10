@@ -5,13 +5,16 @@
 				<nav>
 				</nav>
 			</header>-->
-			<div id="main-menu">
-			
-			
-					
+			<div id="main-menu">	
 				<nav id="cbp-hrmenu" class="cbp-hrmenu">
 					<ul>
-										<%= link_to 'Home' ,root_path %>
+							<% if current_user %>
+			      				Hi<%= current_user.name %> <%= link_to '登出', signout_path %>
+			    			<% else %>
+			    				<%= current_user %>
+			      				<%= link_to 'FB 登入', fb_login_path %>
+			    			<% end %>
+						<%= link_to 'Home' ,root_path %>
 						<li>
 							<a href="#">Courses</a>
 							<div class="cbp-hrsub">
@@ -34,15 +37,7 @@
     					</div>  
     					<% end %>
 						</li>
-							<% if current_user %>
-			      		Hi<%= current_user.name %> <%= link_to '登出', signout_path %>
-			    		<% else %>
-			    			<%= current_user %>
-			      		<%= link_to 'FB 登入', fb_login_path %>
-			    		<% end %>
-			    	
 					</ul>
-
 				</nav>
 			</div>
 		<!--</div>-->

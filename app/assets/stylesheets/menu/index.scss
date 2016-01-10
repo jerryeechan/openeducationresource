@@ -1,5 +1,6 @@
 /* General Demo Style */
 @import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
+/*@import url(https://fonts.googleapis.com/css?family=Noto+Serif:400,400italic,700);*/
 
 body, html { font-size: 100%; 	padding: 0; margin: 0;}
 
@@ -25,25 +26,20 @@ body, html { font-size: 100%; 	padding: 0; margin: 0;}
 
 body {
     font-family: 'Lato', Calibri, Arial, sans-serif;
-    color: #47a3da;
+    color: #5a5a5a;
     min-width: 250px;
 }
 
 a {
-	color: #f0f0f0;
 	text-decoration: none;
 }
 
 a:hover {
-	color: #000;
+	/*color:*/
+	cursor: pointer; 
 }
 
-.main-index-row {
-	position: absolute; 
-	top : 63px;
-	width: 100%;
-	border: 0px solid red;
-}
+/* --------- dont use header now --------- */
 
 .container > header {
 	border: 1px solid red;
@@ -112,6 +108,7 @@ a:hover {
 	background: #47a3da;
 }
 
+/*
 .icon-drop:before, 
 .icon-arrow-left:before {
 	font-family: 'fontawesome';
@@ -128,7 +125,7 @@ a:hover {
 	-webkit-font-smoothing: antialiased;
 	text-indent: 8000px;
 	padding-left: 8px;
-}
+}*/
 
 .container > header nav a:hover:before {
 	color: #fff;

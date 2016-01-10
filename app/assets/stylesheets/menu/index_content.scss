@@ -1,0 +1,137 @@
+.main-index-row {
+	position: absolute; 
+	top : 63px;
+	width: 100%;
+	border: 0px solid red;
+}
+
+#index_container {
+	margin: 0px auto;
+	width: 100%;
+	border: 0px solid red;
+}
+
+#title_container {
+	margin-bottom: 10px;
+	border: 0px solid green;
+	text-align: left;
+	padding: 250px 150px;
+	background: rgba(80, 80, 80, 0.8);
+	/*background: #2f4763;*/
+}
+
+#title_container h1 {
+	font-size: 4em;
+	font-family: 'Noto Serif', serif;
+	font-weight: bold;
+	color: white;
+}
+
+#title_container h2 {
+	font-family: 'Noto Serif', serif;
+	font-weight: bold;
+	color: #fa8072;
+}
+
+#content_container {
+	margin: 10px 20px;
+	border: 0px solid green;
+	font-size: 1.1em;
+}
+
+.subTitle {
+	text-align: center;
+	border: 0px solid green;
+	font-size: 3em;
+	padding: 1em;
+	font-weight: bold;
+	/*color: */
+}
+
+.subTitle div {
+	border-bottom: 4px solid #5a5a5a;
+	width: 75%;
+	margin: 0 auto;
+}
+
+.hotTagContainer {
+	margin: 0 auto;
+	width: 90%;
+	border: 0px solid blue;
+	overflow: auto;
+}
+
+.hotTags {
+	width: 31%;
+	height: 25vh;
+	padding: 1em 0;
+	border: 0px solid red;
+	float: left;
+	font-size: 3.3vh;
+	text-align: center;
+	margin: 1%;
+	background: #5a5a5a;
+	color: white;
+		display: -webkit-flex;
+  	display:         flex;
+  	-webkit-align-items: center;
+          	align-items: center;
+  	-webkit-justify-content: center;
+          	justify-content: center;
+}
+
+.hotTags:hover {
+	background: #a5a5a5;
+}
+
+a:focus {
+	color: #fa8072;
+}
+
+.courseName {
+	overflow:hidden;
+    text-overflow:ellipsis;
+    max-width: 20vw;
+    max-height: 18vh;
+}
+
+.likeNumber {
+	padding-top: 0.5em ;
+	font-size: 0.5em
+}
+
+.refContainer {
+	margin: 0 auto;
+	width: 90%;
+	border: 1px solid blue;
+	overflow: auto;
+}
+
+.ref {
+	width: 100%;
+	padding: 0.5em 0;
+	padding-left: 1em;
+	border: 1px solid red;
+	float: left;
+	font-size: 2em;
+	text-align: left;
+	margin: 8px;
+}
+
+.aboutContainer {
+	font-size: 1.2em;
+	padding-bottom: 3em;
+	text-align: center;
+}
+
+#licence {
+	background: #BBB;
+	font-size: 0.8em;
+	text-align: center;
+	overflow: auto;
+	color: #999;
+	padding: 1em 0;
+}
+#licence a {
+	color: #888;
+}

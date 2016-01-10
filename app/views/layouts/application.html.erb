@@ -1,27 +1,76 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>一起學</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application", 'data-turbolinks-track'=>true %>
-  <%= csrf_meta_tags %>
+    <title>Co Learning</title>
+    <%= stylesheet_link_tag    "application", :media => "all" %>
+    <%= javascript_include_tag "application", 'data-turbolinks-track'=>true %>
+    <%= csrf_meta_tags %>
 </head>
 <body>
+  <div class="container-fluid">
+    <!-- fixed menu -->
+    <div class="row">
+      <%= render 'layouts/menu' %>
+    </div>
+    <!-- index content -->
+    <div class="row main-index-row">
+      <div id = "index_container">
+        <div id = "title_container">
+          <h1>Co Learning</h1>
+          <h2>Share your note and pass the exam together.</h2>
+        </div>
+        <div id = "content_container">
+          <div class = "subTitle">
+            <div>Hot Notes</div>
+          </div>
+          <div class = "hotTagContainer">
 
-<div class="container-fluid">
-  <div class="row">
-    <%= render 'layouts/menu' %>
+            <a herf = '#'><div class = "hotTags">
+              <div>
+                <div class = "courseName">Algorithm</div>
+                <div class = "likeNumber"><i class="fa fa-heart-o"></i>&nbsp;&nbsp;9967</div>
+              </div>
+            </div></a>
 
-    
+            <a herf = '#'><div class = "hotTags">
+              <div>
+                <div class = "courseName">ContemporaryCogni tiveNeuroscience :BrainandMind idksdjhfl  sidugfaidufcg ontlikeithahalala</div>
+                <div class = "likeNumber"><i class="fa fa-heart-o"></i>&nbsp;&nbsp;9967</div>
+              </div>
+            </div></a>
+           </div> 
+          <div class = "subTitle">
+            <div>Reference</div>
+          </div>
+          <div class = "refContainer">
+            <a herf='#'><div class = "ref">Stackoverflow</div></a>
+            <a herf='#'><div class = "ref">Stackoverflow</div></a>
+            <a herf='#'><div class = "ref">Stackoverflow</div></a>
+            <a herf='#'><div class = "ref">Stackoverflow</div></a>
+            <a herf='#'><div class = "ref">Stackoverflow</div></a>
+            <a herf='#'><div class = "ref">Stackoverflow</div></a>
+            <a herf='#'><div class = "ref">Stackoverflow</div></a>
+          </div>
+          <div class = "subTitle">
+            <div>About Us</div>
+          </div>
+          <div class = "aboutContainer">
+            k;sdfhvialbfliduhcaldyhyliaudyvhafbiDUYHVLAIUDVYBAIVGHLA</br>
+            To enhance learning outcome, peer-commenting is applicable since learners can leave their note or interact with others. However, there remains limited work investigating</br>
+          </div>
+        </div>
+      </div>
+
+      <footer id = "licence"><!--optional-->
+        <div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a>, <a href="http://www.flaticon.com/authors/dave-gandy" title="Dave Gandy">Dave Gandy</a> and <a href="http://www.flaticon.com/authors/egor-rumyantsev" title="Egor Rumyantsev">Egor Rumyantsev</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a>             is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0">CC BY 3.0</a></div>
+      </footer>
+
+      <%= yield %>
+      <!--<% (1...1).each do |i| %>
+          <p>tt</p> -->
+      <% end -%>
+    </div>
   </div>
-  <div class="row main-index-row">
-    <%= yield %>
-    
-    <% (1...1).each do |i| %>
-        <p>tt</p> 
-    <% end -%>
-</div>
-</div>
 
 </body>
 </html>

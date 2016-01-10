@@ -1,5 +1,10 @@
 class User < ActiveRecord::Base
   has_many :notes
+
+  scope :create_by, ->(user){
+      where "name like ?", "#{user}%"
+  }
+  
   def self.from_omniauth(auth)
     access_token = auth.credentials.token
 

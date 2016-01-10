@@ -1,9 +1,0 @@
-.chapter-header {
-    padding: 0.2em 0.3em;
-    margin-bottom: 0.5em;
-    position: relative;
-  }
-
-  #chapter { list-style-type: none; margin: 0; padding: 0; width: 60%; }
-  .ui-state-highlight { height: 10em; line-height: 1.2em; }
-  .ui-state-highlight-sec { border: 1px dotted red; height: 50px;}

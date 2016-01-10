@@ -2,15 +2,18 @@ $(document).on('ready page:load', function () {
   // Actions to do
 //  console.log('chapter.js load');
     $('.add_chapter_button').click(function()
-     {
+    {
       console.log('click add chapter button');
-        create_chapter();
+      create_chapter();
     });  
 
 
     function create_chapter()
     {
-      $.post('chapters');
+      var note_id = $('.note').attr('id');
+      console.log($('.note'));
+      console.log(note_id);
+      $.post('/notes/'+note_id+'/chapters');
     }
 
     function delete_chapter(id)

@@ -32,6 +32,7 @@ gem 'omniauth'
 gem 'omniauth-facebook', '1.4.0'
 gem 'koala', "~>1.10.0rc"
 gem 'jquery-rails'
+gem 'jquery-ui-rails'
 #gem "oauth-plugin"
 #gem "oauth"
 gem "byebug"

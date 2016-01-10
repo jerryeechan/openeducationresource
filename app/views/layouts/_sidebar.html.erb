@@ -1,4 +1,4 @@
-<ul class="side-note">
+<div class="side-note">
   <% if current_note%>
     <%= current_note.title %>
 
@@ -30,32 +30,31 @@
     <ul id="chapter">
       <% current_note.chapters.each do |chapter|%>
       <li id="chapter_out" class="ui-state-chapter">
-        <div class="chapter-header">Ch <%= chapter.index%> <%= best_in_place chapter,:title, :classes => 'bip-chapter-title',:chapter_id => chapter.id  %></div>
-
+        <div class="chapter-header">Ch <%= chapter.index%> <%= best_in_place chapter,:title, :classes => 'bip-chapter-title',:chapter_id => chapter.id  %>
+        </div>
         <div class="closeThis">
           <ul id="section1" class="connectedSortable">
             <% chapter.sections.each do |section|%>
-              <li class="ui-state-default"><%= link_to section.title, note_chapter_section_path(current_note,chapter,section)%> </li>
-            <% end -%>
+              <li class="ui-state-default"><%= link_to section.title, note_chapter_section_path(current_note,chapter,section)%>
+               </li>
+            <% end %>
+            <li>
+            <%= link_to '新增段落' , new_note_chapter_section_path(current_note,chapter)%>
+            </li>
           </ul>
 
-          <li>
-            <%= link_to '新增段落' , new_note_chapter_section_path(current_note,chapter)%>
-          </li>
+            
         </div>
+       
       </li>
-    <% end %> 
+      <% end %> 
     </ul>
     
 
       <%= button_tag(:type=> 'button', :class => 'add_chapter_button') do %>
         <%content_tag(:strong, '新增章節')%>
       <%end%>
-  <% end -%>
-
-<!--
-  <% for i in 0...100%>
-    <li>Lomoers</li>
   <% end %>
--->
-</ul>
+
+
+</div>

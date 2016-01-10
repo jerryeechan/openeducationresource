@@ -27,9 +27,12 @@
 						</li>
 						<li>
 							<div class="searchContainer">
-								<input type="search" id="search" placeholder="Search" />
-    							<button class="icon"><i class="fa fa-search"></i></button>
-    					</div>    					
+							<%= form_tag("/home/search", method: "get") do %>
+							  <%= search_field_tag(:search,nil,placeholder: 'Enter search term...') %>
+								
+    							<button type="submit" class="icon search-btn"><i class="fa fa-search"></i></button>
+    					</div>  
+    					<% end %>
 						</li>
 							<% if current_user %>
 			      		Hi<%= current_user.name %> <%= link_to '登出', signout_path %>

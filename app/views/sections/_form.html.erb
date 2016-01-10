@@ -1,5 +1,5 @@
 <div class="create_section form">
-<%= form_for([@chapter, @chapter.sections.build]) do |f| %>
+<%= form_for([@chapter, @chapter.sections.build], remote: true) do |f| %>
   <p><%= radio_button_tag(:mode, "new", true) %> 新增
   <%= radio_button_tag(:mode, "url") %> HackPad連結</p>
   <p> 標題名稱 <%= f.text_field :title %></p>

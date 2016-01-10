@@ -30,7 +30,7 @@ Hpjsdemo::Application.routes.draw do
 
   get 'home' ,to: 'home#index'
   root 'home#index'
-
+  get 'home/search', to: 'home#search'
 
   get 'auth/facebook', as: "fb_login"
   get 'auth/facebook/callback', to: 'sessions#create'#'users#login'

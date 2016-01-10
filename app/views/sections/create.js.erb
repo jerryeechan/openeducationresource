@@ -1,1 +1,2 @@
-<%redirect_to root_path%>
+<% @url = "/notes/#{@note.id}/chapters/#{@chapter.id}/sections/#{@section.id}" %>
+window.location = "<%=@url%>";

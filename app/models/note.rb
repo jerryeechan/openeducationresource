@@ -6,9 +6,14 @@ class Note < ActiveRecord::Base
   default_scope { order(updated_at: :desc) }
 
   
-  scope :username, -> (name){
-      joins(:user).where("users.name like #{name}") 
+  scope :search_keyword_user, -> (keyword){
+      joins(:user).where("user.name like #{keyword}")
   }
+
+  scope :search_keyword_chapter, -> (keyword){
+      joins(:chapters).where("chapters.title like #{keyword}") 
+  }
+
 
   def self.filter(filtering_params)
     results = self.all
@@ -19,7 +24,6 @@ class Note < ActiveRecord::Base
   end
 
   def self.keyword_search(keyword)
-    users = User.arel_table
     
   end
 

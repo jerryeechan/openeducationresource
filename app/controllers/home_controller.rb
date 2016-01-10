@@ -5,11 +5,12 @@ class HomeController < ApplicationController
     @user = User.all
   end
 
-  def search_note
+  def search
     #todo
 =begin
   search for the notes with title, tag, chapter title or sections
   give priority
 =end
+    @notes = Note.search_keyword_user(params[:search])
   end
 end

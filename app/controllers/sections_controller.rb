@@ -53,7 +53,9 @@ class SectionsController < ApplicationController
 
   def create
     puts "create section"
+
     @chapter = Chapter.find(params[:chapter_id])
+    @note = Note.find(@chapter.note_id)
     if params[:mode] == 'url'
       @url_split = params[:pad_url].split('--')
       params[:section][:padId] = @url_split[1]
@@ -71,7 +73,7 @@ class SectionsController < ApplicationController
       redirect_to @section
     else # mode == new
       #@user_email = current_user.email
-      @user_email = "dfdf@dsf.com"
+      @user_email = "pupu1416@yahoo.com.tw"
       puts "/api/1.0/pad/create?asUser=#{@user_email}"
       puts params[:section][:title]
       res = hackpad.request :post, "/api/1.0/pad/create?asUser=#{@user_email}", nil, {}, params[:section][:title], { 'Content-Type' => 'text/plain' }

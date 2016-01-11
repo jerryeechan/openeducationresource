@@ -1,6 +1,7 @@
 class ChaptersController < ApplicationController
   layout "note_layout"
   def create
+    puts "hahahaha"
     @note = Note.find(params[:note_id])
     @chapters = @note.chapters
     @chapter = @note.chapters.new

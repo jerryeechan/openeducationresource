@@ -15,7 +15,7 @@ $(document).on('ready page:load', function () {
     //將chapter加上sortable性質
     $( "#chapter" ).sortable({
         placeholder: "ui-state-highlight ui-corner-all", 
-        handle: ".chapter-header",
+        handle: ".header",
         cancel: ".portlet-toggle",
         update: function( event, ui ) {showList();}
     }).disableSelection;
@@ -31,12 +31,14 @@ function Data(chapter, section){
 //section方面的sortable
 function addSortable(i){
     $( "#"+i ).sortable({
+        handle: ".header",
         connectWith: ".connectedSortable",
         placeholder: "ui-state-highlight-sec",
         update: function( event, ui ) {showList();}
     }).disableSelection();
 }
 
+//加上header的style
 function addStyle(){
     temp  = $(".ui-state-chapter");
     temp.each(function()
@@ -71,6 +73,7 @@ function addStyle(){
     });
 }
 
+//get order
 function showList(){
     index = 0;
     datas = new Array();
@@ -107,42 +110,29 @@ function showList(){
 }
 
 
-function load(){
-    index = 3;
-    array=['ch1', '1.1', '1.2', '1.3', '1.4'];
 
-    temp = "<li id=\"chapter_out\" class=\"ui-state-chapter\"><div class=\"chapter-header\">"+array[0]+"</div><div class=\"closeThis\"><ul id=\"section"+index+"\" class=\"connectedSortable\">";
+// function addSec(i){
+//     name = $("#id").val();
+//     $("#"+i).append("<li class=\"ui-state-default\">"+name+"</li>");
+// }
 
-    for(i = 1; i < array.length; i++){ 
-        temp += "<li class=\"ui-state-default\">"+array[i]+"</li>";                  
-    }
-    temp += "</ul><input type=\"button\" onclick=\"addSec("+index+")\" value=\"Add Section\"></div></li>";
+// function addCh(i){
+//     name = "new chapter";
 
-    $("#chapter").append(temp);
-
-    $( "#section"+index).sortable({
-        connectWith: ".connectedSortable",
-        placeholder: "ui-state-highlight-sec",
-        update: function( event, ui ) {showList();}
-    }).disableSelection();
-}
-
-function addSec(i){
-    name = $("#id").val();
-    $("#"+i).append("<li class=\"ui-state-default\">"+name+"</li>");
-}
-
-function addCh(i){
-    name = "new chapter";
-
-    $("#chapter").append("<li id=\"chapter_out\" class=\"ui-state-chapter\"><div class=\"chapter-header\">"+name+"</div><div class=\"closeThis\"><ul id=\""+i+"\" class=\"connectedSortable\"></ul><input type=\"button\" onclick=\"addSec("+i+")\" value=\"Add Section\"></div></li>");
+//     $("#chapter").append("<li id=\"chapter_out\" class=\"ui-state-chapter\"><div class=\"chapter-header\">"+name+"<%= best_in_place chapter,:title, :classes => 'bip-chapter-title',:chapter_id => chapter.id  %></div>><div class=\"closeThis\"><ul id=\""+i+"\" class=\"connectedSortable\"></ul><input type=\"button\" onclick=\"addSec("+i+")\" value=\"Add Section\"></div></li>");
     
-    addSortable(i);
-    addStyle();
-}
+//     addSortable(i);
+//     addStyle();
+// }
 
-function go(i){
-    window.location = i;
+// function go(i){
+//     window.location = i;
+// }
+
+function move(){
+    $(".header").css({
+        display: "inline"
+    });
 }
 
 function edit(i){

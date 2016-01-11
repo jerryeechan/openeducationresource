@@ -1,3 +1,9 @@
 console.log('haha');
-// $('.side-note').append('<li>chapter</li>');
-addCh("section"+<%=@chapter.id%>);
+
+i = "section<%=@chapter.id%>";
+what = "<%=j best_in_place @chapter,:title, :class => 'bip-chapter-title',:chapter_id => @chapter.id  %>";
+
+$("#chapter").append("<li id=\"chapter_out\" class=\"ui-state-chapter\"><div class=\"chapter-header\"><span class=\"header\">==</span>Ch <%= @chapter.index%>"+what+"</div><div class=\"closeThis\"><ul id=\""+i+"\" class=\"connectedSortable\"><li><%=j link_to '新增段落' , new_note_chapter_section_path(current_note,@chapter)%></li></ul></div></li>");
+
+addSortable(i);
+addStyle();

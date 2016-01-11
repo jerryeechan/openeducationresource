@@ -1,28 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>一起學</title>
+  <title>Co Learning</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application", 'data-turbolinks-track'=>true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<div class="container-fluid">
-  <div class="row">
-    <%= render 'layouts/menu' %>
-  </div>
-  <div class="row main-index-row">
-    <div class="sidebar col-md-2  row2">
-        <%= render 'layouts/sidebar' %>
+  <div class="container-fluid">
+    <div class="row">
+      <%= render 'layouts/menu' %>
     </div>
 
-    <div class="col-md-10 content">
-        <%= yield %>
-        
+    <div class="row main-index-row">
+      <div class="sidebar col-md-2">
+          <%= render 'layouts/sidebar' %>
+      </div>
+      <div class="col-md-10 content">
+          <%= yield %>
+      </div>
     </div>
   </div>
-</div>
-
 </body>
 </html>

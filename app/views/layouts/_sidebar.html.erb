@@ -1,8 +1,9 @@
 <div class="side-note">
+  <!-- course title -->
   <% if current_note%>
-    <%= current_note.title %>
-
-
+  
+    <div class="courseTitle" id="<%=current_note.id%>"><%= current_note.title %></div>
+    
     <!-- <li id="chapter_out" class="ui-state-chapter"> -->
         <!-- <div class="chapter-header">Ch1</div> -->
         <!-- <ul id="section1" class="connectedSortable"> -->
@@ -19,16 +20,8 @@
 
         <!-- notyet
         <input type="button" onclick="addSec(1)" value="Add Section"> -->
-
     <!-- </li> -->
-
     
-
-
-    <div class="note" id="<%=current_note.id%>">
-    </div>
-    <hr>
-
     <ul id="chapter">
       <% current_note.chapters.each do |chapter|%>
       <li id="chapter_out" class="ui-state-chapter">

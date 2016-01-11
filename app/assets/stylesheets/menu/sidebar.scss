@@ -1,40 +1,55 @@
+/* note layout sidebar */
 .sidebar{
-    // width: 400px;
+  width: 18vw;
+  height: calc(100vh - 63px);
+  float: left;
   overflow: auto;
-  position: fixed;
-
-  height: calc(100vh - 63px);
   background-color: #DCDCDC;
+  padding: 10px !important;
 }
+
+.side-note {
+  border: 1px solid red;
+}
+
+.courseTitle {
+  border: 1px solid red;
+  font-family: 'Noto Serif', serif;
+  font-size: 1.5em;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+
+#chapter { 
+  border: 1px solid red;
+  list-style-type: none; 
+  margin: 0; 
+  padding: 0; 
+  width: 100%;
+  margin-top: 20px; 
+}
+
+.ui-state-highlight { 
+  height: 10em; 
+  line-height: 1.2em; 
+}
+
+.ui-state-highlight-sec { 
+  border: 1px dotted red; 
+  height: 50px;
+}
+
+/* note layout content */
 .content{
+  width: 82vw;
   height: calc(100vh - 63px);
-  position: relative;
-  padding: 0px;
-  padding-left: 0px;
-  padding-right: 0px;
-  left: 240px;
+  float: left;
+  overflow: auto;
+  background: green;
 }
-
-.col2 {
-  border: 9px solid green;
-}
-
-.rowfix {
-  position: fixed;
-  top: 0;
-}
-
-.pad
-{
-  width: 1080px;
-}
-#pad_area
-{
-  width: 1080px;
-}
-
 
 .chapter-header {
+<<<<<<< Updated upstream
   padding: 0.2em 0.3em;
   margin-bottom: 0.5em;
   position: relative;
@@ -46,4 +61,25 @@
 
 .header{
   display: none;
+=======
+    padding: 0.2em 0.3em;
+    margin-bottom: 0.5em;
+    position: relative;
+  }
+
+  
+
+
+
+
+
+/*  show.html */
+.pad
+{
+  width: 1080px;
+}
+#pad_area
+{
+  width: 1080px;
+>>>>>>> Stashed changes
 }

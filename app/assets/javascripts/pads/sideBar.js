@@ -100,39 +100,20 @@ function showList(){
     var json = JSON.stringify(datas);
     $.post('note/reorder',json);
 
-    // for(j = 0; j < datas.length; j++){
-    //     for(i = 0; i < datas[j].length; i++){
-    //         console.log(".."+datas[j][i]);
-    //     }
-    // }
 
     console.log(json);
 }
 
 
 
-// function addSec(i){
-//     name = $("#id").val();
-//     $("#"+i).append("<li class=\"ui-state-default\">"+name+"</li>");
-// }
-
-// function addCh(i){
-//     name = "new chapter";
-
-//     $("#chapter").append("<li id=\"chapter_out\" class=\"ui-state-chapter\"><div class=\"chapter-header\">"+name+"<%= best_in_place chapter,:title, :classes => 'bip-chapter-title',:chapter_id => chapter.id  %></div>><div class=\"closeThis\"><ul id=\""+i+"\" class=\"connectedSortable\"></ul><input type=\"button\" onclick=\"addSec("+i+")\" value=\"Add Section\"></div></li>");
-    
-//     addSortable(i);
-//     addStyle();
-// }
-
-// function go(i){
-//     window.location = i;
-// }
-
 function move(){
-    $(".header").css({
-        display: "inline"
-    });
+    $(".chapter-header").addClass( "header" );
+    $(".sec-header").addClass( "header" );
+}
+
+function nonmove(){
+    $(".chapter-header").removeClass( "header" );
+    $(".sec-header").removeClass( "header" );
 }
 
 function edit(i){

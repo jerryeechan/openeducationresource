@@ -7,7 +7,7 @@
         <% current_note.chapters.each do |chapter|%>
         <li id="chapter_out" class="ui-state-chapter chapter-style">
           <div class="chapter-header">
-            Ch <%= chapter.index%> <%= best_in_place chapter,:title, :class => 'bip-chapter-title chapter-text',:chapter_id => chapter.id  %>
+            Ch <%= chapter.index%> <%= best_in_place chapter,:title, :class => 'bip-chapter-title',:chapter_id => chapter.id  %>
           </div>
           <div class="closeThis">
             <ul id="section<%=chapter.id%>" class="connectedSortable">
@@ -19,7 +19,7 @@
                 </li>
               <% end %>
                 <li>
-                  <%= link_to '新增段落' , new_note_chapter_section_path(current_note,chapter), :class => 'insert-new-section'%>
+                  <%= link_to '新增' , new_note_chapter_section_path(current_note,chapter), :class => 'insert-new-section'%>
                 </li>
             </ul>
           </div>
@@ -30,11 +30,11 @@
     
 
       <%= button_tag(:type=> 'button', :class => 'add_chapter_button') do %>
-        <%content_tag(:strong, '新增章節')%>
+        <%content_tag(:div, '新增章節')%>
       <%end%>
 
   <% end %>
 
-  <input type="button" value="edit" onclick="move()">
-  <input type="button" value="nonedit" onclick="nonmove()">
+  <input id="edit" type="button" value="編輯" onclick="move()">
+  <input id="nonedit" type="button" value="完成" onclick="nonmove()">
 </div>

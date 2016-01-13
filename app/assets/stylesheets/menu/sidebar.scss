@@ -6,6 +6,7 @@
   overflow: auto;
   background-color: #DCDCDC;
   padding: 10px !important;
+  padding-bottom: 3em !important;
 }
 
 .side-note {
@@ -14,7 +15,7 @@
 
 /* courseTitle */
 .note {
-  border: 1px solid red;
+  border: 0px solid red;
   /*font-family: 'Noto Serif', serif;*/
   font-size: 1.5em;
   overflow:hidden;
@@ -36,12 +37,12 @@
   border: 0px solid #333;
   background: transparent;
   color: #5a5a5a;
-  margin-bottom: 10px;  
+  margin-bottom: 1em;  
 }
 
 .chapter-header {
   padding: 0.2em 0.3em;
-  margin-bottom: 0.5em;
+  margin-bottom: 0.6em;
   position: relative;
   background: transparent;
   border-radius: 0px;
@@ -50,10 +51,19 @@
   font-weight: normal;
 }
 
+.header{  
+    /*padding: 0.2em 0.3em;
+    margin-bottom: 0.5em;*/
+    position: relative;
+  }
+
+/*
 .chapter-text {
+  width: 100%;
   overflow: hidden;
   text-overflow: ellipsis;
 }
+*/
 
 .chapter-expand-close {
   display: inline-block;
@@ -64,11 +74,17 @@
   border: 0px solid #333 !important;
   background: transparent !important;
   color: #5a5a5a !important;
-  margin: 3px 0px !important;
+  margin: 0.6em 0px !important;
 }
 
 .section-style a {
   color: #5a5a5a !important;
+}
+
+.sec-header {
+  border: 0px solid red;
+  /*overflow: hidden !important;*/
+  text-overflow: ellipsis;
 }
 
 .section-style a:hover {
@@ -86,13 +102,16 @@
 }
 
 .ui-state-highlight { 
-  height: 10em; 
+  height: 7em; 
   line-height: 1.2em; 
+  border: 2px dashed #5a5a5a; 
+  background: transparent;
+  color: #5a5a5a;
 }
 
 .ui-state-highlight-sec { 
-  border: 1px dotted red; 
-  height: 50px;
+  border: 2px dashed #5a5a5a; 
+  height: 3em;
 }
 
 /* note layout content */
@@ -103,12 +122,7 @@
   overflow: auto;
   background: green;
 }
-.header{
-  display: none;
-    padding: 0.2em 0.3em;
-    margin-bottom: 0.5em;
-    position: relative;
-  }
+
 
 
 /*  show.html */

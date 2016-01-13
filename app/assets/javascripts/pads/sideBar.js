@@ -71,6 +71,9 @@ function addStyle(){
             });
         }
     });
+
+    //add edit/nonedit button style
+    //$('#edit'). 
 }
 
 //get order
@@ -113,12 +116,13 @@ function showList(){
 }
 
 
-
+/* edit */
 function move(){
     $(".chapter-header").addClass( "header" );
     $(".sec-header").addClass( "header" );
+    $()
 }
-
+/* nonedit */
 function nonmove(){
     $(".chapter-header").removeClass( "header" );
     $(".sec-header").removeClass( "header" );

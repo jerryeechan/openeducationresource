@@ -97,8 +97,8 @@ function showList(){
         datas[index] = new Data(mid[0].id.substring(7), array);
         index++;
     });
-
-    json = JSON.stringify(datas);
+    var json = JSON.stringify(datas);
+    $.post('note/reorder',json);
 
     // for(j = 0; j < datas.length; j++){
     //     for(i = 0; i < datas[j].length; i++){

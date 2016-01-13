@@ -3,3 +3,5 @@ log
 
 
 log/development.log
+
+db/development.sqlite3

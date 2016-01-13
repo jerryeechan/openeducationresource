@@ -1,3 +1,51 @@
+<div id = "index_container">
+        <div id = "title_container">
+          <h1>Co Learning</h1>
+          <h2>Share your note and pass the exam together.</h2>
+        </div>
+        <div id = "content_container">
+          <div class = "subTitle">
+            <div>Hot Notes</div>
+          </div>
+          <div class = "hotTagContainer">
+            <% @notes.each do |note| %>
+              <%= link_to(note) do %>
+              <div class = "hotTags">
+                <div>
+                  <div class = "courseName"><%= note.title%></div>
+                  <div class = "likeNumber"><i class="fa fa-heart-o"></i>&nbsp;&nbsp;9967</div>
+                </div>
+              </div>
+              <% end %>
+
+              
+            <% end -%>
+           </div> 
+          <div class = "subTitle">
+            <div>Reference</div>
+          </div>
+          <div class = "refContainer">
+            <a herf='#'><div class = "ref">Stackoverflow</div></a>
+            <a herf='#'><div class = "ref">Stackoverflow</div></a>
+            <a herf='#'><div class = "ref">Stackoverflow</div></a>
+            <a herf='#'><div class = "ref">Stackoverflow</div></a>
+            <a herf='#'><div class = "ref">Stackoverflow</div></a>
+            <a herf='#'><div class = "ref">Stackoverflow</div></a>
+            <a herf='#'><div class = "ref">Stackoverflow</div></a>
+          </div>
+          <div class = "subTitle">
+            <div>About Us</div>
+          </div>
+          <div class = "aboutContainer">
+            k;sdfhvialbfliduhcaldyhyliaudyvhafbiDUYHVLAIUDVYBAIVGHLA</br>
+            To enhance learning outcome, peer-commenting is applicable since learners can leave their note or interact with others. However, there remains limited work investigating</br>
+          </div>
+        </div>
+      </div>
+
+      <footer id = "licence"><!--optional-->
+        <div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a>, <a href="http://www.flaticon.com/authors/dave-gandy" title="Dave Gandy">Dave Gandy</a> and <a href="http://www.flaticon.com/authors/egor-rumyantsev" title="Egor Rumyantsev">Egor Rumyantsev</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a>             is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0">CC BY 3.0</a></div>
+      </footer>
 <p>精選筆記</p>
 <% @notes.each do |note| %>
   <%= link_to note.title, note%>

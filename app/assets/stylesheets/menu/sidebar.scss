@@ -1,6 +1,6 @@
 /* note layout sidebar */
 .sidebar{
-  width: 18vw;
+  width: 19vw;
   height: calc(100vh - 63px);
   float: left;
   overflow: auto;
@@ -9,24 +9,80 @@
 }
 
 .side-note {
-  border: 1px solid red;
+  border: 0px solid red;
 }
 
-.courseTitle {
+/* courseTitle */
+.note {
   border: 1px solid red;
-  font-family: 'Noto Serif', serif;
+  /*font-family: 'Noto Serif', serif;*/
   font-size: 1.5em;
   overflow:hidden;
   text-overflow:ellipsis;
 }
 
 #chapter { 
-  border: 1px solid red;
+  border: 0px solid red;
   list-style-type: none; 
   margin: 0; 
   padding: 0; 
   width: 100%;
   margin-top: 20px; 
+  background: transparent;
+}
+
+.chapter-style {
+  border-radius: 0px;
+  border: 0px solid #333;
+  background: transparent;
+  color: #5a5a5a;
+  margin-bottom: 10px;  
+}
+
+.chapter-header {
+  padding: 0.2em 0.3em;
+  margin-bottom: 0.5em;
+  position: relative;
+  background: transparent;
+  border-radius: 0px;
+  border: 0px solid #333;
+  color: #5a5a5a;
+  font-weight: normal;
+}
+
+.chapter-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.chapter-expand-close {
+  display: inline-block;
+  float: right;
+}
+
+.section-style {
+  border: 0px solid #333 !important;
+  background: transparent !important;
+  color: #5a5a5a !important;
+  margin: 3px 0px !important;
+}
+
+.section-style a {
+  color: #5a5a5a !important;
+}
+
+.section-style a:hover {
+  color: #459f69 !important;
+}
+
+.insert-new-section {
+  color: #5a5a5a !important;
+  text-decoration: none;
+}
+
+.insert-new-section:hover {
+  color: #459f69 !important;
+  text-decoration: none;
 }
 
 .ui-state-highlight { 
@@ -41,17 +97,11 @@
 
 /* note layout content */
 .content{
-  width: 82vw;
+  width: 81vw;
   height: calc(100vh - 63px);
   float: left;
   overflow: auto;
   background: green;
-}
-
-.chapter-header {
-  padding: 0.2em 0.3em;
-  margin-bottom: 0.5em;
-  position: relative;
 }
 .header{
   display: none;

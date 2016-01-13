@@ -51,7 +51,7 @@ function addStyle(){
             node.addClass( "ui-widget ui-widget-content ui-helper-clearfix ui-corner-all" )
             .find( ".chapter-header" )
             .addClass( "ui-widget-header ui-corner-all" )
-            .prepend( "<span class='ui-icon ui-icon-minusthick portlet-toggle'></span>");
+            .prepend( "<span class='ui-icon ui-icon-minusthick portlet-toggle chapter-expand-close'></span>");
         }
     });
 
@@ -114,6 +114,7 @@ function move(){
 function nonmove(){
     $(".chapter-header").removeClass( "header" );
     $(".sec-header").removeClass( "header" );
+
 }
 
 function edit(i){

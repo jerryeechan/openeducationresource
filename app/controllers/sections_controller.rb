@@ -57,8 +57,8 @@ class SectionsController < ApplicationController
     @chapter = Chapter.find(params[:chapter_id])
     @note = Note.find(@chapter.note_id)
     if params[:mode] == 'url'
-      @url_split = params[:pad_url].split('--')
-      params[:section][:padId] = @url_split[1]
+      @url_split = params[:pad_url].split('-')
+      params[:section][:padId] = @url_split[@url_split.count-1]
 
     
       puts params[:section][:padId]

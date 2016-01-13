@@ -13,7 +13,7 @@ Hpjsdemo::Application.routes.draw do
       resources :sections
     end
   end
-
+  post 'notes/reorder', to:'notes#reorder'
   resources :chapters do
     resources :sections
   end

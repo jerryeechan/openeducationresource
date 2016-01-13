@@ -84,22 +84,30 @@ function showList(){
         array = [];
         var parent = $(this);
         // var ch = parent.children(".chapter-header");
-        var mid = parent.children(".closeThis").children(".connectedSortable");
-        var sec = mid.children(".ui-state-default");
+        var chapter = parent.children(".closeThis").children(".connectedSortable");
+        var sections = chapter.children(".ui-state-default");
 
         // array.push(mid[0].id.substring(7));
 
 
-        for(i = 0;i < sec.length; i++){
-            array.push(sec[i].id.substring(3));
+        for(i = 0;i < sections.length; i++){
+            array.push(sections[i].id.substring(3));
         }
 
-        datas[index] = new Data(mid[0].id.substring(7), array);
+        var object = new Object;
+        object.chapter = chapter[0].id.substring(7);
+        object.sections = array;
+
+
+        datas[index] = object;
         index++;
     });
-    var json = JSON.stringify(datas);
-    $.post('note/reorder',json);
-
+    
+    var obj = new Object();
+    obj.json = datas;
+    var json = JSON.stringify(obj);
+    $.post('/notes/reorder',json);
+    
 
     console.log(json);
 }

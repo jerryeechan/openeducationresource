@@ -35,8 +35,18 @@ class NotesController < ApplicationController
       end
   end
   def reorder
-    puts params
-    chapter_array = params[:json]
+
+    json = request.body.read
+    puts json
+    data = ActiveSupport::JSON.decode(json)
+    chapter_array = JSON.parse data
+    puts "parasm~~~~"
+    
+    puts data
+    p 
+    puts "parasm~~~~end"
+    
+    puts chapter_array
     chapter_array.each do |chapter_jobj|
       chapter_id = chapter_jobj[:chapter_id]
       section_ids = chapter_jobj[:section_id]

@@ -4,6 +4,7 @@ class NotesController < ApplicationController
     @notes = Note.all
   end
   def show
+    destroy_current_section
     @note = Note.find(params[:id])
     session[:note_id] = params[:id]
   end

@@ -17,6 +17,29 @@ module ApplicationHelper
     session[:section_id] = nil
   end
 
+  def get_section_like
+    @section = current_section
+    @user = current_user
+    puts "werawer"
+    puts @section.likes
+    puts @section.likes.count
+    puts "werawer"
+    @section_like = Like.where(:likeable_id=>@section.id,:likeable_type=>"Section",:user_id=>@user.id).first_or_create
+  end
+  def get_section_like_num
+    @section = current_section
+    @section_like_num = @section.likes.where(:is_like=>true).count
+  end
+  def get_note_like
+    @note = current_note
+    @user = current_user
+    @note_like = Like.where(:likeable_id=>@note.id,:likeable_type=>"Note",:user_id=>@user.id).first_or_create
+  end
+  def get_note_like_num
+    @note = current_note
+    @note_like_num = @note.likes.where(:is_like=>true).count    
+  end
+
   def get_tags
     @tags = Tag.all
   end

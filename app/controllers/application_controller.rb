@@ -1,6 +1,7 @@
 require 'oauth'
 
 class ApplicationController < ActionController::Base
+  include ApplicationHelper
   protect_from_forgery
 
   HACKPAD_SERVER = URI.parse(ENV['HACKPAD_SERVER'])

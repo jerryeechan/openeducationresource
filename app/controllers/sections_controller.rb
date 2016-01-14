@@ -6,8 +6,7 @@ class SectionsController < ApplicationController
     @note = Note.find(params[:note_id])
     @chapter = Chapter.find(params[:chapter_id])
     @section = Section.find(params[:id])
-    @section_like = @section.likes.where(:likeable_id=>params[:id],:likeable_type=>"Section",:user_id=>current_user.id).first_or_create
-    @note_like = @note.likes.where(:likeable_id=>params[:id],:likeable_type=>"Note",:user_id=>current_user.id).first_or_create
+    
     if current_user
       @user_email = @current_user.email
     else
@@ -49,6 +48,7 @@ class SectionsController < ApplicationController
   end
 
   def new
+    destroy_current_section
     @note = Note.find(params[:note_id])
     @chapter = Chapter.find(params[:chapter_id])
   end
@@ -100,6 +100,7 @@ class SectionsController < ApplicationController
   end
 
   def destroy
+    destroy_current_section
     @note = Note.find(params[:chapter_id])
     Section.find(params[:id]).destroy
     redirect_to @note

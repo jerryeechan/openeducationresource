@@ -8,7 +8,9 @@
   <% if current_note%>
 
     <div class="note" id="<%=current_note.id%>"><%= current_note.title %></div>
-    <div class="course-like"><i class="fa fa-heart icon-center"></i><span>567</span></div>    
+    <!--likes-->
+    <div class="course-like"><i class="fa fa-heart icon-center"></i><span><%=get_note_like_num%></span></div>    
+
       <ul id="chapter">
         <% current_note.chapters.each do |chapter|%>
         <li id="chapter_out" class="ui-state-chapter chapter-style">

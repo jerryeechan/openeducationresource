@@ -1,6 +1,7 @@
 class Note < ActiveRecord::Base
   has_many :chapters
   has_many :sections, through: :chapters
+  has_many :likes, :as=>:likeable
   belongs_to :user
 
   default_scope { order(updated_at: :desc) }

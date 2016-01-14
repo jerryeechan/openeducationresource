@@ -11,12 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160114094040) do
-
-  create_table "bookmarks", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
+ActiveRecord::Schema.define(version: 20160114074453) do
 
   create_table "chapters", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -29,17 +24,25 @@ ActiveRecord::Schema.define(version: 20160114094040) do
   add_index "chapters", ["note_id"], name: "index_chapters_on_note_id"
 
   create_table "likes", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string   "text"
+    t.datetime "created_at",                    null: false
+    t.datetime "updated_at",                    null: false
+    t.integer  "user_id"
+    t.integer  "likeable_id"
+    t.string   "likeable_type"
+    t.boolean  "is_like",       default: false
+    t.boolean  "is_bookmark",   default: false
   end
 
+  add_index "likes", ["likeable_type", "likeable_id"], name: "index_likes_on_likeable_type_and_likeable_id"
+  add_index "likes", ["user_id"], name: "index_likes_on_user_id"
+
   create_table "notes", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
     t.string   "title"
     t.integer  "viewby"
     t.integer  "follower"
+    t.string   "description_padId"
     t.integer  "user_id"
   end
 
@@ -75,6 +78,7 @@ ActiveRecord::Schema.define(version: 20160114094040) do
   create_table "tags", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "text"
   end
 
   create_table "users", force: :cascade do |t|

@@ -35,11 +35,13 @@
 								</div><!-- /cbp-hrsub-inner -->
 							</div><!-- /cbp-hrsub -->
 						</li>
+						<!--
 						<li style="width:600px;">
 							<div class="searchtag">
 								<ul id="demo" name="demo"></ul>
 									<button id="SearchTag" value="SearchTag">Search</button>
-							</div>
+							</div>-->
+							<li>
 							<div class="searchContainer">
 							<%= form_tag("/home/search", method: "get") do %>
 							  <%= search_field_tag(:search,nil,placeholder: 'Enter search term...') %>

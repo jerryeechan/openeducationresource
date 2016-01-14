@@ -7,7 +7,8 @@
   </div>
   <% if current_note%>
 
-    <div class="note" id="<%=current_note.id%>"><%= current_note.title %></div>    
+    <div class="note" id="<%=current_note.id%>"><%= current_note.title %></div>
+    <div class="course-like"><i class="fa fa-heart icon-center"></i><span>567</span></div>    
       <ul id="chapter">
         <% current_note.chapters.each do |chapter|%>
         <li id="chapter_out" class="ui-state-chapter chapter-style">
@@ -23,7 +24,7 @@
                   </div>
                 </li>
               <% end %>
-                <li>
+                <li class="insert-new-section-li">
                   <%= link_to '新增' , new_note_chapter_section_path(current_note,chapter), :class => 'insert-new-section'%>
                 </li>
             </ul>
@@ -33,13 +34,14 @@
       </ul>
 
     
-
-      <%= button_tag(:type=> 'button', :class => 'add_chapter_button') do %>
-        <%content_tag(:div, '新增章節')%>
-      <%end%>
-
+      <div id="sidebar-button-set">
+        <input id="edit" type="button" value="編輯" onclick="move()">
+        <input id="nonedit" type="button" value="完成" onclick="nonmove()">
+        <%= button_tag(:type=> 'button', :class => 'add_chapter_button', :id => 'insert-new-chapter') do %>
+          <%content_tag(:div, '新增章節')%>
+        <%end%>
+      </div>
   <% end %>
 
-  <input id="edit" type="button" value="編輯" onclick="move()">
-  <input id="nonedit" type="button" value="完成" onclick="nonmove()">
+
 </div>

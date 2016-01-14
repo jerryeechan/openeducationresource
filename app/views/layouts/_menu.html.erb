@@ -38,13 +38,23 @@
 							  <%= search_field_tag(:search,nil,placeholder: 'Enter search term...') %>
 								
     							<button type="submit" class="icon search-btn"><i class="fa fa-search"></i></button>
-    					</div>  
+    						</div> 
     					<% end %>
 						</li>
 						<% if controller.controller_name == "sections"&& controller.action_name == "show"%>
 							<%= current_section.title %>
 						<% end %>
-
+						</li>				
+						<div class="switch">
+					      <input type="radio" class="switch-input" name="view" value="week" id="week" checked>
+					      <label for="week" class="switch-label switch-label-off">Week</label>
+					      <input type="radio" class="switch-input" name="view" value="month" id="month">
+					      <label for="month" class="switch-label switch-label-on">Month</label>
+					      <span class="switch-selection"></span>
+					    </div> 
+					    <div class="section-like"><i class="fa fa-heart icon-center"></i><span>567</span></div>
+					    <div class="section-collection"><i class="fa fa-star icon-center"></i></div>
+					    <!--<div id="log"></div>-->
 					</ul>
 				</nav>
 			</div>

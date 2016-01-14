@@ -11,7 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160114074453) do
+ActiveRecord::Schema.define(version: 20160114094040) do
+
+  create_table "bookmarks", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "chapters", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -30,12 +35,11 @@ ActiveRecord::Schema.define(version: 20160114074453) do
   end
 
   create_table "notes", force: :cascade do |t|
-    t.datetime "created_at",        null: false
-    t.datetime "updated_at",        null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.string   "title"
     t.integer  "viewby"
     t.integer  "follower"
-    t.string   "description_padId"
     t.integer  "user_id"
   end
 
@@ -90,11 +94,6 @@ ActiveRecord::Schema.define(version: 20160114074453) do
     t.string   "name"
     t.string   "oauth_token"
     t.string   "provider"
-  end
-
-  create_table "users_sections_likes", id: false, force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "section_id"
   end
 
 end

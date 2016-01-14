@@ -66,14 +66,14 @@ function addStyle(){
             node.addClass( "done" )
             .click(function() {
                 var icon = $( this );
-                icon.toggleClass( "ui-icon-minusthick ui-icon-plusthick" );
+                // icon.toggleClass( "ui-icon-minusthick ui-icon-plusthick" );
                 icon.closest( ".ui-state-chapter" ).find( ".closeThis" ).toggle(500);
             });
         }
     });
 
     //add edit/nonedit button style
-    //$('#edit'). 
+    $( '#nonedit' ).addClass( 'hidden' ) 
 }
 
 //get order
@@ -118,15 +118,20 @@ function showList(){
 
 /* edit */
 function move(){
-    $(".chapter-header").addClass( "header" );
-    $(".sec-header").addClass( "header" );
-    $()
+    $(".chapter-header").addClass( "header shake" );
+    $(".sec-header").addClass( "header shake" );
+    $(".sec-header a").css( "cursor", "move" )
+    $("#edit").addClass( "hidden" )
+    $("#nonedit").removeClass( "hidden" )
+
 }
 /* nonedit */
 function nonmove(){
-    $(".chapter-header").removeClass( "header" );
-    $(".sec-header").removeClass( "header" );
-
+    $(".chapter-header").removeClass( "header shake" );
+    $(".sec-header").removeClass( "header shake" );
+    $(".sec-header a").css( "cursor", "pointer" )
+    $("#edit").removeClass( "hidden" )
+    $("#nonedit").addClass( "hidden" )
 }
 
 function edit(i){

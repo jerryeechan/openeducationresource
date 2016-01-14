@@ -225,10 +225,10 @@
 }
 
 .searchContainer input#search {
-  /*width*/
+  width: 250px;
   height: 2.5em;
   background: #FFF;
-  border: 2px solid #47a3da;
+  border: 2px solid #5a5a5a;
   float: left;
   color: #999;
   padding: 0px 10px;
@@ -270,11 +270,11 @@
   -moz-border-radius: 100px;
   border-radius: 100px;
  
-  border: 2px solid #47a3da;
+  border: 2px solid #5a5a5a;
   background: #fff;
   height: 2.5em;
   width: 2.5em;
-  color: #47a3da;
+  color: #5a5a5a;
   font-size: 100%;
 }
 
@@ -283,7 +283,7 @@
 }
  
 .searchContainer:hover button.icon:hover{
-  background:  #47a3da;
+  background:  #5a5a5a;
   color: white;
 }
 

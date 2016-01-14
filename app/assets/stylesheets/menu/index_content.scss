@@ -11,12 +11,19 @@
 	border: 0px solid red;
 }
 
+#title-mask {
+	background-image: image-url("titlebkg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
 #title_container {
 	margin-bottom: 10px;
 	border: 0px solid green;
 	text-align: left;
 	padding: 250px 150px;
-	background: rgba(80, 80, 80, 0.8);
+	background: rgba(255, 255, 255, 0.6);
+	z-index: 2;
 	/*background: #2f4763;*/
 }
 
@@ -24,13 +31,13 @@
 	font-size: 4em;
 	font-family: 'Noto Serif', serif;
 	font-weight: bold;
-	color: white;
+	color: #5a5a5a;
 }
 
 #title_container h2 {
 	font-family: 'Noto Serif', serif;
 	font-weight: bold;
-	color: #fa8072;
+	color: #0C843C;
 }
 
 #content_container {
@@ -103,7 +110,7 @@ a:focus {
 .refContainer {
 	margin: 0 auto;
 	width: 90%;
-	border: 1px solid blue;
+	border: 0px solid blue;
 	overflow: auto;
 }
 
@@ -116,6 +123,20 @@ a:focus {
 	font-size: 1em;
 	text-align: left;
 	margin: 8px;
+	background: #EEE;
+	color: #5a5a5a;
+}
+
+.refContainer a {
+	text-decoration: none;
+}
+
+.refContainer a:hover {
+	text-decoration: none;
+}
+
+.ref:hover {
+	background-color: #DDD;
 }
 
 .aboutContainer {

@@ -11,6 +11,12 @@ class HomeController < ApplicationController
   search for the notes with title, tag, chapter title or sections
   give priority
 =end
-    @notes = Note.search_keyword_user(params[:search])
+    keyword = params[:search]
+    
+    #@users = User.where("name like #{keyword}")
+    
+    @notes = Note.where("title like ?","#{keyword}%")
+    @chapters = Chapter.where("title like ?","#{keyword}%")
+    @sections = Section.where("title like ?","#{keyword}%")
   end
 end

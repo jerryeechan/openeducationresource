@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151225213611) do
+ActiveRecord::Schema.define(version: 20160114074453) do
 
   create_table "chapters", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -23,12 +23,19 @@ ActiveRecord::Schema.define(version: 20151225213611) do
 
   add_index "chapters", ["note_id"], name: "index_chapters_on_note_id"
 
-  create_table "notes", force: :cascade do |t|
+  create_table "likes", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "text"
+  end
+
+  create_table "notes", force: :cascade do |t|
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
     t.string   "title"
     t.integer  "viewby"
     t.integer  "follower"
+    t.string   "description_padId"
     t.integer  "user_id"
   end
 
@@ -61,6 +68,11 @@ ActiveRecord::Schema.define(version: 20151225213611) do
 
   add_index "sections", ["chapter_id"], name: "index_sections_on_chapter_id"
 
+  create_table "tags", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "users", force: :cascade do |t|
     t.datetime "created_at",                      null: false
     t.datetime "updated_at",                      null: false
@@ -78,6 +90,11 @@ ActiveRecord::Schema.define(version: 20151225213611) do
     t.string   "name"
     t.string   "oauth_token"
     t.string   "provider"
+  end
+
+  create_table "users_sections_likes", id: false, force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "section_id"
   end
 
 end

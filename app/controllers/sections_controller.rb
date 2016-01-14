@@ -13,7 +13,8 @@ class SectionsController < ApplicationController
     else
       @user_email = anonymous_user.email
     end
-    
+
+=begin    
     #@user_email = 
     res = hackpad.request :get, "/api/1.0/pad/#{@section.padId}/content.txt?asUser=#{@user_email}"
     if res.is_a? Net::HTTPSuccess
@@ -24,7 +25,8 @@ class SectionsController < ApplicationController
       puts res.body
     end   
     
-    
+=end
+    session[:section_id] = params[:id]
     opts = {
       :padId => @section.padId,
       #:email => 'anonymous@hackpad.user',
@@ -63,12 +65,9 @@ class SectionsController < ApplicationController
     
       puts params[:section][:padId]
       @section = @chapter.sections.create(section_param)
-      @sections = @chapter.sections
-      if @sections
-        @section.index = 1
-      else
-        @section.index = @sections.length+1
-      end
+
+      @section.index = @chapter.sections.length
+      @section.save
 
       respond_to do |format|
         #format.html {redirect_to  }

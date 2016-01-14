@@ -31,7 +31,17 @@ class ApplicationController < ActionController::Base
   helper_method :anonymous_user
 
   
-  
+  def create_hackpad(user_email,title)
+    
+      puts "/api/1.0/pad/create?asUser=#{user_email}" 
+      res = hackpad.request :post, "/api/1.0/pad/create?asUser=#{user_email}", nil, {}, title, { 'Content-Type' => 'text/plain' }
+      if res.is_a? Net::HTTPSuccess
+        json = ActiveSupport::JSON.decode res.body
+        return json['padId']
+      else
+        return nil
+      end
+  end
 =begin
   def current_user
     @current_user ||= User.find_by(uid: session[:user_id]) if session[:user_id]

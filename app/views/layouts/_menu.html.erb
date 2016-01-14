@@ -9,11 +9,11 @@
 				<nav id="cbp-hrmenu" class="cbp-hrmenu">
 					<ul>
 							<% if current_user %>
-			      				Hi<%= current_user.name %> <%= link_to '登出', signout_path %>
-			    			<% else %>
-			    				<%= current_user %>
-			      				<%= link_to 'FB 登入', fb_login_path %>
-			    			<% end %>
+		      				Hi<%= current_user.name %> <%= link_to '登出', signout_path %>
+		    			<% else %>
+		    				<%= current_user %>
+		      				<%= link_to 'FB 登入', fb_login_path %>
+		    			<% end %>
 						<%= link_to 'Home' ,root_path %>
 						<li>
 							<a href="#">Courses</a>
@@ -28,7 +28,11 @@
 								</div><!-- /cbp-hrsub-inner -->
 							</div><!-- /cbp-hrsub -->
 						</li>
-						<li>
+						<li style="width:600px;">
+							<div class="searchtag">
+								<ul id="demo" name="demo"></ul>
+									<button id="SearchTag" value="SearchTag">Search</button>
+							</div>
 							<div class="searchContainer">
 							<%= form_tag("/home/search", method: "get") do %>
 							  <%= search_field_tag(:search,nil,placeholder: 'Enter search term...') %>
@@ -37,6 +41,10 @@
     					</div>  
     					<% end %>
 						</li>
+						<% if controller.controller_name == "sections"&& controller.action_name == "show"%>
+							<%= current_section.title %>
+						<% end %>
+
 					</ul>
 				</nav>
 			</div>

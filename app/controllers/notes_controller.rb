@@ -15,6 +15,11 @@ class NotesController < ApplicationController
   def create
     @note = current_user.notes.create(note_params)
     
+
+    @user_email = "pupu1416@yahoo.com.tw"
+    @title = note_params[:title]
+    @pad_id = create_hackpad(@user_email,@title)
+    @note.description_padId = @pad_id
     #current_user.notes << @note
     #current_user.save
     if @note.save
@@ -38,24 +43,46 @@ class NotesController < ApplicationController
 
     json = request.body.read
     puts json
-    data = ActiveSupport::JSON.decode(json)
-    chapter_array = JSON.parse data
+    
+    chapter_array = JSON.parse(json)["json"]
+    
     puts "parasm~~~~"
     
-    puts data
-    p 
+    puts chapter_array
     puts "parasm~~~~end"
     
     puts chapter_array
-    chapter_array.each do |chapter_jobj|
-      chapter_id = chapter_jobj[:chapter_id]
-      section_ids = chapter_jobj[:section_id]
 
-      (0...section_ids.count-1).each do |i|
-        section = Section.find(section_ids[i])
+    ci = 0
+    chapter_array.each do |chapter_jobj|
+
+      chapter_id = chapter_jobj["chapter"].to_i
+
+      chapter =  Chapter.find(chapter_id)
+      chapter.index = ci
+      chapter.save
+      section_ids = chapter_jobj["sections"]
+
+      (0...section_ids.count).each do |i|
+
+        section = Section.find(section_ids[i].to_i)
+
         section.index = i
         section.chapter_id = chapter_id
+
+        puts section.id
+        puts section.title
+        puts section.index
+        
+        
+
+        section.save
       end
+      ci = ci+1
+    end
+    respond_to do |format|
+      #format.html {redirect_to  }
+      format.js #create.js
     end
   end
   def note_params

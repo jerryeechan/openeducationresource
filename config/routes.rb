@@ -35,5 +35,4 @@ Hpjsdemo::Application.routes.draw do
   get 'auth/facebook', as: "fb_login"
   get 'auth/facebook/callback', to: 'sessions#create'#'users#login'
   get 'signout', to: 'sessions#destroy', as: 'signout'
-
 end

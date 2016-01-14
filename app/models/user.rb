@@ -1,5 +1,9 @@
 class User < ActiveRecord::Base
   has_many :notes
+  has_many :tags
+  
+  has_many :sections, through: :tags
+
 
   scope :create_by, ->(user){
       where "name like ?", "#{user}%"

@@ -7,6 +7,7 @@ class Note < ActiveRecord::Base
 
   
   scope :search_keyword_user, -> (keyword){
+
       joins(:user).where("user.name like #{keyword}")
   }
 
@@ -22,9 +23,10 @@ class Note < ActiveRecord::Base
     end
     results
   end
-
+  
   def self.keyword_search(keyword)
-    
+    @chapters = Chapter.where("chapters.title like #{keyword}")
+    @chapters
   end
 
   def hot

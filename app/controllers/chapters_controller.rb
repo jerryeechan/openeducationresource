@@ -1,13 +1,15 @@
 class ChaptersController < ApplicationController
   layout "note_layout"
   def create
-    puts "hahahaha"
+    
     @note = Note.find(params[:note_id])
+
     @chapters = @note.chapters
     @chapter = @note.chapters.new
     @chapter.title = '新章節'
-    @chapter.index = @chapters.count+1
+    @chapter.index = @chapters.count
     @chapter.save
+
     #@chapter.save
     respond_to do |format|
       #format.html {redirect_to  }

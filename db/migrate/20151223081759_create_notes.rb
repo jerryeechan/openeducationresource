@@ -5,6 +5,7 @@ class CreateNotes < ActiveRecord::Migration
       t.string :title
       t.integer :viewby
       t.integer :follower
+      t.string :description_padId
 #      t.string :description_padId
     end
   end

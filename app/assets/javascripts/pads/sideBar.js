@@ -65,7 +65,7 @@ function addStyle(){
             node.addClass( "done" )
             .click(function() {
                 var icon = $( this );
-                // icon.toggleClass( "ui-icon-minusthick ui-icon-plusthick" );
+                icon.toggleClass( "ui-icon-minusthick ui-icon-plusthick" );
                 icon.closest( ".ui-state-chapter" ).find( ".closeThis" ).toggle(500);
             });
         }

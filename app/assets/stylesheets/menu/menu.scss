@@ -14,7 +14,7 @@
 .cbp-hrmenu {
 	width: 100%;
 	margin-top: 0em;
-	border-bottom: 4px solid #47a3da;
+	border-bottom: 4px solid #459f69;
 	padding-bottom: 5px;
 }
 
@@ -28,8 +28,8 @@
 /* first level ul style */
 .cbp-hrmenu > ul,
 .cbp-hrmenu .cbp-hrsub-inner {
-	width: 90%;
-	max-width: 70em;
+	width: 95%;
+	max-width: 80em;
 	margin: 0 auto;
 	padding: 0 1.875em;
 }
@@ -43,27 +43,29 @@
 }
 
 .cbp-hrmenu > ul > li > a {
+	border: 0px solid red;
 	font-weight: 700;
 	padding: 1em 2em;
-	color: #999;
+	color: #5a5a5a;
 	display: inline-block;
+	text-decoration: none;
 }
 
 .cbp-hrmenu > ul > li > a:hover {
-	color: #47a3da;
+	color: #459f69;
 }
 
 .cbp-hrmenu > ul > li.cbp-hropen a,
 .cbp-hrmenu > ul > li.cbp-hropen > a:hover {
 	color: #fff;
-	background: #47a3da;
+	background: #459f69;
 }
 
 /* sub-menu */
 .cbp-hrmenu .cbp-hrsub {
 	display: none;
 	position: absolute;
-	background: #47a3da;
+	background: #459f69;
 	width: 100%;
 	left: 0;
 }
@@ -151,8 +153,8 @@
 	font-weight: 300;
 }
 
- .cbp-hrsub .insert-note {
-	border: 1px solid red;
+.cbp-hrsub .insert-note {
+	border: 0px solid red;
 	font-weight: 300;
 	color: #afdefa;
 }
@@ -187,7 +189,7 @@
 
 	.cbp-hrmenu > ul > li {
 		display: block;
-		border-bottom: 4px solid #47a3da;
+		border-bottom: 4px solid #459f69;
 	}
 
 	.cbp-hrmenu > ul > li > a { 
@@ -291,29 +293,31 @@
 /* pad/QA toggle button  */
 
 .switch {
-  border: 1px solid red;	
+  border: 2px solid #5a5a5a;	
   position: relative;
   display: inline-block;
-  margin: 0px;
-  height: 26px;
-  width: 120px;
-  background: rgba(0, 0, 0, 0.25);
-  border-radius: 3px;
-  -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.1);
-  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.1);
+  height: 36px;
+  width: 248px;
+  background: white;
+  border-radius: 36px;
+  top: 13px;
+  margin: 0px 0.5em;
+  /*-webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.1);
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.1);*/
 }
 
 .switch-label {
   position: relative;
-  z-index: 2;
+  z-index: 3;
   float: left;
-  width: 58px;
-  line-height: 26px;
-  font-size: 11px;
-  color: rgba(255, 255, 255, 0.35);
+  width: 120px;
+  line-height: 36px;
+  font-size: 13px;
+  color: #5a5a5a;
   text-align: center;
-  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.45);
+  /*text-shadow: 0 1px 1px rgba(0, 0, 0, 0.45);*/
   cursor: pointer;
+  margin: 0px;
 }
 .switch-label:active {
   font-weight: bold;
@@ -338,34 +342,29 @@
 }
 .switch-input:checked + .switch-label {
   font-weight: bold;
-  color: rgba(0, 0, 0, 0.65);
-  text-shadow: 0 1px rgba(255, 255, 255, 0.25);
+  color: white;
+  /*color: rgba(0, 0, 0, 0.65);*/
+  text-shadow: 0 1px rgba(128, 128, 128, 0.25);
   -webkit-transition: 0.15s ease-out;
   -moz-transition: 0.15s ease-out;
   -o-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
 }
 .switch-input:checked + .switch-label-on ~ .switch-selection {
-  left: 60px;
+  left: 122px;
   /* Note: left: 50% doesn't transition in WebKit */
 }
 
 .switch-selection {
   display: block;
   position: absolute;
-  z-index: 1;
+  z-index: 2;
   top: 2px;
   left: 2px;
-  width: 58px;
-  height: 22px;
-  background: #65bd63;
-  border-radius: 3px;
-  background-image: -webkit-linear-gradient(top, #9dd993, #65bd63);
-  background-image: -moz-linear-gradient(top, #9dd993, #65bd63);
-  background-image: -o-linear-gradient(top, #9dd993, #65bd63);
-  background-image: linear-gradient(to bottom, #9dd993, #65bd63);
-  -webkit-box-shadow: inset 0 1px rgba(255, 255, 255, 0.5), 0 0 2px rgba(0, 0, 0, 0.2);
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.5), 0 0 2px rgba(0, 0, 0, 0.2);
+  width: 120px;
+  height: 28px;
+  background: #459f69;
+  border-radius: 28px;
   -webkit-transition: left 0.15s ease-out;
   -moz-transition: left 0.15s ease-out;
   -o-transition: left 0.15s ease-out;
@@ -374,8 +373,42 @@
 
 .section-like {
 	display: inline-block;
+	margin: 0px 0em;
+	position: relative;
 }
 
 .section-collection {
+	display: inline-block;
+	margin-right: 0.5em;
+}
+
+.section-collection-icon {
+  color: #5a5a5a;
+  font-size: 100%;
+  border: 2px solid #5a5a5a;
+  padding: 8px 9px;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  border-radius: 100px;
+  background: transparent;
+  display: inline-block;
+}
+
+.section-collection-icon:hover {
+  color: #459f69;
+  border: 2px solid #459f69;
+  cursor: pointer;
+}
+
+.section-like span {
+  border: 0px solid yellow;
+  position: absolute;
+  bottom: 4px;
+  font-size: 1.2em;
+  margin-left: 7px;
+}
+
+#section-toolbar {
+	float: right;
 	display: inline-block;
 }

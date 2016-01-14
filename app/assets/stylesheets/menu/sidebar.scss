@@ -1,10 +1,15 @@
 /* note layout sidebar */
+$bgcolor: #DCDCDC;
+$textcolor: #5a5a5a;
+$shake-bordercolor: #5a5a5a;
+
 .sidebar{
   width: 19vw;
   height: calc(100vh - 63px);
   float: left;
-  overflow: auto;
-  background-color: #DCDCDC;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background-color: $bgcolor;
   padding: 10px !important;
   padding-bottom: 3em !important;
 }
@@ -16,11 +21,20 @@
 /* courseTitle */
 .note {
   border: 0px solid red;
+  font-family: 'Lato', Calibri, Arial, sans-serif;
   /*font-family: 'Noto Serif', serif;*/
   font-size: 1.5em;
-  font-weight: bold;
   overflow:hidden;
   text-overflow:ellipsis;
+}
+
+.note a {
+  color: $textcolor;
+  text-decoration: none;
+}
+
+.note a:hover {
+  color: #459f69;
 }
 
 .course-like {
@@ -35,12 +49,13 @@
   bottom: 4px;
   font-size: 1.2em;
   margin-left: 10px;
+  color: $textcolor;
 }
 
 .icon-center {
-  color: #5a5a5a;
+  color: $textcolor;
   font-size: 100%;
-  border: 2px solid #5a5a5a;
+  border: 2px solid $textcolor;
   padding: 8px;
   -webkit-border-radius: 100px;
   -moz-border-radius: 100px;
@@ -55,9 +70,10 @@
   cursor: pointer;
 }
 
+/* ------------------------------------------------------------------------------------- */
 .course-like-state {
   color: #459f69;
-  border: 3px solid #459f69;
+  border: 2px solid #459f69;
 }
 
 #chapter { 
@@ -73,8 +89,8 @@
 .chapter-style {
   border-radius: 0px;
   border: 0px solid #333;
-  background: rgba(220, 220, 220, 1);
-  color: #5a5a5a;
+  background: $bgcolor;
+  color: $textcolor;
   margin-bottom: 1em;  
 }
 
@@ -85,7 +101,7 @@
   background: transparent;
   border-radius: 0px;
   border: 0px solid #333;
-  color: #5a5a5a;
+  color: $textcolor;
   font-weight: normal;
 }
 
@@ -98,6 +114,7 @@
 
 .header:hover {
   color: #459f69;
+  /*font-weight: bold;*/
 }
 
 /*
@@ -120,13 +137,13 @@
 .section-style {
   border: 0px solid #333 !important;
   background: transparent !important;
-  color: #5a5a5a !important;
+  color: $textcolor !important;
   margin: 0.6em 0px !important;
-  background: rgba(220, 220, 220, 1) !important;
+  /*background: $bgcolor !important;*/
 }
 
 .section-style a {
-  color: #5a5a5a !important;
+  color: $textcolor !important;
 }
 
 .sec-header {
@@ -137,6 +154,7 @@
 
 .section-style a:hover {
   color: #459f69 !important;
+  /*font-weight: bold !important;*/
 }
 
 .insert-new-section-li {
@@ -149,29 +167,31 @@
 }
 
 .insert-new-section {
-  color: #5a5a5a !important;
+  color: $textcolor !important;
   text-decoration: none;
 }
 
 .insert-new-section:hover {
   color: #459f69 !important;
+  /*font-weight: bold;*/
   text-decoration: none;
 }
 
+/* ------------------------------------------------------------ */
 .current-section {
-  font-weight: bold;
+  color: #242424;
 }
 
 .ui-state-highlight { 
   height: 7em; 
   line-height: 1.2em; 
-  border: 2px dashed #5a5a5a; 
+  border: 2px dashed $shake-bordercolor; 
   background: transparent;
-  color: #5a5a5a;
+  color: $textcolor;
 }
 
 .ui-state-highlight-sec { 
-  border: 2px dashed #5a5a5a; 
+  border: 2px dashed $shake-bordercolor; 
   height: 3em;
 }
 
@@ -195,7 +215,7 @@
 }
 
 #sidebar-button-set{
-  background: #DCDCDC;
+  background: $bgcolor;
   position: fixed;
   bottom: 0;
   left: 0;
@@ -245,9 +265,11 @@
 
 .momImHere
 {
-  background: green;
+  background: #515151 !important;
 }
 
 .delButton{
+  background: transparent;
+  border: none;
   display: none;
 }

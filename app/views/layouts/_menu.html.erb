@@ -8,10 +8,11 @@
 			<div id="main-menu">	
 				<nav id="cbp-hrmenu" class="cbp-hrmenu">
 					<ul>
+
 							<% if current_user %>
 
 								<li>
-			      					Hi<%= current_user.name %> <%= link_to '登出', signout_path %>
+			      					Hi, <%= current_user.name %> <%= link_to '登出', signout_path %>
 			      				</li>
 			    			<% else %>
 			    				<%= current_user %>
@@ -19,6 +20,7 @@
 			      					<%= link_to 'FB 登入', fb_login_path %>
 			      				</li>
 			    			<% end %>
+
 						<li>
 							<%= link_to 'Home' ,root_path %>
 						</li>
@@ -26,12 +28,12 @@
 							<a href="#">Courses</a>
 							<div class="cbp-hrsub">
 								<div class="cbp-hrsub-inner">
-									<div><a href="#">Learn Thai</a><span>NEW</span></div>
+									<!--<div><a href="#">Learn Thai</a><span>NEW</span></div>-->
 									<% get_all_notes %>
 									<% @notes.each do |note| %>
  										<div><%= link_to note.title, note_path(note)%> </div>
 									<% end %>
-									<div><%= link_to '新增課程筆記', new_note_path, :class => 'insert-note' %><div>
+									<div><%= link_to '新增課程', new_note_path, :class => 'insert-note' %><div>
 								</div><!-- /cbp-hrsub-inner -->
 							</div><!-- /cbp-hrsub -->
 						</li>
@@ -41,7 +43,7 @@
 								<ul id="demo" name="demo"></ul>
 									<button id="SearchTag" value="SearchTag">Search</button>
 							</div>-->
-							<li>
+						<li>
 							<div class="searchContainer">
 							<%= form_tag("/home/search", method: "get") do %>
 							  <%= search_field_tag(:search,nil,placeholder: 'Enter search term...') %>
@@ -50,21 +52,22 @@
     						</div> 
     					<% end %>
 						</li>
-						
-						</li>				
-						<div class="switch">
-					      <input type="radio" class="switch-input" name="view" value="week" id="week" checked>
-					      <label for="week" class="switch-label switch-label-off">Week</label>
-					      <input type="radio" class="switch-input" name="view" value="month" id="month">
-					      <label for="month" class="switch-label switch-label-on">Month</label>
-					      <span class="switch-selection"></span>
-					    </div> 
-					    <% if controller.controller_name == "sections"&& controller.action_name == "show"%>
+						<div id = "section-toolbar">		
+							<div class="switch">
+						      <input type="radio" class="switch-input" name="view" value="Note" id="week" checked>
+						      <label for="week" class="switch-label switch-label-off">Week</label>
+						      <input type="radio" class="switch-input" name="view" value="Q&amp;A" id="month">
+						      <label for="month" class="switch-label switch-label-on">Month</label>
+						      <span class="switch-selection"></span>
+						    </div> 
+						    
+						    <% if controller.controller_name == "sections"&& controller.action_name == "show"%>
 								<%= current_section.title %>
-						    <% @like_num = get_section_like_num %>
-						    <div class="section-like"><i class="fa fa-heart icon-center"></i><span><%=@like_num%></span></div>
-						    <div class="section-collection"><i class="fa fa-star icon-center"></i></div>
-					    <% end %>
+						    	<% @like_num = get_section_like_num %>
+						    	<div class="section-collection"><i class="fa fa-star section-collection-icon"></i></div>
+						    	<div class="section-like"><i class="fa fa-heart icon-center"></i><span><%=@like_num%></span></div>
+					    	<% end %>
+					    </div>
 					    <!--<div id="log"></div>-->
 					</ul>
 				</nav>

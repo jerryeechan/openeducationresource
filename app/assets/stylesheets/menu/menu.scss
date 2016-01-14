@@ -400,10 +400,20 @@
 
 .section-like span {
   border: 0px solid yellow;
+/*  position: absolute;
+  bottom: 4px;
+  left: 38px;*/
+  font-size: 1.2em;
+  margin-left: 10px;
+}
+
+.section-like div{
   position: absolute;
   bottom: 4px;
-  font-size: 1.2em;
-  margin-left: 7px;
+  left: 36px;
+  display: inline-block;
+  white-space:nowrap;
+  border: 0px solid red;
 }
 
 #section-toolbar {

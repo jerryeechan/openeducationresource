@@ -37,23 +37,17 @@ function bind_like(){
         var type = icon.attr('type');
         $.post('/likes/'+like_id+'/'+type+'_toggle',function(response)
         {
-            if(response==true)
+            icon.toggleClass("like-state");
+            if(type=='like')
             {
-                icon.toggleClass("like-state");
-                if(type=='like')
-                {
-                    var addOne = parseInt(icon.next().text())+1;
-                    icon.next().text(addOne);
-                }
-            }
-            else if(response==false)
-            {
-                icon.toggleClass("like-state");
-                if(type=='like')
-                {
-                    var addOne = parseInt(icon.next().text())-1;
-                    icon.next().text(addOne);
-                }
+                var value = 0;
+                if(response==true)
+                    value = 1;
+                else
+                    value = -1;
+
+                var addOne = parseInt(icon.next().text())+value;
+                icon.next().find('span').text(addOne);
             }
         });
     });

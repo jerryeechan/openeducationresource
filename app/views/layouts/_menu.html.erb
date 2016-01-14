@@ -9,7 +9,7 @@
 				<nav id="cbp-hrmenu" class="cbp-hrmenu">
 					<ul>
 
-							<% if current_user %>
+						<% if current_user %>
 
 								<li>
 			      				Hi, <%= current_user.name %> <%= link_to '登出', signout_path %>
@@ -52,6 +52,7 @@
     						</div> 
     					<% end %>
 						</li>
+						<% if controller.controller_name == "sections"&& controller.action_name == "show"%>
 						<div id = "section-toolbar">		
 							<div class="switch">
 						      <input type="radio" class="switch-input" name="view" value="Note" id="week" checked>
@@ -61,7 +62,7 @@
 						      <span class="switch-selection"></span>
 						    </div> 
 						    
-						    <% if controller.controller_name == "sections"&& controller.action_name == "show"%>
+						    
 								
 						    	<% @like_num = get_section_like_num %>
 						    	<div class="section-collection">
@@ -78,10 +79,11 @@
 						    		<%else%>
 						    		<i id="<%=get_section_like.id%>" type="like" class="fa fa-heart icon-center icon"></i>
 						    		<% end %>
-						    		<span><%=@like_num%></span></div>
-					    	<% end %>
+						    		<div><span><%=@like_num%></span> likes</div>
+						    	</div>
+					    	
 					    </div>
-
+					    <% end %>
 					    <!--<div id="log"></div>-->
 					</ul>
 				</nav>

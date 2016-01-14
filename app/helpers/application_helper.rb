@@ -24,7 +24,7 @@ module ApplicationHelper
     puts @section.likes
     puts @section.likes.count
     puts "werawer"
-    @section_like = Like.where(:likeable_id=>@section.id,:likeable_type=>"Section",:user_id=>@user.id).first_or_create
+    @section_like = Like.where(:likeable_id=>@section.id,:likeable_type=>"Section",:user_id=>@user.id).first
   end
   def get_section_like_num
     @section = current_section
@@ -33,7 +33,7 @@ module ApplicationHelper
   def get_note_like
     @note = current_note
     @user = current_user
-    @note_like = Like.where(:likeable_id=>@note.id,:likeable_type=>"Note",:user_id=>@user.id).first_or_create
+    @note_like = Like.where(:likeable_id=>@note.id,:likeable_type=>"Note",:user_id=>@user.id).first
   end
   def get_note_like_num
     @note = current_note

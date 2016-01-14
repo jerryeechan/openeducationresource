@@ -49,13 +49,14 @@ $(document).on('ready page:load', function () {
     //detect radio change
     $('input[type="radio"][name="mode"]').change(function(){
         if ($(this).is(':checked') && $(this).val() == 'new') {
-            $('#titleHere').css({display: "inline"});
+            $('#titleHere').css({display: "inline-block"});
             $('#urlHere').css({display: "none"});
         }
         else if ($(this).is(':checked') && $(this).val() == 'url') {
-            $('#titleHere').css({display: "inline"});
-            $('#urlHere').css({display: "inline"});
+            $('#titleHere').css({display: "inline-block"});
+            $('#urlHere').css({display: "inline-block"});
         }
+        $('input[type="submit"][name="commit"]').css({display: "inline-block"});
     });
 });
 

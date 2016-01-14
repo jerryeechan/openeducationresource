@@ -1,10 +1,48 @@
 .create_section {
+	width: 30%;
 	border: 1px solid red;
 	margin: 0 auto;
+	margin-top: 8%;
 }
 
-.create_section h1 {
+.outer h1 {
+	margin-top: 3%;
 	font-size: 3em;
 	text-align: center;
 	border: 1px solid red;
+}
+
+.outer{
+	border: 1px solid green;
+	margin: 0 auto;
+}
+
+.out{
+	text-align: center;
+}
+
+.new{
+	float: left;
+}
+
+.url{
+	float: right;
+}
+
+#titleHere{
+	display: none;
+	text-align: right;
+	margin-top: 3%;
+}
+
+#urlHere{
+	display: none;
+	text-align: right;
+	margin-top: 3%;
+}
+
+input[type="submit"][name="commit"]{
+	float: right;
+	display: none;
+	margin-top: 2%;
 }

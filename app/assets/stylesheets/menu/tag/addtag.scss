@@ -1,3 +1,7 @@
+.tag-container {
+    border: 0px solid red;
+}
+
 .ui-autocomplete {
     background-color: #fff;
     position: absolute;
@@ -44,22 +48,25 @@
 
 
     ul.tagit {
-        cursor: text;
+        /*cursor: text;*/
         
-        font-size: 14px;
-        width:100px;
-        padding: 3px;
-        
-        background: #fff;
-        color: #333;
+        font-size: 1em;
+        width: 100%;
+        color: #5a5a5a;
+
+        border: 0px solid red;
+        list-style-type: none; 
+        padding: 0; 
+        margin-top: 20px; 
+        background: transparent;
+        overflow: hidden;
     }
 
     ul.tagit li {
-        
-        
-        margin: 2px 5px 2px 0;
+        margin: 2px 5px 2px 2px;
         position: relative;
-        
+        word-break: break-all;
+        max-width: 100%;
     }
 
     ul.tagit.ui-sortable li.tagit-choice a.ui-icon.ui-icon-grip-dotted-vertical{
@@ -72,12 +79,14 @@
     ul.tagit li.tagit-choice {
         display: inline-block;
         background: #FFF5BB;
-        background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0.32,#FFF5BB),color-stop(0.66,#FDF2B1),color-stop(0.83, #FCEE9B));
+        /*background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0.32,#FFF5BB),color-stop(0.66,#FDF2B1),color-stop(0.83, #FCEE9B));
         background-image: -moz-linear-gradient(top,#FFF5BB,#FCEE9B);
         filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff5bb', endColorstr='#fcee9b');
-        border: 1px solid #F2E598;
-        border-bottom-left-radius: 6px;
-        border-top-right-radius: 6px;
+        */
+        border: 0px solid #F2E598;
+        /*border-bottom-left-radius: 6px;
+        border-top-right-radius: 6px;*/
+        border-radius: 6px;
         padding: 2px 15px 3px 4px;
         cursor: default;
     }
@@ -95,6 +104,7 @@
         background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0.32,#FFF57E),color-stop(0.66,#FDF2B1),color-stop(0.83, #FCEE9B));
         background-image: -moz-linear-gradient(top,#FFF57E,#FCEE9B);
         filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFF57E', endColorstr='#fcee9b');
+        
     }
 
     ul.tagit li.tagit-new {
@@ -105,19 +115,19 @@
 
     ul.tagit li.tagit-choice input {
         display: block;
-        float: left;
+        /*float: left;*/
         margin: 0 5px 0 0;
         padding-top: 2px;
         padding-bottom: 2px;
     }
 
     ul.tagit li.tagit-choice a.tagit-close {
-        color: #111;
+        color: #5a5a5a;
         cursor: pointer;
         font-size: 12px;
         font-weight: bold;
         outline: medium none;
-        padding: 3px 0 2px 3px;
+        padding: 3px 1px 2px 3px;
         text-decoration: none;
         position: absolute;
         display: block;
@@ -126,7 +136,7 @@
     }
 
     ul.tagit li.tagit-choice a.tagit-close:hover {
-        color: #f00;
+        color: #ff4444;
     }
     ul.tagit div.tagit-label
     {
@@ -145,10 +155,29 @@
     ul.tagit input[type="text"] {
         -moz-box-sizing: border-box;
         
-        margin: 0 !important;
-        padding: 0 !important;
-        width: inherit !important;
+        margin: 10px 0 0 0 !important;
+        padding: 3px !important;
+        width: 16vw !important;
         outline: none;
+
+        border-color:#cccccc;
+        border-style:solid;
+        border-radius:6px;
+        border-width:1px;
+        padding:10px 6px;
+        font-size:16px;
+        color:#5a5a5a;
+        box-shadow: 0px 0px 5px 0px rgba(42,42,42,.0);
+        /*margin: 5px 20px;
+        width:370px;
+        height:60px;
+        font-size : 1.2em;
+        font-weight: 300;
+        letter-spacing: 1px;
+        box-shadow: inset;
+        border : 1px solid #6e6e6e;
+          border-radius : 5px;
+          padding: 15px; */
     }
 
     .tagit-hiddenSelect {

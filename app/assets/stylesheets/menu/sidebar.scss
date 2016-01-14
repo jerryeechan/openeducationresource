@@ -1,7 +1,9 @@
 /* note layout sidebar */
 $bgcolor: #DCDCDC;
 $textcolor: #5a5a5a;
-$shake-bordercolor: #5a5a5a;
+$shake-bordercolor: #6e6e6e;
+
+/*sidebar basic style */
 
 .sidebar{
   width: 19vw;
@@ -16,6 +18,12 @@ $shake-bordercolor: #5a5a5a;
 
 .side-note {
   border: 0px solid red;
+}
+
+/*---------------------------------------------------*/
+/* index container */
+
+.index-container {
 }
 
 /* courseTitle */
@@ -159,6 +167,7 @@ $shake-bordercolor: #5a5a5a;
 
 .insert-new-section-li {
   list-style-type: none;
+  margin-left: 22px;
 }
 
 .insert-new-section-li:before {
@@ -196,7 +205,7 @@ $shake-bordercolor: #5a5a5a;
 }
 
 .hidden {
-  display: none
+  display: none;
 }
 
 #edit {
@@ -265,7 +274,7 @@ $shake-bordercolor: #5a5a5a;
 
 .momImHere
 {
-  background: #515151 !important;
+  background: #c6c6c6 !important;
 }
 
 .delButton{

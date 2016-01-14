@@ -1,13 +1,15 @@
 <div class="side-note">
-  <!-- course title -->
-  <div class="addtag">
-    <ul id="demo" name="demo" class="tagit ui-sortable"><li class="tagit-choice tagit-type-none" tagvalue="ee"><div class="tagit-label">ee</div><a class="tagit-close">x</a></li>
-    <li class="tagit-choice tagit-type-none" tagvalue="qq"><div class="tagit-label">qq</div><a class="tagit-close">x</a></li>
+  <div class="addtag tag-container">
+    <div class="note">Tags</div>
+    <ul id="demo" name="demo" class="tagit ui-sortable">
+      <li class="tagit-choice tagit-type-none" tagvalue="ee"><div class="tagit-label">ee</div><a class="tagit-close">x</a></li>
+      <li class="tagit-choice tagit-type-none" tagvalue="qq"><div class="tagit-label">qq</div><a class="tagit-close">x</a></li>
     </ul>
   </div>
-  <% if current_note%>
 
 
+<% if current_note%>
+  <div class = "index-container">
     <div class="note" id="<%=current_note.id%>"><%= link_to current_note.title, current_note %></div>
     <!--like course-->
     <div class="course-like">
@@ -16,35 +18,34 @@
       <%else%>
         <i id="<%=get_note_like.id%>" type="like" class="fa fa-heart icon-center icon"></i>
       <% end -%>
-      <span><%=get_note_like_num%></span>
+      <span><%=get_note_like_num%></span><span> people like this course.</span>
     </div>    
-      <ul id="chapter">
+    <ul id="chapter">
         <% current_note.chapters.each do |chapter|%>
-        <li id="chapter_out" class="ui-state-chapter chapter-style">
-          <div id="chapterHeader<%=chapter.id%>" class="chapter-header">
-            <button class="delButton" onclick="deleteChapter(this.parentNode)"><i class="fa fa-times"></i></button>
-            Ch <%= chapter.index%> <%= best_in_place chapter,:title, :class => 'bip-chapter-title',:chapter_id => chapter.id  %>
-          </div>
-          <div class="closeThis">
-            <ul id="section<%=chapter.id%>" class="connectedSortable">
-              <% chapter.sections.each do |section|%>
-                <li class="ui-state-default section-style" id="sec<%=section.id%>">
-                  <div class="sec-header">
-                    <button class="delButton" onclick="deleteSection(this.parentNode.parentNode)"><i class="fa fa-times"></i></button>
-                    <%= link_to section.title, note_chapter_section_path(current_note,chapter,section)%>
-                  </div>
-                </li>
-              <% end %>
-            </ul>
-            <div class="insert-new-section-li">
-              <%= link_to '新增筆記' , new_note_chapter_section_path(current_note,chapter), :class => 'insert-new-section'%>
+          <li id="chapter_out" class="ui-state-chapter chapter-style">
+            <div id="chapterHeader<%=chapter.id%>" class="chapter-header">
+              <button class="delButton" onclick="deleteChapter(this.parentNode)"><i class="fa fa-times"></i></button>
+              Ch <%= chapter.index%> <%= best_in_place chapter,:title, :class => 'bip-chapter-title',:chapter_id => chapter.id  %>
             </div>
-          </div>
-        </li>
+            <div class="closeThis">
+              <ul id="section<%=chapter.id%>" class="connectedSortable">
+                <% chapter.sections.each do |section|%>
+                  <li class="ui-state-default section-style" id="sec<%=section.id%>">
+                    <div class="sec-header">
+                      <button class="delButton" onclick="deleteSection(this.parentNode.parentNode)"><i class="fa fa-times"></i></button>
+                      <%= link_to section.title, note_chapter_section_path(current_note,chapter,section)%>
+                    </div>
+                  </li>
+                <% end %>
+              </ul>
+              <div class="insert-new-section-li">
+                <%= link_to '新增筆記' , new_note_chapter_section_path(current_note,chapter), :class => 'insert-new-section'%>
+              </div>
+            </div>
+          </li>
         <% end %> 
-      </ul>
+    </ul>
 
-    
       <div id="sidebar-button-set">
         <input id="edit" type="button" value="編輯" onclick="move()">
         <input id="nonedit" type="button" value="完成" onclick="nonmove()">
@@ -52,7 +53,8 @@
           <%content_tag(:div, '新增章節')%>
         <%end%>
       </div>
-  <% end %>
+  </div>
+<% end %>
 
 
 </div>

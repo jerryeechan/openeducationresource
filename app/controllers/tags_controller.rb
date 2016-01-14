@@ -1,8 +1,8 @@
 class TagsController < ApplicationController
   def create
-    json = request.body.read
+    json = JSON.parse(request.body.read)
     
-    chapter_array = JSON.parse(json)
+    
     #ajax 
     @tag = Tag.where(:text=>json["text"]).first_or_create
     respond_to do |format|

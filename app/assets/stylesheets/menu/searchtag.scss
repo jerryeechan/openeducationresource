@@ -1,0 +1,112 @@
+.searchtag{
+    ul.tagit {
+        cursor: text;
+        overflow: auto;
+        font-size: 14px;
+        width: 97%;
+        padding: 3px;
+        margin-top: 2px;
+        margin-right: 6px;
+        margin-bottom: 16px;
+        border: 1px solid #E5E5E5;
+        background: #fff;
+        color: #333;
+    }
+
+    ul.tagit li {
+        display: block;
+        float: left;
+        margin: 2px 5px 2px 0;
+        position: relative;
+    }
+
+    ul.tagit.ui-sortable li.tagit-choice a.ui-icon.ui-icon-grip-dotted-vertical{
+        float: left;
+        width: 12px;
+        margin-left: -5px;
+        cursor: move;
+    }
+
+    ul.tagit li.tagit-choice {
+        background: #FFF5BB;
+        background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0.32,#FFF5BB),color-stop(0.66,#FDF2B1),color-stop(0.83, #FCEE9B));
+        background-image: -moz-linear-gradient(top,#FFF5BB,#FCEE9B);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff5bb', endColorstr='#fcee9b');
+        border: 1px solid #F2E598;
+        border-bottom-left-radius: 6px;
+        border-top-right-radius: 6px;
+        padding: 2px 15px 3px 4px;
+        cursor: default;
+    }
+
+    ul.tagit li.tagit-choice.selected {
+        background: #ff3019; /* old browsers */
+        background: -moz-linear-gradient(top, #ff3019 0%, #cf0404 100%); /* firefox */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ff3019), color-stop(100%, #cf0404)); /* webkit */
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = '#ff3019', endColorstr = '#cf0404', GradientType = 0); /* ie */
+        border-color: #f76464;
+    }
+
+    ul.tagit li.tagit-choice:hover {
+        background: #FFF5BB;
+        background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0.32,#FFF57E),color-stop(0.66,#FDF2B1),color-stop(0.83, #FCEE9B));
+        background-image: -moz-linear-gradient(top,#FFF57E,#FCEE9B);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFF57E', endColorstr='#fcee9b');
+    }
+
+    ul.tagit li.tagit-new {
+        padding: 2px 4px 3px;
+        padding: 2px 4px 1px;
+        padding: 2px 4px 1px 0;
+    }
+
+    ul.tagit li.tagit-choice input {
+        display: block;
+        float: left;
+        margin: 0 5px 0 0;
+        padding-top: 2px;
+        padding-bottom: 2px;
+    }
+
+    ul.tagit li.tagit-choice a.tagit-close {
+        color: #111;
+        cursor: pointer;
+        font-size: 12px;
+        font-weight: bold;
+        outline: medium none;
+        padding: 3px 0 2px 3px;
+        text-decoration: none;
+        position: absolute;
+        display: block;
+        top: 0;
+        right: 3px;
+        text-shadow: -1px -1px 0 rgba(150, 150, 0, 0.7);
+    }
+
+    ul.tagit li.tagit-choice a.tagit-close:hover {
+        color: #f00;
+    }
+
+    ul.tagit div.tagit-label.hidden {
+      display: none;
+    }
+
+    ul.tagit input.tagit-edit {
+      margin: 0px 0px 0px 2px;
+      border: none;
+      line-height: 16px;
+    }
+
+    ul.tagit input[type="text"] {
+        -moz-box-sizing: border-box;
+        border: none !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        width: inherit !important;
+        outline: none;
+    }
+
+    .tagit-hiddenSelect {
+        display:none;
+    }
+}

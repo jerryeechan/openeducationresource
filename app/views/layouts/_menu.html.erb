@@ -12,8 +12,8 @@
 							<% if current_user %>
 
 								<li>
-			      					Hi, <%= current_user.name %> <%= link_to '登出', signout_path %>
-			      				</li>
+			      				Hi, <%= current_user.name %> <%= link_to '登出', signout_path %>
+			      		</li>
 			    			<% else %>
 			    				<%= current_user %>
 			    				<li>
@@ -64,10 +64,24 @@
 						    <% if controller.controller_name == "sections"&& controller.action_name == "show"%>
 								
 						    	<% @like_num = get_section_like_num %>
-						    	<div class="section-collection"><i class="fa fa-star section-collection-icon"></i></div>
-						    	<div class="section-like"><i class="fa fa-heart icon-center"></i><span><%=@like_num%></span></div>
+						    	<div class="section-collection">
+						    		<%if get_section_like.is_bookmark %>
+						    			<i id="<%=get_section_like.id%>" type="bookmark" class="fa fa-star section-collection-icon icon like-state"></i>
+						    		<% else %>
+						    			<i id="<%=get_section_like.id%>" type="bookmark" class="fa fa-star section-collection-icon icon"></i>
+						    		<% end %>
+						    	</div>
+
+						    	<div class="section-like">
+						    		<%if get_section_like.is_like%>
+						    		<i id="<%=get_section_like.id%>" type="like" class="fa fa-heart icon-center icon like-state"></i>
+						    		<%else%>
+						    		<i id="<%=get_section_like.id%>" type="like" class="fa fa-heart icon-center icon"></i>
+						    		<% end %>
+						    		<span><%=@like_num%></span></div>
 					    	<% end %>
 					    </div>
+
 					    <!--<div id="log"></div>-->
 					</ul>
 				</nav>

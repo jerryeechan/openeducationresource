@@ -23,20 +23,31 @@ $(document).on('ready page:load', function () {
     }).disableSelection;
 
     
-    Like(1);
+    bind_like();
     addStyle();
 });
 
 //like or not
-function Like(likes){
-    if(likes){
-        $(".icon-center").addClass("course-like-state");
-    }
-
-    $(".icon-center")
+function bind_like(){
+    $(".icon")
     .click(function() {
-        var icon = $( this );
-        icon.toggleClass( "course-like-state  " );
+        var icon = $(this);
+        var like_id = icon.attr('id');
+        //icon.toggleClass("like-state");
+        var type = icon.attr('type');
+        $.post('/likes/'+like_id+'/'+type+'_toggle',function(response)
+        {
+            if(response==true)
+            {
+                icon.toggleClass("like-state");
+                if(type=='like')
+                {
+
+                    //todo adddd 1
+                    //icon.next()
+                }
+            }
+        });
     });
 }
 

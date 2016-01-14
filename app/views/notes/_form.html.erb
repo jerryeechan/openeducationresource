@@ -1,14 +1,17 @@
-<%= form_for @note do |f| %>
+<div style="text-align:center">
+  <h1>新增筆記</h1>
+  <%= form_for @note do |f| %>
   <!--
   加入欄位
   -->
+
   <% if current_user %>
     <label>筆記標題名稱</label>
-    <%= f.text_field :title %><br>
+    <%= f.text_field :title, :placeholder => "標題"%><br>
     <br>
     <%= f.submit "新增筆記" %>
   <% else %>
     <p>請先<%= link_to '登入', fb_login_path %>!!</p>
-
   <% end -%>
 <% end %>
+</div>

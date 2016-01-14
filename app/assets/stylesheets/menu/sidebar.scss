@@ -27,7 +27,7 @@ $shake-bordercolor: #6e6e6e;
 }
 
 /* courseTitle */
-.note {
+.title {
   border: 0px solid red;
   font-family: 'Lato', Calibri, Arial, sans-serif;
   /*font-family: 'Noto Serif', serif;*/
@@ -36,12 +36,12 @@ $shake-bordercolor: #6e6e6e;
   text-overflow:ellipsis;
 }
 
-.note a {
+.title a {
   color: $textcolor;
   text-decoration: none;
 }
 
-.note a:hover {
+.title a:hover {
   color: #459f69;
 }
 

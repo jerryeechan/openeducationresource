@@ -1,6 +1,6 @@
 <div class="side-note">
   <div class="addtag tag-container">
-    <div class="note">Tags</div>
+    <div class="title">Tags</div>
     <ul id="demo" name="demo" class="tagit ui-sortable">
       <li class="tagit-choice tagit-type-none" tagvalue="ee"><div class="tagit-label">ee</div><a class="tagit-close">x</a></li>
       <li class="tagit-choice tagit-type-none" tagvalue="qq"><div class="tagit-label">qq</div><a class="tagit-close">x</a></li>
@@ -10,7 +10,7 @@
 
   <% if current_note%>
     <div class = "index-container">
-      <div class="note" id="<%=current_note.id%>"><%= link_to current_note.title, current_note %></div>
+      <div class="note title" id="<%=current_note.id%>"><%= link_to current_note.title, current_note %></div>
       <!--like course-->
       <div class="course-like">
         <%if get_note_like.is_like%>

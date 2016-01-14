@@ -5,7 +5,7 @@ j = "chapterHeader<%=@chapter.id%>";
 what = "<%=j best_in_place @chapter,:title, :class => 'bip-chapter-title',:chapter_id => @chapter.id  %>";
 
 
-$("#chapter").append("<li id='chapter_out' class='ui-state-chapter chapter-style'><div id='"+j+"' class='chapter-header'><button class='delButton' onclick='deleteChapter(this.parentNode)''><i class='fa fa-times'></i></button>Ch <%= @chapter.index%>"+what+"</div><div class='closeThis'><ul id='"+i+"' class='connectedSortable'><li class='insert-new-section-li'><%=j link_to '新增' , new_note_chapter_section_path(current_note,@chapter), :class => 'insert-new-section'%></li></ul></div></li>");
+$("#chapter").append("<li id='chapter_out' class='ui-state-chapter chapter-style'><div id='"+j+"' class='chapter-header'><button class='delButton' onclick='deleteChapter(this.parentNode)''><i class='fa fa-times'></i></button>Ch <%= @chapter.index%>"+what+"</div><div class='closeThis'><ul id='"+i+"' class='connectedSortable'></ul><div class='insert-new-section-li'><%=j link_to '新增' , new_note_chapter_section_path(current_note,@chapter), :class => 'insert-new-section'%></div></div></li>");
 
 
 addSortable(i);

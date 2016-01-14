@@ -22,8 +22,23 @@ $(document).on('ready page:load', function () {
         stop: function( event, ui ) {stopMoving(ui.item);}
     }).disableSelection;
 
+    
+    Like(1);
     addStyle();
 });
+
+//like or not
+function Like(likes){
+    if(likes){
+        $(".icon-center").addClass("course-like-state");
+    }
+
+    $(".icon-center")
+    .click(function() {
+        var icon = $( this );
+        icon.toggleClass( "course-like-state  " );
+    });
+}
 
 //section方面的sortable
 function addSortable(i){
@@ -116,6 +131,7 @@ function showList(){
 
 function startMoving(item){
     item.addClass("momImHere");
+    console.log(item);
 }
 
 function stopMoving(item){

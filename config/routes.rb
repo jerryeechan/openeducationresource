@@ -21,6 +21,7 @@ Hpjsdemo::Application.routes.draw do
   resources :sections do
     resources :questions
   end
+  get 'sections/:id/createqa', to:'sections#createqa', as: 'createqa_section'
 
   resources :questions
 
@@ -37,4 +38,6 @@ Hpjsdemo::Application.routes.draw do
   get 'signout', to: 'sessions#destroy', as: 'signout'
   post 'likes/:id/like_toggle',to:'likes#like_toggle'
   post 'likes/:id/bookmark_toggle',to:'likes#bookmark_toggle'
+  post 'tags/create',to:'tags#create'
+  post 'tags/get',to:'tags#get'
 end

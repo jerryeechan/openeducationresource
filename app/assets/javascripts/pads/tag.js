@@ -9,17 +9,26 @@ $(document).on('ready page:load', function () { 'use strict';
       }
       alert(string);
   }
+  $.post('/tags/get',function(response)
+  {
+      var database = response;
+      console.log(response);
+      $('#add-tag-field').tagit({tagSource:database,sortable:true,caseSensitive:true,tagsChanged:tagsChanged});
+      $('#search-tag-field').tagit({tagSource:database,caseSensitive:true,tagsChanged:tagsChanged});
 
-  var database = [
-    //put all the data here!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-    "OS",
-    "OS_final",
-    "OSSSS",
-    "鍾葉清",
-    "周志遠"
-  ]
-  $('#demo').tagit({tagSource:database,sortable:true});
-  $('#demoGetTags').click(function () {
-      showTags($('#demo').tagit('tags'));
   });
+  
+
+  
+  $('#demoGetTags').click(function () {
+      showTags($('#search-tag-field').tagit('tags'));
+  });
+
+  function tagsChanged(tagValue, action, element)
+  {
+    if(action =="added")
+    {
+      $.post('/tags/create?text='+tagValue);
+    }
+  }
 });

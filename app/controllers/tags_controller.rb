@@ -1,17 +1,16 @@
 class TagsController < ApplicationController
   def create
-    json = JSON.parse(request.body.read)
-    
-    
+    puts params
+    puts params[:text]
     #ajax 
-    @tag = Tag.where(:text=>json["text"]).first_or_create
+    @tag = Tag.where(:text=>params[:text]).first_or_create
     respond_to do |format|
       #format.html {redirect_to  }
       format.js #create.js
     end
   end
-  def getAll
-    @tags = Tag.all
+  def get
+    @tags = Tag.all.pluck(:text)
     respond_to do |format|
       #format.html {redirect_to  }
       format.json  { render json: @tags }#create.js

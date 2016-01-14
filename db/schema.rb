@@ -54,20 +54,11 @@ ActiveRecord::Schema.define(version: 20160114074453) do
     t.string   "url"
   end
 
-  create_table "questions", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string   "padId"
-    t.string   "pad_url"
-    t.integer  "section_id"
-  end
-
-  add_index "questions", ["section_id"], name: "index_questions_on_section_id"
-
   create_table "sections", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string   "padId"
+    t.string   "qa_pad_id"
     t.string   "title"
     t.integer  "index"
     t.integer  "chapter_id"

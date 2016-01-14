@@ -1,19 +1,7 @@
 
 <iframe src="https://openeducationresource.hackpad.com/<%=@section.padId%>" style="width:100%;height:100%;"></iframe>
-
-
-<script type="text/javascript">
-
-/*
-$(function () {
-  console.log($("#pad<%= @section.padId %>"));
-  hackpad.render_url($("#pad<%= @section.padId %>"),"<%= raw @pad_url %>");
-});
-
-var onPadFrameLoad = function(padId)
-{
-  console.log('#loadText'+padId);
-  $('#loadText'+padId).remove();
-}
-*/
-</script>
+<%= if @section.QApadId==nil%>
+<%= link_to "創立Q&A", createqa_section_path(@section) %>
+<% else %>
+<iframe id='qa-pad' src="https://openeducationresource.hackpad.com/<%=@section.qa_pad_id%>" style="width:100%;height:100%;"></iframe>
+<% end %>

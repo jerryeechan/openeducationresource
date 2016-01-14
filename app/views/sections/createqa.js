@@ -1,0 +1,1 @@
+$('#qa_pad').attr('src', 'https://openeducationresource.hackpad.com/<%=j @section.qa_pad_id%>');

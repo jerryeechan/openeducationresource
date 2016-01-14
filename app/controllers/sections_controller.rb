@@ -55,7 +55,7 @@ class SectionsController < ApplicationController
 
   def create
     puts "create section"
-
+    
     @chapter = Chapter.find(params[:chapter_id])
     @note = Note.find(@chapter.note_id)
     if params[:mode] == 'url'
@@ -94,7 +94,15 @@ class SectionsController < ApplicationController
       end
     end
   end
+  def createqa
+    @section = Section.find_by_id(params[:id])
+    @section.qa_pad_id = create_hackpad("pupu1416@yahoo.com.tw","#{@section.title} Q&A")
+    @section.save
+    respond_to do |format|
+      format.js
+    end
 
+  end
   def update
     Section.find()
   end

@@ -55,14 +55,14 @@
 						<div id = "section-toolbar">		
 							<div class="switch">
 						      <input type="radio" class="switch-input" name="view" value="Note" id="week" checked>
-						      <label for="week" class="switch-label switch-label-off">Week</label>
+						      <label for="week" class="switch-label switch-label-off">筆記</label>
 						      <input type="radio" class="switch-input" name="view" value="Q&amp;A" id="month">
-						      <label for="month" class="switch-label switch-label-on">Month</label>
+						      <label for="month" class="switch-label switch-label-on">Q&amp;A</label>
 						      <span class="switch-selection"></span>
 						    </div> 
 						    
 						    <% if controller.controller_name == "sections"&& controller.action_name == "show"%>
-								<%= current_section.title %>
+								
 						    	<% @like_num = get_section_like_num %>
 						    	<div class="section-collection"><i class="fa fa-star section-collection-icon"></i></div>
 						    	<div class="section-like"><i class="fa fa-heart icon-center"></i><span><%=@like_num%></span></div>

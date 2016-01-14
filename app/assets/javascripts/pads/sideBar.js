@@ -17,16 +17,13 @@ $(document).on('ready page:load', function () {
         placeholder: "ui-state-highlight ui-corner-all", 
         handle: ".header",
         cancel: ".portlet-toggle",
-        update: function( event, ui ) {showList();}
+        update: function( event, ui ) {showList();},
+        start: function( event, ui ) {startMoving(ui.item);},
+        stop: function( event, ui ) {stopMoving(ui.item);}
     }).disableSelection;
 
     addStyle();
 });
-
-function Data(chapter, section){
-    this.chapter = chapter;
-    this.section = section;
-}
 
 //section方面的sortable
 function addSortable(i){
@@ -34,7 +31,9 @@ function addSortable(i){
         handle: ".header",
         connectWith: ".connectedSortable",
         placeholder: "ui-state-highlight-sec",
-        update: function( event, ui ) {showList();}
+        update: function( event, ui ) {showList();},
+        start: function( event, ui ) {startMoving(ui.item.children(".sec-header"));},
+        stop: function( event, ui ) {stopMoving(ui.item.children(".sec-header"));}
     }).disableSelection();
 }
 
@@ -115,6 +114,14 @@ function showList(){
     console.log(json);
 }
 
+function startMoving(item){
+    item.addClass("momImHere");
+}
+
+function stopMoving(item){
+    item.removeClass("momImHere");
+}
+
 
 /* edit */
 function move(){
@@ -123,6 +130,8 @@ function move(){
     $(".sec-header a").css( "cursor", "move" )
     $("#edit").addClass( "hidden" )
     $("#nonedit").removeClass( "hidden" )
+    $(".delButton").css({display: "inline"});
+    $(".connectedSortable").css({"list-style": "none"});
 
 }
 /* nonedit */
@@ -132,13 +141,42 @@ function nonmove(){
     $(".sec-header a").css( "cursor", "pointer" )
     $("#edit").removeClass( "hidden" )
     $("#nonedit").addClass( "hidden" )
+    $(".delButton").css({display: "none"});
+    $(".connectedSortable").css({"list-style-type": "circle"});
+
 }
+
 
 function edit(i){
     name = $("#id").val();
     $( i ).children("span").text(name);
 }
 
-function del(i){
+function deleteSection(i){
     $(i).remove();
+
+
+    // $.ajax({
+    //     url: 'sections/'+i.id.substring(3),
+    //     type: 'DELETE',
+    //     success: function(result) {
+    //         // Do something with the result
+    //     }
+    // });
+}
+
+function deleteChapter(i){
+    var item = i.parentNode;
+
+    $(item).remove();
+    console.log(i.id.substring(13));
+
+
+    // $.ajax({
+    //     url: 'sections/'+i.id.substring(13),
+    //     type: 'DELETE',
+    //     success: function(result) {
+    //         // Do something with the result
+    //     }
+    // });
 }

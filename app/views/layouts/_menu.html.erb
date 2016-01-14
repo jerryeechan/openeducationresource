@@ -9,13 +9,20 @@
 				<nav id="cbp-hrmenu" class="cbp-hrmenu">
 					<ul>
 							<% if current_user %>
-		      				Hi<%= current_user.name %> <%= link_to '登出', signout_path %>
-		    			<% else %>
-		    				<%= current_user %>
-		      				<%= link_to 'FB 登入', fb_login_path %>
-		    			<% end %>
-						<%= link_to 'Home' ,root_path %>
+
+								<li>
+			      					Hi<%= current_user.name %> <%= link_to '登出', signout_path %>
+			      				</li>
+			    			<% else %>
+			    				<%= current_user %>
+			    				<li>
+			      					<%= link_to 'FB 登入', fb_login_path %>
+			      				</li>
+			    			<% end %>
 						<li>
+							<%= link_to 'Home' ,root_path %>
+						</li>
+						<li id="dadImHere">
 							<a href="#">Courses</a>
 							<div class="cbp-hrsub">
 								<div class="cbp-hrsub-inner">
@@ -58,6 +65,7 @@
 					</ul>
 				</nav>
 			</div>
+
 		<!--</div>-->
 		<script>
 			$(function() {

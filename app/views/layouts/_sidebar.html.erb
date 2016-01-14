@@ -12,7 +12,8 @@
       <ul id="chapter">
         <% current_note.chapters.each do |chapter|%>
         <li id="chapter_out" class="ui-state-chapter chapter-style">
-          <div class="chapter-header">
+          <div id="chapterHeader<%=chapter.id%>" class="chapter-header">
+            <button class="delButton" onclick="deleteChapter(this.parentNode)"><i class="fa fa-times"></i></button>
             Ch <%= chapter.index%> <%= best_in_place chapter,:title, :class => 'bip-chapter-title',:chapter_id => chapter.id  %>
           </div>
           <div class="closeThis">
@@ -20,6 +21,7 @@
               <% chapter.sections.each do |section|%>
                 <li class="ui-state-default section-style" id="sec<%=section.id%>">
                   <div class="sec-header">
+                    <button class="delButton" onclick="deleteSection(this.parentNode.parentNode)"><i class="fa fa-times"></i></button>
                     <%= link_to section.title, note_chapter_section_path(current_note,chapter,section)%>
                   </div>
                 </li>

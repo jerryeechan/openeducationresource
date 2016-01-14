@@ -13,7 +13,7 @@ var cbpHorizontalMenu = (function() {
 	var $listItems;
 	var $menuItems;
 	function init() {
-		$listItems = $( '#cbp-hrmenu > ul > li' ),
+		$listItems = $( '#dadImHere' ),
 		$menuItems = $listItems.children( 'a' ),
 		$body = $( 'body' ),
 		current = -1;
@@ -53,5 +53,17 @@ var cbpHorizontalMenu = (function() {
 	}
 
 	return { init : init };
-
 })();
+
+
+$('html').click(function() {
+	$('#dadImHere').removeClass("cbp-hropen");
+});
+
+$('.cbp-hrsub').click(function(event){
+  	event.stopPropagation();
+});
+
+function appear(){
+	alert("~~");
+}

@@ -42,9 +42,17 @@ function bind_like(){
                 icon.toggleClass("like-state");
                 if(type=='like')
                 {
-
-                    //todo adddd 1
-                    //icon.next()
+                    var addOne = parseInt(icon.next().text())+1;
+                    icon.next().text(addOne);
+                }
+            }
+            else if(response==false)
+            {
+                icon.toggleClass("like-state");
+                if(type=='like')
+                {
+                    var addOne = parseInt(icon.next().text())-1;
+                    icon.next().text(addOne);
                 }
             }
         });

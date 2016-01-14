@@ -1,11 +1,15 @@
-<div class="create_section form">
-<%= form_for([@chapter, @chapter.sections.build], remote: true) do |f| %>
-  <p><%= radio_button_tag(:mode, "new") %> 新增
-  <%= radio_button_tag(:mode, "url") %> HackPad連結</p>
-  <p id="titleHere" style="display:none;"> 標題名稱 <%= f.text_field :title %></p>
-  <p id="urlHere" style="display:none;"> HackPad連結 <input name='pad_url' id='pad_url'></p>
-  <%= f.submit%>
-<% end %>
+<div class="outer">
+	<h1>新增筆記</h1>
+	<div class="create_section form">
+	<%= form_for([@chapter, @chapter.sections.build], remote: true) do |f| %>
+		<p class="new"><%= radio_button_tag(:mode, "new") %> 新增</p>
+	  	<p class="url"><%= radio_button_tag(:mode, "url") %> HackPad連結</p>
+	  	<br/>
+	  	<div class="out"><p id="titleHere"> 筆記名稱 <%= f.text_field :title %></p></div>
+	  	<div class="out"><p id="urlHere"> HackPad連結 <input name='pad_url' id='pad_url'></p></div>
+		  <%= f.submit%>
+	<% end %>
+	</div>
 </div>
 
 

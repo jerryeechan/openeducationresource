@@ -24,6 +24,7 @@ class SectionsController < ApplicationController
     end   
     
 =end
+    session[:chapter_id] = params[:chapter_id]
     session[:section_id] = params[:id]
     session[:note_id] = params[:note_id]
     opts = {
@@ -121,7 +122,15 @@ class SectionsController < ApplicationController
     @chapter = find_chapter(@section)
     @note = find_note(@chapter)
     @section.destroy
-    render :js => "window.location = '#{note_path(@note)}'"
+    
+
+    if session[:section_id]==params[:id]
+      #redirect to note
+      render :js => "window.location = '#{note_path(@note)}'"
+    else
+      #ajax delete
+      redirect_to @note,status: 303
+    end
   end
   def copy
     session[:section_id] = params[:id]

@@ -13,6 +13,7 @@ module ApplicationHelper
     @section = Section.find_by_id(session[:section_id])
   end
 
+
   def destroy_current_section
     session[:section_id] = nil
   end

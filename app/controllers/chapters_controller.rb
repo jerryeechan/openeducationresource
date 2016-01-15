@@ -35,6 +35,21 @@ class ChaptersController < ApplicationController
   end
 
   def destroy
+
+    @chapter = Chapter.find(params[:id])
+    @note = find_note(@chapter)
+    @chapter.sections.each do |section|
+      section.destroy
+    end
+    @chapter.destroy
+
+    if session[:chapter_id]==params[:id]
+      #redirect to note
+      render :js => "window.location = '#{note_path(@note)}'"
+    else
+      #ajax delete
+      redirect_to @note,status: 303
+    end
   end
 
   def reloadIndex

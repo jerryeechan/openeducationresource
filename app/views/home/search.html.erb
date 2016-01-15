@@ -1,11 +1,21 @@
+<div class = "subTitle">
+    <div>搜尋結果</div>
+</div>
+<div class = "refContainer">
 <% @notes.each do |note|%>
-<%= note.title%><br/>
+<div class = "ref">課程：<%= link_to note.title, note_path(note) %></div>
 <% end %>
 
 <% @chapters.each do |chapter|%>
-<%= chapter.title%><br/>
+<% note = find_note(chapter) %>
+<div class = "ref">章節：<%= link_to chapter.title, note_chapter_path(note,chapter) %></div>
 <% end %>
 
 <% @sections.each do |section|%>
-<%= section.title%><br/>
-<% end %>
+<% chapter = find_chapter(section) %>
+<% note = find_note(chapter) %>
+<div class = "ref">筆記：<%= link_to section.title, note_chapter_section_path(note,chapter,section) %></div><% end %>
+</div>
+
+
+

@@ -2,6 +2,8 @@ class HomeController < ApplicationController
   layout "application"
   def index
     @notes = Note.all
+
+    
     @user = User.all
   end
 
@@ -20,6 +22,9 @@ class HomeController < ApplicationController
     @sections = Section.where("title like ?","#{keyword}%")
   end
   def favorite
-    
+    puts current_user.likes
+    puts current_user.likes.count
+    puts current_user.likes.where(:is_bookmark=>true)
+    @likes = current_user.likes.where(:is_bookmark=>true)
   end
 end

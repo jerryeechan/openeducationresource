@@ -12,7 +12,7 @@
 						<% if current_user %>
 
 								<li>
-			      				Hi, <%= current_user.name %> <%= link_to '登出', signout_path %>
+			      				Hi,<%= link_to current_user.name, favorite_home_path %>  <%= link_to '登出', signout_path %>
 			      		</li>
 			    			<% else %>
 			    				<%= current_user %>

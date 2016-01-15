@@ -3,8 +3,7 @@ class User < ActiveRecord::Base
   has_many :tags
   
   has_many :sections, through: :tags
-  has_many :bookmarks, foreign_key:"bookmark_by_id" , class_name:"Section"
-
+  has_many :likes
   scope :create_by, ->(user){
       where "name like ?", "#{user}%"
   }

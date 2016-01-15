@@ -1,5 +1,10 @@
 module ApplicationHelper
-  
+  def find_chapter(section)
+    @chapter = Chapter.find_by_id(section.chapter_id)
+  end
+  def find_note(chapter)
+    @note = Note.find_by_id(chapter.note_id)
+  end
   def current_note
     @note = Note.find_by_id(session[:note_id])
   end

@@ -1,0 +1,7 @@
+<p>我的最愛</p>
+<% @likes.each do |like| %>
+  <% section = Section.find_by_id(like.likeable_id)%>
+  <% chapter = find_chapter(section) %>
+  <% note = find_note(chapter) %>
+  <p>筆記名稱：<%= link_to section.title, note_chapter_section_path(note,chapter,section) %></p>
+<% end %>

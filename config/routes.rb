@@ -22,6 +22,7 @@ Hpjsdemo::Application.routes.draw do
    
   post 'sections/:id/createqa', to:'sections#createqa', as: 'createqa_section'
 
+
   resources :questions
 
   get 'user', to:'user#index'
@@ -31,6 +32,7 @@ Hpjsdemo::Application.routes.draw do
   get 'home' ,to: 'home#index'
   root 'home#index'
   get 'home/search', to: 'home#search'
+  get 'home/favorite',to:'home#favorite',as: 'favorite_home'
 
   get 'auth/facebook', as: "fb_login"
   get 'auth/facebook/callback', to: 'sessions#create'#'users#login'

@@ -42,6 +42,7 @@ ActiveRecord::Schema.define(version: 20160115002126) do
     t.string   "title"
     t.integer  "viewby"
     t.integer  "follower"
+    t.integer  "likenum"
     t.string   "description_padId"
     t.integer  "user_id"
   end

@@ -1,16 +1,15 @@
 <div class="side-note">
   <div class="addtag tag-container hidden">
+    <% if controller.controller_name == "sections"&& controller.action_name == "show"%>
     <div class="title">Tags</div>
     <ul id="add-tag-field" name="add-tag-field" class="tagit ui-sortable">
       <script type="text/javascript">
         <% current_section.tags.each do |tag| %>
-
-        
           $('#add-tag-field').append("<li><%=tag.text%></li>\n");
-        
         <% end %>
       </script>
     </ul>
+    <% end %>
   </div>
 
 
@@ -65,6 +64,7 @@
         </div>
     </div>
   <% end %>
+  <% if controller.controller_name == "sections"&& controller.action_name == "show"%>
   <div id = "index-tag-toggle-button">
     <ul class='tg-list'>
       <li class='tg-list-item'>
@@ -73,6 +73,7 @@
       </li>
     </ul>
   </div>
+  <% end %>
 
 
 </div>

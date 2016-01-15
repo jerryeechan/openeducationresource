@@ -19,4 +19,7 @@ class HomeController < ApplicationController
     @chapters = Chapter.where("title like ?","#{keyword}%")
     @sections = Section.where("title like ?","#{keyword}%")
   end
+  def favorite
+    
+  end
 end

@@ -1,7 +1,6 @@
 class SectionsController < ApplicationController
   include ActionView::Helpers::TextHelper
   layout "note_layout"
-  respond_to :html, :js
   def show
     @note = Note.find(params[:note_id])
     @chapter = Chapter.find(params[:chapter_id])
@@ -35,11 +34,6 @@ class SectionsController < ApplicationController
     
     @pad_url = hackpad.uri + get_pad_url(opts)
 
-    @section.questions.each do |question|
-      opts[:padId] = question.padId
-      question.pad_url = get_pad_url(opts)
-    end
-    #@questions = section.questions
   end
 
   def get_pad_url(opts)
@@ -64,7 +58,7 @@ class SectionsController < ApplicationController
 
     
       puts params[:section][:padId]
-      @section = @chapter.sections.create(section_param)
+      @section = @chapter.sections.create(section_params)
 
       @section.index = @chapter.sections.length
       @section.save
@@ -82,7 +76,7 @@ class SectionsController < ApplicationController
       if res.is_a? Net::HTTPSuccess
         json = ActiveSupport::JSON.decode res.body
         params[:section][:padId] = json['padId']
-        @section = @chapter.sections.create(section_param)
+        @section = @chapter.sections.create(section_params)
         #redirect_to @section
         respond_to do |format|
         #format.html {redirect_to  }
@@ -96,15 +90,28 @@ class SectionsController < ApplicationController
   end
   def createqa
     @section = Section.find_by_id(params[:id])
-    @section.qa_pad_id = create_hackpad("pupu1416@yahoo.com.tw","#{@section.title} Q&A")
-    @section.save
-    respond_to do |format|
-      format.js
+    if @section.qa_pad_id == nil
+      @section.qa_pad_id= create_hackpad("pupu1416@yahoo.com.tw","#{@section.title} Q&A")
+      @section.save
     end
-
+    
+    respond_to do |format|
+      format.js #create.js
+    end
   end
   def update
-    Section.find()
+    @section =Section.find(params[:id])
+
+    respond_to do |format|
+        if @section.update_attributes(section_params) 
+          format.html { redirect_to(@section) }
+          format.json { respond_with_bip(@section) }
+        else
+          format.html { render :action => "edit" }
+          format.json { respond_with_bip(@section) }
+        end
+    end
+
   end
 
   def destroy
@@ -121,7 +128,7 @@ class SectionsController < ApplicationController
     
   end
 
-  def section_param
+  def section_params
     params.require(:section).permit(:title,:padId)
   end
 end

@@ -18,10 +18,9 @@ Hpjsdemo::Application.routes.draw do
     resources :sections
   end
 
-  resources :sections do
-    resources :questions
-  end
-  get 'sections/:id/createqa', to:'sections#createqa', as: 'createqa_section'
+  resources :sections 
+   
+  post 'sections/:id/createqa', to:'sections#createqa', as: 'createqa_section'
 
   resources :questions
 

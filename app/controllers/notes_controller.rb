@@ -19,7 +19,7 @@ class NotesController < ApplicationController
 
     @user_email = "pupu1416@yahoo.com.tw"
     @title = note_params[:title]
-    @pad_id = create_hackpad(@user_email,@title)
+    @pad_id = create_hackpad(@user_email,@title+"簡介\n在這裡加上關於本課程的介紹")
     @note.description_padId = @pad_id
     #current_user.notes << @note
     #current_user.save

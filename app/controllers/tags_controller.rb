@@ -3,7 +3,8 @@ class TagsController < ApplicationController
     puts params
     puts params[:text]
     #ajax 
-    @tag = Tag.where(:text=>params[:text]).first_or_create
+    @tag = current_section.tags.where(:text=>params[:text]).first_or_create
+    
     respond_to do |format|
       #format.html {redirect_to  }
       format.js #create.js

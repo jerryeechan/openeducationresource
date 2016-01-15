@@ -25,8 +25,13 @@ $(document).on('ready page:load', function () {
     
     bind_like();
     addStyle();
+    $('.tgl-flip').click(toggleSideBar);
 });
-
+function toggleSideBar()
+{
+    $('.tag-container').toggleClass('hidden');
+    $('.index-container').toggleClass('hidden');
+}
 //like or not
 function bind_like(){
     $(".icon")

@@ -1,7 +1,9 @@
 
-<iframe src="https://openeducationresource.hackpad.com/<%=@section.padId%>" style="width:100%;height:100%;"></iframe>
-<%= if @section.QApadId==nil%>
-<%= link_to "創立Q&A", createqa_section_path(@section) %>
+<iframe id = 'note-pad' src="https://openeducationresource.hackpad.com/<%=@section.padId%>" style="width:100%;height:100%;"></iframe>
+<div id="qa-area" class="hidden" style="width:100%;height:100%;">
+<% if @section.qa_pad_id==nil%>
+<%= link_to "創立Q&A", createqa_section_path(@section,:format => :js), :remote=>true, method: :post %>
 <% else %>
-<iframe id='qa-pad' src="https://openeducationresource.hackpad.com/<%=@section.qa_pad_id%>" style="width:100%;height:100%;"></iframe>
+<iframe id='qa-pad'  src="https://openeducationresource.hackpad.com/<%=@section.qa_pad_id%>" style="width:100%;height:100%;"></iframe>
 <% end %>
+</div>

@@ -1,16 +1,22 @@
 <div class="side-note">
-  <div class="addtag tag-container">
-    <div class="note">Tags</div>
+  <div class="addtag tag-container hidden">
+    <div class="title">Tags</div>
     <ul id="add-tag-field" name="add-tag-field" class="tagit ui-sortable">
-      <li class="tagit-choice tagit-type-none" tagvalue="ee"><div class="tagit-label">ee</div><a class="tagit-close">x</a></li>
-      <li class="tagit-choice tagit-type-none" tagvalue="qq"><div class="tagit-label">qq</div><a class="tagit-close">x</a></li>
+      <script type="text/javascript">
+        <% current_section.tags.each do |tag| %>
+
+        
+          $('#add-tag-field').append("<li><%=tag.text%></li>\n");
+        
+        <% end %>
+      </script>
     </ul>
   </div>
 
 
   <% if current_note%>
     <div class = "index-container">
-      <div class="note" id="<%=current_note.id%>"><%= link_to current_note.title, current_note %></div>
+      <div class="note title" id="<%=current_note.id%>"><%= link_to current_note.title, current_note %></div>
       <!--like course-->
       <div class="course-like">
         <%if get_note_like.is_like%>
@@ -34,7 +40,7 @@
                       <div class="sec-header">
                         <button class="delButton" onclick="deleteSection(this.parentNode.parentNode)"><i class="fa fa-times"></i></button>
                         <%if current_section && current_section.id == section.id%>
-                        <%= link_to section.title, note_chapter_section_path(current_note,chapter,section),:class=>'current-section'%>
+                        <%= best_in_place section,:title,:class=>'bip-chapter-title current-section',:section_id => section.id%>
                         <%else%>
                         <%= link_to section.title, note_chapter_section_path(current_note,chapter,section)%>
                         <% end %>

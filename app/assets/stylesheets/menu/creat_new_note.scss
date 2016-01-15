@@ -63,8 +63,20 @@ input:-moz-placeholder { color:#737373;  font-weight: lighter; letter-spacing:1p
 .submit-button:hover {
   background: #377F54;
   cursor: pointer;
+  color: #FFF;
+  text-decoration: none;
 }
 
 .submit-button:focus {
   outline: none;  
+  color: #FFF;
+  text-decoration: none;
 }
+
+.submit-button a, 
+.submit-button a:hover,
+.submit-button a:focus {
+  color: #FFF;
+  text-decoration: none;
+}
+

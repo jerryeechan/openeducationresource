@@ -1,0 +1,70 @@
+.creat-note {
+	margin: 50px auto;
+	border: 0px solid red;
+	width: 30vw;
+}
+
+.creat-note h1 {
+	border-bottom: 3px solid #5a5a5a;
+	padding: 15px 0;
+	margin-bottom: 20px;
+}
+
+.creat-note p {
+	font-size: 1.2em;
+	margin: 5px 0;
+}
+
+.creat-note a 
+{
+	color: #459f69;
+}
+
+.creat-note a:hover {
+	color: #377F54;
+}
+
+.input-title {
+  margin: 5px 0px;
+  width: 30vw;
+  height: 45px;
+  font-size : 1.1em;
+  font-weight: normal;
+  letter-spacing: 1px;
+  box-shadow: inset;
+  border : 1px solid #5a5a5a;
+  border-radius : 5px;
+  padding: 15px; 
+}
+
+.input-title:focus {
+  border: 1px solid #459f69;
+  outline: none;
+}
+
+::-webkit-input-placeholder { color:#737373; font-weight: lighter; letter-spacing:1px;}
+::-moz-placeholder { color:#737373; font-weight: lighter;letter-spacing:1px;} /* firefox 19+ */
+:-ms-input-placeholder { color:#737373; font-weight: lighter;letter-spacing:1px;} /* ie */
+input:-moz-placeholder { color:#737373;  font-weight: lighter; letter-spacing:1px;}
+
+.submit-button {
+  margin: 5px 0;
+  width:30vw;
+  height:45px;
+  color: #FFF;
+  font-size : 1.1em;
+  box-shadow: inset;
+  border : 1px solid #459f69;
+  border-radius : 5px;
+  padding: 7px 15px;
+  background: #459f69;
+}
+
+.submit-button:hover {
+  background: #377F54;
+  cursor: pointer;
+}
+
+.submit-button:focus {
+  outline: none;  
+}

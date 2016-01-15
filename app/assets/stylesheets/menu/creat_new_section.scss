@@ -1,48 +1,41 @@
-.create_section {
-	width: 30%;
-	border: 1px solid red;
-	margin: 0 auto;
-	margin-top: 8%;
+.create-section {
+	margin: 50px auto;
+	border: 0px solid red;
+	width: 30vw;
 }
 
-.outer h1 {
-	margin-top: 3%;
-	font-size: 3em;
-	text-align: center;
-	border: 1px solid red;
+.create-section h1 {
+	border-bottom: 3px solid #5a5a5a;
+	padding: 15px 0;
+	margin-bottom: 20px;
 }
 
-.outer{
-	border: 1px solid green;
-	margin: 0 auto;
+.create-section p {
+	font-size: 1.2em;
+	margin: 5px 0;
+	border:0px solid red;
 }
 
-.out{
-	text-align: center;
+.create-section a 
+{
+	color: #459f69;
 }
 
-.new{
-	float: left;
+.create-section a:hover {
+	color: #377F54;
 }
 
-.url{
-	float: right;
+.new {
+	display: inline-block;
+	padding: 5px 50px 5px 2px;
 }
 
-#titleHere{
+.url {
+	display: inline-block;
+	padding: 5px 5px 5px 0;
+}
+
+#urlHere {
 	display: none;
-	text-align: right;
-	margin-top: 3%;
 }
 
-#urlHere{
-	display: none;
-	text-align: right;
-	margin-top: 3%;
-}
-
-input[type="submit"][name="commit"]{
-	float: right;
-	display: none;
-	margin-top: 2%;
-}

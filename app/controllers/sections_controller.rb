@@ -25,6 +25,7 @@ class SectionsController < ApplicationController
     
 =end
     session[:section_id] = params[:id]
+    session[:note_id] = params[:note_id]
     opts = {
       :padId => @section.padId,
       #:email => 'anonymous@hackpad.user',
@@ -115,10 +116,12 @@ class SectionsController < ApplicationController
   end
 
   def destroy
-    destroy_current_section
-    @note = Note.find(params[:chapter_id])
-    Section.find(params[:id]).destroy
-    redirect_to @note
+    #destroy_current_section
+    @section = Section.find(params[:id])
+    @chapter = find_chapter(@section)
+    @note = find_note(@chapter)
+    @section.destroy
+    render :js => "window.location = '#{note_path(@note)}'"
   end
   def copy
     session[:section_id] = params[:id]

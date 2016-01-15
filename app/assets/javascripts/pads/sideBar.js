@@ -187,17 +187,20 @@ function edit(i){
 }
 
 function deleteSection(i){
+    var id = i.id;
+    console.log(i);
     $(i).remove();
 
-
-    // $.ajax({
-    //     url: 'sections/'+i.id.substring(3),
-    //     type: 'DELETE',
-    //     success: function(result) {
-    //         // Do something with the result
-    //     }
-    // });
+    console.log('/sections/'+id.substring(3));
+    $.ajax({
+         url: '/sections/'+id.substring(3),
+         type: 'DELETE',
+         success: function(result) {
+             // Do something with the result
+         }
+     });
 }
+
 
 function deleteChapter(i){
     var item = i.parentNode;
@@ -206,11 +209,11 @@ function deleteChapter(i){
     console.log(i.id.substring(13));
 
 
-    // $.ajax({
-    //     url: 'sections/'+i.id.substring(13),
-    //     type: 'DELETE',
-    //     success: function(result) {
-    //         // Do something with the result
-    //     }
-    // });
+     $.ajax({
+         url: '/sections/'+i.id.substring(13),
+         type: 'DELETE',
+         success: function(result) {
+             // Do something with the result
+         }
+     });
 }

@@ -15,11 +15,10 @@ class NotesController < ApplicationController
 
   def create
     @note = current_user.notes.create(note_params)
-    
-
     @user_email = "pupu1416@yahoo.com.tw"
     @title = note_params[:title]
     @pad_id = create_hackpad(@user_email,@title+"簡介\n在這裡加上關於本課程的介紹")
+    puts @pad_id
     @note.description_padId = @pad_id
     @note.likenum = 0
     #current_user.notes << @note

@@ -40,9 +40,23 @@ function bind_like(){
         var like_id = icon.attr('id');
         //icon.toggleClass("like-state");
         var type = icon.attr('type');
+
+        //not like
+        var value = 1;
+        if(icon.hasClass("like-state"))
+        {
+        //already like
+           value = -1; 
+        }
+
+        var changeValue = parseInt(icon.next().text())+value;
+        icon.toggleClass("like-state");
+        icon.next().find('span').text(changeValue);
+
         $.post('/likes/'+like_id+'/'+type+'_toggle',function(response)
         {
-            icon.toggleClass("like-state");
+            //icon.toggleClass("like-state");
+
             if(type=='like')
             {
                 var value = 0;
@@ -51,8 +65,8 @@ function bind_like(){
                 else
                     value = -1;
 
-                var addOne = parseInt(icon.next().text())+value;
-                icon.next().find('span').text(addOne);
+                //var addOne = parseInt(icon.next().text())+value;
+                //icon.next().find('span').text(addOne);
             }
         });
     });
@@ -210,7 +224,7 @@ function deleteChapter(i){
 
 
      $.ajax({
-         url: '/sections/'+i.id.substring(13),
+         url: '/chapters/'+i.id.substring(13),
          type: 'DELETE',
          success: function(result) {
              // Do something with the result

@@ -1,4 +1,5 @@
 class SessionsController < ApplicationController
+
   def create
     @user = User.from_omniauth(env["omniauth.auth"])
     if @user.nil?
@@ -10,7 +11,7 @@ class SessionsController < ApplicationController
   end
 
   def destroy
-    session[:user_id] = nil
+    session[:user_id] = nil 
     redirect_to root_path
   end
 end

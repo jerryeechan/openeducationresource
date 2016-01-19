@@ -27,11 +27,6 @@ $(document).on('ready page:load', function () {
       });
     }
 
-    function reorder()
-    {
-      
-    }
-
 
     $('.bip-chapter-title').bind("ajax:success", function(){
       var chater_id = $(this).attr('chater_id');

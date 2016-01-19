@@ -1,0 +1,44 @@
+<%if Rails.env =='development'%>
+var appId = '1066169166749657';
+<%else%>
+var appId = '1066168746749699';
+<%end%>
+  
+
+$(document).on('ready page:load', function () {
+//development id
+  console.log('logout bind');
+      $('.logout').click(function()
+      {
+        console.log('logout clicked');
+       
+        FB.getLoginStatus(function(response) {
+        if (response && response.status === 'connected') {
+          console.log('connected');
+            FB.logout(function(response) {
+              console.log('logout');
+            });
+        }
+    });
+      });
+  window.fbAsyncInit = function() {
+    console.log('FB sync');
+    FB.init({
+      appId      : appId,
+      xfbml      : true,
+      version    : 'v2.5',
+      status     : true
+    });
+
+    
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/zh_TW/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+});
+

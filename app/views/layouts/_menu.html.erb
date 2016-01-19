@@ -10,9 +10,8 @@
 					<ul>
 
 						<% if current_user %>
-
 								<li>
-			      				Hi,<%= link_to current_user.name, favorite_home_path %>  <%= link_to '登出', signout_path %>
+			      				<%= link_to 'Hi, '+current_user.name, favorite_home_path %>  <%= link_to '登出', signout_path ,:class=>'logout '%>
 			      		</li>
 			    			<% else %>
 			    				<%= current_user %>
@@ -88,8 +87,11 @@
 					</ul>
 				</nav>
 			</div>
-
+			
+				
+			
 		<!--</div>-->
+		
 		<script>
 			$(function() {
 				cbpHorizontalMenu.init();

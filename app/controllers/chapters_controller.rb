@@ -42,7 +42,7 @@ class ChaptersController < ApplicationController
       section.destroy
     end
     @chapter.destroy
-
+    
     if session[:chapter_id]==params[:id]
       #redirect to note
       render :js => "window.location = '#{note_path(@note)}'"

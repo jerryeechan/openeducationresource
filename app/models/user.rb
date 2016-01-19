@@ -1,7 +1,6 @@
 class User < ActiveRecord::Base
   has_many :notes
   has_many :tags
-  
   has_many :sections, through: :tags
   has_many :likes
   scope :create_by, ->(user){
@@ -10,7 +9,6 @@ class User < ActiveRecord::Base
   
   def self.from_omniauth(auth)
     access_token = auth.credentials.token
-
     facebook = Koala::Facebook::API.new(access_token)
     public_attr = facebook.get_object("me?fields=id,name,email") 
     if !exists?(uid: auth.uid)

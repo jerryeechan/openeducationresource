@@ -14,9 +14,8 @@
 			      				<%= link_to 'Hi, '+current_user.name, favorite_home_path %>  <%= link_to '登出', signout_path ,:class=>'logout '%>
 			      		</li>
 			    			<% else %>
-			    				<%= current_user %>
 			    				<li>
-			      					<%= link_to 'FB 登入', fb_login_path %>
+			      					<%= link_to 'FB 登入', signin_path %>
 			      				</li>
 			    			<% end %>
 
@@ -64,23 +63,30 @@
 						    
 								
 						    	<% @like_num = get_section_like_num %>
-						    	<div class="section-collection">
-						    		<%if get_section_like.is_bookmark %>
-						    			<i id="<%=get_section_like.id%>" type="bookmark" class="fa fa-star section-collection-icon icon like-state"></i>
-						    		<% else %>
-						    			<i id="<%=get_section_like.id%>" type="bookmark" class="fa fa-star section-collection-icon icon"></i>
-						    		<% end %>
-						    	</div>
+						    	<% if current_user %>
+							    	<div class="section-collection">
+							    		<%if get_section_like.is_bookmark %>
+							    			<i id="<%=get_section_like.id%>" type="bookmark" class="fa fa-star section-collection-icon icon like-state"></i>
+							    		<% else %>
+							    			<i id="<%=get_section_like.id%>" type="bookmark" class="fa fa-star section-collection-icon icon"></i>
+							    		<% end %>
+							    	</div>
 
-						    	<div class="section-like">
-						    		<%if get_section_like.is_like%>
-						    		<i id="<%=get_section_like.id%>" type="like" class="fa fa-heart icon-center icon like-state"></i>
-						    		<%else%>
-						    		<i id="<%=get_section_like.id%>" type="like" class="fa fa-heart icon-center icon"></i>
-						    		<% end %>
+							    	<div class="section-like">
+							    		<%if get_section_like.is_like%>
+							    		<i id="<%=get_section_like.id%>" type="like" class="fa fa-heart icon-center icon like-state"></i>
+							    		<%else%>
+							    		<i id="<%=get_section_like.id%>" type="like" class="fa fa-heart icon-center icon"></i>
+							    		<% end %>
 
-						    		<div><span><%=@like_num%></span> likes</div>
-						    	</div>
+							    		<div><span><%=@like_num%></span> likes</div>
+							    	</div>
+							    <% else %>
+							    	<div class="section-like">
+							    	<i type="like" class="fa fa-heart icon-center"></i>
+							    	<div><span><%=@like_num%></span> likes</div>
+							    	</div>
+							    <% end %>
 						    </div>
 					    <% end %>
 					    <!--<div id="log"></div>-->

@@ -35,8 +35,10 @@ Hpjsdemo::Application.routes.draw do
   get 'home/favorite',to:'home#favorite',as: 'favorite_home'
 
   get 'auth/facebook', as: "fb_login"
-  get 'auth/facebook/callback', to: 'sessions#create'#'users#login'
+  get 'auth/facebook/callback', to: 'sessions#create'
+
   get 'signout', to: 'sessions#destroy', as: 'signout'
+  get 'signin', to:'sessions#login', as: 'signin'
   
   post 'likes/:id/like_toggle',to:'likes#like_toggle'
   post 'likes/:id/bookmark_toggle',to:'likes#bookmark_toggle'

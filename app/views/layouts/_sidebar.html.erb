@@ -15,16 +15,23 @@
 
   <% if current_note%>
     <div class = "index-container">
-      <div class="note title" id="<%=current_note.id%>"><%= link_to current_note.title, current_note %></div>
+      <div class="note title" id="<%=current_note.id%>"><%= link_to current_note.title, current_note %>
+
+      </div>
       <!--like course-->
       <div class="course-like">
-        <%if get_note_like.is_like%>
-          <i id="<%=get_note_like.id%>" type="like" class="fa fa-heart icon-center icon like-state"></i>
-        <%else%>
-          <i id="<%=get_note_like.id%>" type="like" class="fa fa-heart icon-center icon"></i>
-        <% end -%>
+        <% if current_user %>
+          <%if get_note_like.is_like%>
+            <i id="<%=get_note_like.id%>" type="like" class="fa fa-heart icon-center icon like-state"></i>
+          <%else%>
+            <i id="<%=get_note_like.id%>" type="like" class="fa fa-heart icon-center icon"></i>
+          <% end -%>
+        <% else %>
+          <i type="like" class="fa fa-heart icon-center "></i>
+        <% end %>
         <div><span><%=get_note_like_num%></span> people like this course.</div>
       </div>    
+      <hr>
       <ul id="chapter">
           <% current_note.chapters.each do |chapter|%>
             <li id="chapter_out" class="ui-state-chapter chapter-style">

@@ -14,7 +14,7 @@ class ApplicationController < ActionController::Base
     }
   	return @hackpad
   end
-
+  
   def current_user
     puts "current_user called"
     puts session[:user_id]

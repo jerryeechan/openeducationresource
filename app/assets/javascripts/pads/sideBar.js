@@ -26,7 +26,14 @@ $(document).on('ready page:load', function () {
     bind_like();
     addStyle();
     $('.tgl-flip').click(toggleSideBar);
+    recordKeypress();
 });
+function recordKeypress()
+{
+    $( "body" ).keypress(function() {
+    console.log( "Handler for .keypress() called." );
+});
+}
 function toggleSideBar()
 {
     $('.tag-container').toggleClass('hidden');

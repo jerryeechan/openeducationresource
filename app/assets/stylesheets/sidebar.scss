@@ -6,9 +6,9 @@ $shake-bordercolor: #6e6e6e;
 /*sidebar basic style */
 
 .sidebar{
-  width: 19vw;
+  width: 19%;
   height: calc(100vh - 63px);
-  float: left;
+  float:left;
   overflow-y: auto;
   overflow-x: hidden;
   background-color: $bgcolor;
@@ -274,7 +274,7 @@ $shake-bordercolor: #6e6e6e;
 
 /* note layout content */
 .content{
-  width: 81vw;
+  width: 81%;
   height: calc(100vh - 63px);
   float: left;
   background: rgba(230, 234, 231, 1);

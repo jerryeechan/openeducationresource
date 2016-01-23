@@ -42,6 +42,7 @@ gem 'best_in_place', '3.0.3'
 gem 'websocket-rails'
 gem 'faye-websocket', '0.10.0'
 gem 'font-awesome-sass'
+gem 'activeadmin', github: 'activeadmin'
 #gem "koala", "~> 2.2"
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

@@ -12,7 +12,7 @@ class SectionsController < ApplicationController
       @user_email = anonymous_user.email
     end
 
-=begin    
+
     #@user_email = 
     res = hackpad.request :get, "/api/1.0/pad/#{@section.padId}/content.txt?asUser=#{@user_email}"
     if res.is_a? Net::HTTPSuccess
@@ -23,7 +23,7 @@ class SectionsController < ApplicationController
       puts res.body
     end   
     
-=end
+    @user_email = 'test123@hackpad.com'
     session[:chapter_id] = params[:chapter_id]
     session[:section_id] = params[:id]
     session[:note_id] = params[:note_id]
@@ -121,6 +121,7 @@ class SectionsController < ApplicationController
     @section = Section.find(params[:id])
     @chapter = find_chapter(@section)
     @note = find_note(@chapter)
+    @section.likes.destroy
     @section.destroy
     
 

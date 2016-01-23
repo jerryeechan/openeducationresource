@@ -1,11 +1,1 @@
 <iframe src="https://openeducationresource.hackpad.com/<%=@note.description_padId%>" style="width:100%;height:100%;"></iframe>
-
-<p>筆記名稱：<%= best_in_place @note, :title, :as => :input %></p>
-<p>created by<%= get_note_created_user(@note.user_id).name %></p>
-<% @note.chapters.each do |chapter| %>
-  <%= best_in_place chapter, :title, :as => :input %>
-  
-  <% for i in 0...100%>
-    <li>Lomoers</li>
-  <% end %>
-<% end %>

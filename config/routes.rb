@@ -1,4 +1,5 @@
 Hpjsdemo::Application.routes.draw do
+  ActiveAdmin.routes(self)
   resources :pads do
     resource 'embed', :only => :show do
       get 'nosig'

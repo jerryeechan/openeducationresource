@@ -26,14 +26,78 @@ $(document).on('ready page:load', function () {
     bind_like();
     addStyle();
     $('.tgl-flip').click(toggleSideBar);
-    recordKeypress();
+
+    $(window).on("blur focus", function(e) {
+    var prevType = $(this).data("prevType"); // getting identifier to check by
+        if (prevType != e.type) {   //  reduce double fire issues by checking identifier
+            switch (e.type) {
+                case "blur":
+                    
+                    // do work
+                    
+                    break;
+                case "focus":
+                    
+                    // console.log('focus');
+                    break;
+            }
+
+        }
+        $(this).data("prevType", e.type);
+    });
+    $('#note-pad').on('blur',function()
+    {
+        console.log('iframe blur');
+
+    });
+     // reset identifier
+
+
+    /*
+    document.getElementById('note-pad').addEventListener('mouseover',function(){
+        //myConfObj.iframeMouseOver = true;
+        console.log('mouse over');
+    });
+    document.getElementById('note-pad').addEventListener('mouseout',function(){
+        //myConfObj.iframeMouseOver = true;
+        console.log('mouse out');
+    });
+
+    document.getElementById('note-pad').addEventListener('mouseleave',function(){
+        //myConfObj.iframeMouseOver = true;
+        console.log('mouse leave');
+    });
+*/
+
+
+    vis(function(){
+        console.log(vis() ? 'Visible' : 'Not visible');
+        console.log(document.activeElement);
+    });
+
 });
-function recordKeypress()
-{
-    $( "body" ).keypress(function() {
-    console.log( "Handler for .keypress() called." );
-});
-}
+
+
+var vis = (function(){
+    var stateKey, eventKey, keys = {
+        hidden: "visibilitychange",
+        webkitHidden: "webkitvisibilitychange",
+        mozHidden: "mozvisibilitychange",
+        msHidden: "msvisibilitychange"
+    };
+    for (stateKey in keys) {
+        if (stateKey in document) {
+            eventKey = keys[stateKey];
+            break;
+        }
+    }
+    return function(c) {
+        if (c) document.addEventListener(eventKey, c);
+        return !document[stateKey];
+    }
+})();
+
+
 function toggleSideBar()
 {
     $('.tag-container').toggleClass('hidden');

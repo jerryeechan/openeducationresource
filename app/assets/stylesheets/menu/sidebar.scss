@@ -1,0 +1,416 @@
+/* note layout sidebar */
+$bgcolor: #DCDCDC;
+$textcolor: #5a5a5a;
+$shake-bordercolor: #6e6e6e;
+
+/*sidebar basic style */
+
+.sidebar{
+  width: 19vw;
+  height: calc(100vh - 63px);
+  float: left;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background-color: $bgcolor;
+  padding: 10px !important;
+  padding-bottom: 3em !important;
+}
+
+.side-note {
+  border: 0px solid red;
+}
+
+/*---------------------------------------------------*/
+/* index container */
+
+.index-container {
+}
+
+/* courseTitle */
+.title {
+  border: 0px solid red;
+  font-family: 'Lato', Calibri, Arial, sans-serif;
+  /*font-family: 'Noto Serif', serif;*/
+  font-size: 1.5em;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+
+.title a {
+  color: $textcolor;
+  text-decoration: none;
+}
+
+.title a:hover {
+  color: #459f69;
+}
+
+.course-like {
+  border: 0px solid red;
+  margin-top: 5px;
+  position: relative;
+}
+
+.course-like span {
+  border: 0px solid yellow;
+/*  position: absolute;
+  bottom: 4px;
+  left: 38px;*/
+  font-size: 1.2em;
+  margin-left: 10px;
+  color: $textcolor;
+}
+
+.course-like div{
+  position: absolute;
+  bottom: 4px;
+  left: 36px;
+  display: inline;
+  border: 0px solid red;
+}
+
+.icon-center {
+  color: $textcolor;
+  font-size: 100%;
+  border: 2px solid $textcolor;
+  padding: 8px;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  border-radius: 100px;
+  background: transparent;
+  display: inline-block;
+}
+
+.icon-center:hover {
+  color: #459f69;
+  border: 2px solid #459f69;
+  cursor: pointer;
+}
+
+/* ------------------------------------------------------------------------------------- */
+.like-state {
+  color: #459f69;
+  border: 2px solid #459f69;
+}
+
+#chapter { 
+  border: 0px solid red;
+  list-style-type: none; 
+  margin: 0; 
+  padding: 0; 
+  width: 100%;
+  margin-top: 20px; 
+  background: transparent;
+}
+
+.chapter-style {
+  border-radius: 0px;
+  border: 0px solid #333;
+  background: $bgcolor;
+  color: $textcolor;
+  margin-bottom: 1em;  
+}
+
+.chapter-header {
+  padding: 0.2em 0.3em;
+  margin-bottom: 0.6em;
+  position: relative;
+  background: transparent;
+  border-radius: 0px;
+  border: 0px solid #333;
+  color: $textcolor;
+  font-weight: normal;
+}
+
+
+.header{  
+    /*padding: 0.2em 0.3em;
+    margin-bottom: 0.5em;*/
+    position: relative;
+}
+
+.header:hover {
+  color: #459f69;
+  /*font-weight: bold;*/
+}
+
+/*
+.chapter-text {
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+*/
+
+.chapter-expand-close {
+  display: inline-block;
+  float: right;
+}
+
+.chapter-expand-close:hover {
+  cursor: pointer;
+}
+
+.section-style {
+  border: 0px solid #333 !important;
+  background: transparent !important;
+  color: $textcolor !important;
+  margin: 0.6em 0px !important;
+  /*background: $bgcolor !important;*/
+}
+
+.section-style a {
+  color: $textcolor;
+}
+
+.sec-header {
+  border: 0px solid red;
+  /*overflow: hidden !important;*/
+  text-overflow: ellipsis;
+}
+
+.section-style a:hover {
+  color: #459f69 !important;
+  /*font-weight: bold !important;*/
+}
+
+.insert-new-section-li {
+  list-style-type: none;
+  margin-left: 22px;
+}
+
+.insert-new-section-li:before {
+    content: "+";
+    margin-right: 4px;
+}
+
+.insert-new-section {
+  color: $textcolor !important;
+  text-decoration: none;
+}
+
+.insert-new-section:hover {
+  color: #459f69 !important;
+  /*font-weight: bold;*/
+  text-decoration: none;
+}
+
+/* ------------------------------------------------------------ */
+.current-section {
+  color: #2F5666 !important;
+ font-weight: bold !important; 
+}
+
+.ui-state-highlight { 
+  height: 7em; 
+  line-height: 1.2em; 
+  border: 2px dashed $shake-bordercolor; 
+  background: transparent;
+  color: $textcolor;
+}
+
+.ui-state-highlight-sec { 
+  border: 2px dashed $shake-bordercolor; 
+  height: 3em;
+}
+
+.hidden {
+  display: none;
+}
+
+#edit {
+  margin: 0px 5px;
+  float: right;
+}
+
+#nonedit {
+  margin: 0px 5px;
+  float: right;
+}
+
+#insert-new-chapter {
+  margin: 0px 5px;
+  float: right;
+}
+
+#sidebar-button-set{
+  background: $bgcolor;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  padding: 0.7em 10px;
+  width: 19vw;
+}
+
+/* shake~~ */
+@-webkit-keyframes spaceboots {
+  0% { -webkit-transform: translate(2px, 1px) rotate(0deg); }
+  10% { -webkit-transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { -webkit-transform: translate(-3px, 0px) rotate(1deg); }
+  30% { -webkit-transform: translate(0px, 2px) rotate(0deg); }
+  40% { -webkit-transform: translate(1px, -1px) rotate(1deg); }
+  50% { -webkit-transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { -webkit-transform: translate(-3px, 1px) rotate(0deg); }
+  70% { -webkit-transform: translate(2px, 1px) rotate(-1deg); }
+  80% { -webkit-transform: translate(-1px, -1px) rotate(1deg); }
+  90% { -webkit-transform: translate(2px, 2px) rotate(0deg); }
+  100% { -webkit-transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+.shake {
+  -webkit-animation-name: spaceboots;
+  -webkit-animation-duration: 0.8s;
+  -webkit-transform-origin:50% 50%;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+}
+
+.shake:hover, .shake:focus {
+  cursor: move !important;
+  animation : none;
+  -webkit-animation: none;
+  /*background: #9a9a9a;*/
+}
+
+/* note layout content */
+.content{
+  width: 81vw;
+  height: calc(100vh - 63px);
+  float: left;
+  background: rgba(230, 234, 231, 1);
+  padding: 0px;
+}
+
+.momImHere
+{
+  background: #c6c6c6 !important;
+}
+
+.delButton{
+  background: transparent;
+  border: none;
+  display: none;
+}
+
+#index-tag-toggle-button {
+  z-index: 3;
+  position: fixed;
+  bottom: 100px;
+  left: calc(19vw - 1.5em + 2px);
+  border: 0px solid green;
+}
+
+
+#index-tag-toggle-button{ 
+    ul,li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.tg-list {
+  border: 0px solid blue;
+}
+
+.tg-list-item {
+  margin: 0;
+}
+
+.tgl {
+  display: none;
+}
+.tgl, .tgl:after, .tgl:before, .tgl *, .tgl *:after, .tgl *:before, .tgl + .tgl-btn {
+  box-sizing: border-box;
+}
+.tgl::-moz-selection, .tgl:after::-moz-selection, .tgl:before::-moz-selection, .tgl *::-moz-selection, .tgl *:after::-moz-selection, .tgl *:before::-moz-selection, .tgl + .tgl-btn::-moz-selection {
+  background: none;
+}
+.tgl::selection, .tgl:after::selection, .tgl:before::selection, .tgl *::selection, .tgl *:after::selection, .tgl *:before::selection, .tgl + .tgl-btn::selection {
+  background: none;
+}
+.tgl + .tgl-btn {
+
+  outline: 0;
+  display: block;
+  width: 5em;
+  height: 2em;
+  position: relative;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+.tgl + .tgl-btn:after, .tgl + .tgl-btn:before {
+  position: relative;
+  display: block;
+  content: "";
+  width: 50%;
+  height: 100%;
+}
+.tgl + .tgl-btn:after {
+  left: 0;
+}
+.tgl + .tgl-btn:before {
+  display: none;
+}
+.tgl:checked + .tgl-btn:after {
+  left: 50%;
+}
+
+.tgl-flip + .tgl-btn {
+  padding: 2px;
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
+  font-family: sans-serif;
+  -webkit-perspective: 100px;
+          perspective: 100px;
+}
+.tgl-flip + .tgl-btn:after, .tgl-flip + .tgl-btn:before {
+  display: inline-block;
+  -webkit-transition: all .4s ease;
+  transition: all .4s ease;
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  line-height: 2em;
+  font-weight: bold;
+  color: #5a5a5a;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  border-radius: 0px;
+}
+.tgl-flip + .tgl-btn:after {
+  content: attr(data-tg-on);
+  background: #02C66F;
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
+}
+.tgl-flip + .tgl-btn:before {
+  background: #FFF5BB;
+  content: attr(data-tg-off);
+}
+.tgl-flip + .tgl-btn:active:before {
+  -webkit-transform: rotateY(-20deg);
+          transform: rotateY(-20deg);
+}
+.tgl-flip:checked + .tgl-btn:before {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+.tgl-flip:checked + .tgl-btn:after {
+  -webkit-transform: rotateY(0);
+          transform: rotateY(0);
+  left: 0;
+  background: #7FC6A6;
+}
+.tgl-flip:checked + .tgl-btn:active:after {
+  -webkit-transform: rotateY(20deg);
+          transform: rotateY(20deg);
+}

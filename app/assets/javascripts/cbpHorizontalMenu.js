@@ -13,14 +13,20 @@ var cbpHorizontalMenu = (function() {
 	var $listItems;
 	var $menuItems;
 	function init() {
-		$listItems = $( '#dadImHere' ),
+		$listItems = $( '.menu-drop-list' ),
 		$menuItems = $listItems.children( 'a' ),
 		$body = $( 'body' ),
 		current = -1;
 
-		console
 		$menuItems.on( 'click', open );
 		$listItems.on( 'click', function( event ) { event.stopPropagation(); } );
+		$('.cbp-hrsub').mouseleave(function()
+		{
+			console.log("mouse leave");
+			$('.menu-drop-list').removeClass("cbp-hropen");	
+			current = -1;
+		});
+		
 	}
 
 	function open( event ) {
@@ -51,13 +57,13 @@ var cbpHorizontalMenu = (function() {
 		$listItems.eq( current ).removeClass( 'cbp-hropen' );
 		current = -1;
 	}
+	
 
 	return { init : init };
 })();
 
-
 $('html').click(function() {
-	$('#dadImHere').removeClass("cbp-hropen");
+	
 });
 
 $('.cbp-hrsub').click(function(event){

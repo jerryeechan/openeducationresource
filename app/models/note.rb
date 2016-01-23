@@ -4,7 +4,7 @@ class Note < ActiveRecord::Base
   has_many :likes, :as=>:likeable
   belongs_to :user
 
-  default_scope { order(updated_at: :desc) }
+  default_scope { order(:likenum) }
 
   
   scope :search_keyword_user, -> (keyword){
@@ -31,7 +31,7 @@ class Note < ActiveRecord::Base
   end
 
   def hot
-    @news = Note.order(:like).limit(11)
+    @notes = Note.order(:like).limit(11)
   end
 
   def recent_hot 

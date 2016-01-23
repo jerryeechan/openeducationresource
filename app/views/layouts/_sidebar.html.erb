@@ -15,8 +15,14 @@
 
   <% if current_note%>
     <div class = "index-container">
-      <div class="note title" id="<%=current_note.id%>"><%= link_to current_note.title, current_note %>
-
+      <div class="note title" id="<%=current_note.id%>">
+        <% if controller.controller_name == "sections"&& controller.action_name == "show"%>
+          <%= link_to current_note.title, current_note %> 
+        <% else %>
+          <%= best_in_place @note, :title, :as => :input %>
+        <% end %>
+      
+      
       </div>
       <!--like course-->
       <div class="course-like">

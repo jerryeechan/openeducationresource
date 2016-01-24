@@ -1,4 +1,5 @@
-Hpjsdemo::Application.routes.draw do
+CoLearning::Application.routes.draw do
+  devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   resources :pads do
     resource 'embed', :only => :show do

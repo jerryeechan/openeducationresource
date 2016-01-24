@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Hpjsdemo::Application.load_tasks
+CoLearning::Application.load_tasks

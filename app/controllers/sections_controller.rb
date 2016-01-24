@@ -22,8 +22,11 @@ class SectionsController < ApplicationController
       puts res
       puts res.body
     end   
-    
-    @user_email = 'test123@hackpad.com'
+    if current_user
+      @user_email = current_user.email
+    else
+      @user_email = 'anonymous@hackpad'
+    end
     session[:chapter_id] = params[:chapter_id]
     session[:section_id] = params[:id]
     session[:note_id] = params[:note_id]
